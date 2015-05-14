@@ -102,7 +102,7 @@ Include dependency graph for usart_macro.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="usart__macro_8h__incl.png" border="0" usemap="#src_2usart__macro_8h" alt=""/></div>
 <map name="src_2usart__macro_8h" id="src_2usart__macro_8h">
-<area shape="rect" id="node2" href="uart_8h.html" title="UART HAL Include file. " alt="" coords="217,80,277,107"/><area shape="rect" id="node3" href="gpio_8h.html" title="GPIO HAL includes. " alt="" coords="141,155,203,181"/><area shape="rect" id="node4" href="hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="5,229,56,256"/></map>
+<area shape="rect" id="node2" href="uart_8h.html" title="UART HAL Include file. " alt="" coords="229,80,289,107"/><area shape="rect" id="node3" href="gpio_8h.html" title="GPIO HAL includes. " alt="" coords="141,155,203,181"/><area shape="rect" id="node7" href="time_8h.html" title="Time keeping and converting include file. " alt="" coords="227,155,290,181"/><area shape="rect" id="node4" href="hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="5,229,56,256"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -116,8 +116,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a2d29cc8a99909b90adf6f50c82ff2f37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>USART_TXONLY_INSTANCE</b>(Name,  Usart,  Usart_Rcc,  Baudrate,  Databits,  Parity,  Stopbits,  Flowcontrol,  TXPin_Port,  TXPin_Pin)</td></tr>
-<tr class="separator:a2d29cc8a99909b90adf6f50c82ff2f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf43678b0c09f7c3c6b8a0751e9e1c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>USART_8N1</b>(Name,  Usart,  Rcc,  Baudrate,  Rx_pin,  Tx_pin)</td></tr>
+<tr class="separator:aecf43678b0c09f7c3c6b8a0751e9e1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16db80b3de545c6de81da706d1dd2aba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16db80b3de545c6de81da706d1dd2aba"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>_USART_MACRO_H_</b></td></tr>
 <tr class="separator:a16db80b3de545c6de81da706d1dd2aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,12 +127,12 @@ Macros</h2></td></tr>
 
 <p>Definition in file <a class="el" href="usart__macro_8h_source.html">usart_macro.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a2d29cc8a99909b90adf6f50c82ff2f37"></a>
+<a class="anchor" id="aecf43678b0c09f7c3c6b8a0751e9e1c9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define USART_TXONLY_INSTANCE</td>
+          <td class="memname">#define USART_8N1</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">Name, </td>
@@ -147,7 +147,7 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">Usart_Rcc, </td>
+          <td class="paramname">Rcc, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -159,37 +159,13 @@ Macros</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">Databits, </td>
+          <td class="paramname">Rx_pin, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">Parity, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">Stopbits, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">Flowcontrol, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">TXPin_Port, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">TXPin_Pin&#160;</td>
+          <td class="paramname">Tx_pin&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -199,43 +175,28 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">\</div>
-<div class="line">struct <a class="code" href="structgpio__pin__config.html">gpio_pin_config</a> Name##_txpin_config = {\</div>
-<div class="line">    .port = TXPin_Port,\</div>
-<div class="line">    .pin = TXPin_Pin,\</div>
-<div class="line">};\</div>
-<div class="line">\</div>
-<div class="line">struct <a class="code" href="structgpio__pin.html">gpio_pin</a> Name##_txpin = {\</div>
-<div class="line">    .configuration = &amp;Name##_txpin_config,\</div>
-<div class="line">};\</div>
-<div class="line">\</div>
-<div class="line">struct <a class="code" href="structusart__config.html">usart_config</a> Name##_config = {\</div>
-<div class="line">    .usart = Usart,\</div>
-<div class="line">    .rcc = Usart_Rcc,\</div>
-<div class="line">    .tx_pin = &amp;Name##_txpin,\</div>
-<div class="line">    .baudrate = Baudrate,\</div>
-<div class="line">    .databits = Databits,\</div>
-<div class="line">    .parity = Parity,\</div>
-<div class="line">    .stopbits = Stopbits,\</div>
-<div class="line">    .flowcontrol = Flowcontrol,\</div>
-<div class="line">    .mode = USART_MODE_TX,\</div>
-<div class="line">};\</div>
-<div class="line">\</div>
-<div class="line">struct <a class="code" href="structusart.html">usart</a> Name = {\</div>
-<div class="line">    .configuration = &amp;Name##_config,\</div>
-<div class="line">};</div>
+<div class="line">    struct <a class="code" href="structusart__config.html">usart_config</a> Name##_config = {\</div>
+<div class="line">        .tx_pin = Tx_pin,\</div>
+<div class="line">        .rx_pin = Rx_pin,\</div>
+<div class="line">        .usart = Usart,\</div>
+<div class="line">        .rcc = Rcc,\</div>
+<div class="line">        .baudrate = Baudrate,\</div>
+<div class="line">    };\</div>
+<div class="line">    \</div>
+<div class="line">    struct <a class="code" href="structusart.html">usart</a> Serial = {\</div>
+<div class="line">        .configuration = &amp;Name##_config,\</div>
+<div class="line">    };</div>
 <div class="ttc" id="structusart_html"><div class="ttname"><a href="structusart.html">usart</a></div><div class="ttdoc">Usart. </div><div class="ttdef"><b>Definition:</b> <a href="uart_8h_source.html#l00029">uart.h:29</a></div></div>
 <div class="ttc" id="structusart__config_html"><div class="ttname"><a href="structusart__config.html">usart_config</a></div><div class="ttdoc">Usart configuration. </div><div class="ttdef"><b>Definition:</b> <a href="uart_8h_source.html#l00014">uart.h:14</a></div></div>
-<div class="ttc" id="structgpio__pin__config_html"><div class="ttname"><a href="structgpio__pin__config.html">gpio_pin_config</a></div><div class="ttdef"><b>Definition:</b> <a href="gpio_8h_source.html#l00021">gpio.h:21</a></div></div>
-<div class="ttc" id="structgpio__pin_html"><div class="ttname"><a href="structgpio__pin.html">gpio_pin</a></div><div class="ttdef"><b>Definition:</b> <a href="gpio_8h_source.html#l00029">gpio.h:29</a></div></div>
 </div><!-- fragment -->
-<p>Definition at line <a class="el" href="usart__macro_8h_source.html#l00009">9</a> of file <a class="el" href="usart__macro_8h_source.html">usart_macro.h</a>.</p>
+<p>Definition at line <a class="el" href="usart__macro_8h_source.html#l00010">10</a> of file <a class="el" href="usart__macro_8h_source.html">usart_macro.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 16:31:08 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

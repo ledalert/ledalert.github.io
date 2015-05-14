@@ -1,0 +1,46 @@
+\hypertarget{group__state__measure}{}\section{This state makes the actual soil measure}
+\label{group__state__measure}\index{This state makes the actual soil measure@{This state makes the actual soil measure}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__state__measure_ga24a42892ba25be220bff68fc151e0be7}{state\+\_\+measure\+\_\+enter} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em Measure state enter. \end{DoxyCompactList}\item 
+\hypertarget{group__state__measure_ga410776694bde81bde92a0b6b178ac015}{}void {\bfseries state\+\_\+measure\+\_\+run} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{group__state__measure_ga410776694bde81bde92a0b6b178ac015}
+
+\item 
+\hypertarget{group__state__measure_ga0f85f8645f5311e776e85a3697517266}{}void {\bfseries state\+\_\+measure\+\_\+exit} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)\label{group__state__measure_ga0f85f8645f5311e776e85a3697517266}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__state__measure_ga24a42892ba25be220bff68fc151e0be7}{}\index{This state makes the actual soil measure@{This state makes the actual soil measure}!state\+\_\+measure\+\_\+enter@{state\+\_\+measure\+\_\+enter}}
+\index{state\+\_\+measure\+\_\+enter@{state\+\_\+measure\+\_\+enter}!This state makes the actual soil measure@{This state makes the actual soil measure}}
+\subsubsection[{state\+\_\+measure\+\_\+enter}]{\setlength{\rightskip}{0pt plus 5cm}void state\+\_\+measure\+\_\+enter (
+\begin{DoxyParamCaption}
+\item[{struct {\bf irrigation\+\_\+controller} $\ast$}]{controller}
+\end{DoxyParamCaption}
+)}\label{group__state__measure_ga24a42892ba25be220bff68fc151e0be7}
+
+
+Measure state enter. 
+
+The following things are done in this function \begin{DoxyItemize}
+\item It is asserted that the last soil temperature is no older than 10 m\+S\end{DoxyItemize}
+\begin{DoxyItemize}
+\item last\+\_\+soil\+\_\+sample is set to soil\+\_\+temperature\end{DoxyItemize}
+\begin{DoxyItemize}
+\item Initializing variables used in run state\end{DoxyItemize}
+\begin{DoxyItemize}
+\item Report that heater was started \end{DoxyItemize}
+
+
+Definition at line 12 of file state\+\_\+measure.\+c.
+
+
+
+References irrigation\+\_\+status\+\_\+\+R\+E\+B\+O\+O\+T, irrigation\+\_\+controller\+\_\+status\+::iteration\+\_\+time, irrigation\+\_\+controller\+\_\+status\+::last\+\_\+soil\+\_\+sample, moisture\+\_\+sensor\+\_\+heating, irrigation\+\_\+controller\+::pending\+\_\+state, irrigation\+\_\+controller\+\_\+status\+::periodic\+\_\+temp\+\_\+report, irrigation\+\_\+events\+::report\+\_\+msg\+\_\+note, irrigation\+\_\+events\+::report\+\_\+sensor\+\_\+malfunction, irrigation\+\_\+controller\+\_\+status\+::soil\+\_\+temperature, irrigation\+\_\+controller\+::status, time\+\_\+delta, and irrigation\+\_\+temperature\+\_\+sample\+::timestamp.
+

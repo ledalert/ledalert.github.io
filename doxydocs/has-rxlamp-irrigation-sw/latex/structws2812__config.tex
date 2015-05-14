@@ -1,0 +1,124 @@
+\hypertarget{structws2812__config}{}\section{ws2812\+\_\+config Struct Reference}
+\label{structws2812__config}\index{ws2812\+\_\+config@{ws2812\+\_\+config}}
+
+
+Configuration for W\+S2812.  
+
+
+
+
+{\ttfamily \#include $<$ws2812.\+h$>$}
+
+
+
+Collaboration diagram for ws2812\+\_\+config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structws2812__config__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtimer__ccr}{timer\+\_\+ccr} $\ast$ \hyperlink{structws2812__config_a0c4b50ce11c055c0457af653c4951ee9}{ccr}
+\begin{DoxyCompactList}\small\item\em What C\+C\+R to use. \end{DoxyCompactList}\item 
+struct \hyperlink{structgpio__pin}{gpio\+\_\+pin} $\ast$ \hyperlink{structws2812__config_a665ce3190145f97af1d234f9de5defc1}{pin}
+\begin{DoxyCompactList}\small\item\em What G\+P\+I\+O pin to use. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{structws2812__config_a15634a419d7f20275ec1e6ba1215920b}{frequency}
+\begin{DoxyCompactList}\small\item\em Frequency of data, defaults to 800k\+Hz. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{structws2812__config_a22370b6dc4cdf5c6e25c4c155a275046}{bit0}
+\begin{DoxyCompactList}\small\item\em Length of bit 0 for P\+W\+M. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{structws2812__config_a410b277b06bbb4ff2f8fd8c6fb5bc994}{bit1}
+\begin{DoxyCompactList}\small\item\em Length of bit 1 for P\+W\+M. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configuration for W\+S2812. 
+
+Definition at line 12 of file ws2812.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structws2812__config_a22370b6dc4cdf5c6e25c4c155a275046}{}\index{ws2812\+\_\+config@{ws2812\+\_\+config}!bit0@{bit0}}
+\index{bit0@{bit0}!ws2812\+\_\+config@{ws2812\+\_\+config}}
+\subsubsection[{bit0}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t ws2812\+\_\+config\+::bit0}\label{structws2812__config_a22370b6dc4cdf5c6e25c4c155a275046}
+
+
+Length of bit 0 for P\+W\+M. 
+
+
+
+Definition at line 16 of file ws2812.\+h.
+
+
+
+Referenced by ws2812\+\_\+set\+\_\+defaults().
+
+\hypertarget{structws2812__config_a410b277b06bbb4ff2f8fd8c6fb5bc994}{}\index{ws2812\+\_\+config@{ws2812\+\_\+config}!bit1@{bit1}}
+\index{bit1@{bit1}!ws2812\+\_\+config@{ws2812\+\_\+config}}
+\subsubsection[{bit1}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t ws2812\+\_\+config\+::bit1}\label{structws2812__config_a410b277b06bbb4ff2f8fd8c6fb5bc994}
+
+
+Length of bit 1 for P\+W\+M. 
+
+
+
+Definition at line 17 of file ws2812.\+h.
+
+
+
+Referenced by ws2812\+\_\+set\+\_\+defaults().
+
+\hypertarget{structws2812__config_a0c4b50ce11c055c0457af653c4951ee9}{}\index{ws2812\+\_\+config@{ws2812\+\_\+config}!ccr@{ccr}}
+\index{ccr@{ccr}!ws2812\+\_\+config@{ws2812\+\_\+config}}
+\subsubsection[{ccr}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf timer\+\_\+ccr}$\ast$ ws2812\+\_\+config\+::ccr}\label{structws2812__config_a0c4b50ce11c055c0457af653c4951ee9}
+
+
+What C\+C\+R to use. 
+
+
+
+Definition at line 13 of file ws2812.\+h.
+
+
+
+Referenced by ws2812\+\_\+configure\+\_\+timer(), and ws2812\+\_\+init().
+
+\hypertarget{structws2812__config_a15634a419d7f20275ec1e6ba1215920b}{}\index{ws2812\+\_\+config@{ws2812\+\_\+config}!frequency@{frequency}}
+\index{frequency@{frequency}!ws2812\+\_\+config@{ws2812\+\_\+config}}
+\subsubsection[{frequency}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t ws2812\+\_\+config\+::frequency}\label{structws2812__config_a15634a419d7f20275ec1e6ba1215920b}
+
+
+Frequency of data, defaults to 800k\+Hz. 
+
+
+
+Definition at line 15 of file ws2812.\+h.
+
+
+
+Referenced by ws2812\+\_\+configure\+\_\+timer(), and ws2812\+\_\+set\+\_\+defaults().
+
+\hypertarget{structws2812__config_a665ce3190145f97af1d234f9de5defc1}{}\index{ws2812\+\_\+config@{ws2812\+\_\+config}!pin@{pin}}
+\index{pin@{pin}!ws2812\+\_\+config@{ws2812\+\_\+config}}
+\subsubsection[{pin}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf gpio\+\_\+pin}$\ast$ ws2812\+\_\+config\+::pin}\label{structws2812__config_a665ce3190145f97af1d234f9de5defc1}
+
+
+What G\+P\+I\+O pin to use. 
+
+
+
+Definition at line 14 of file ws2812.\+h.
+
+
+
+Referenced by ws2812\+\_\+configure\+\_\+gpio(), and ws2812\+\_\+init().
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{ws2812_8h}{ws2812.\+h}\end{DoxyCompactItemize}

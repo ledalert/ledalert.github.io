@@ -1,0 +1,122 @@
+\hypertarget{gpio__macro_8h}{}\section{src/gpio\+\_\+macro.h File Reference}
+\label{gpio__macro_8h}\index{src/gpio\+\_\+macro.\+h@{src/gpio\+\_\+macro.\+h}}
+
+
+Helper macros for G\+P\+I\+O.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{gpio__macro_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gpio__macro_8h_aecbaaaba532fce90bdbb37ff13fa220e}{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Port,  Rcc)
+\begin{DoxyCompactList}\small\item\em Declares a new G\+P\+I\+O port. \end{DoxyCompactList}\item 
+\#define \hyperlink{gpio__macro_8h_ac93174a4de27900671c09ea62ffb16b2}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Port,  Mode,  Configuration,  Pin)
+\begin{DoxyCompactList}\small\item\em Declares a new G\+P\+I\+O pin and G\+P\+I\+O pin config. \end{DoxyCompactList}\item 
+\hypertarget{gpio__macro_8h_a1b2ea2f540968f79ec27781d05350843}{}\#define {\bfseries G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+N\+O\+C\+O\+N\+F}(Name,  Port,  Pin)~\hyperlink{gpio__macro_8h_ac93174a4de27900671c09ea62ffb16b2}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name, Port, 0, 0, Pin)\label{gpio__macro_8h_a1b2ea2f540968f79ec27781d05350843}
+
+\item 
+\hypertarget{gpio__macro_8h_a799ae7b1d569950c8d113d31e5c98ebf}{}\#define {\bfseries \+\_\+\+G\+P\+I\+O\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}\label{gpio__macro_8h_a799ae7b1d569950c8d113d31e5c98ebf}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper macros for G\+P\+I\+O. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{gpio__macro_8h_ac93174a4de27900671c09ea62ffb16b2}{}\index{gpio\+\_\+macro.\+h@{gpio\+\_\+macro.\+h}!G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}}
+\index{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}!gpio\+\_\+macro.\+h@{gpio\+\_\+macro.\+h}}
+\subsubsection[{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Port, }
+\item[{}]{Mode, }
+\item[{}]{Configuration, }
+\item[{}]{Pin}
+\end{DoxyParamCaption}
+)}\label{gpio__macro_8h_ac93174a4de27900671c09ea62ffb16b2}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\hyperlink{structgpio__pin__config}{gpio\_pin\_config} Name##\_config = \{\(\backslash\)
+    .port = Port,\(\backslash\)
+    .mode = Mode,\(\backslash\)
+    .configuration = Configuration,\(\backslash\)
+    .pin = Pin,\(\backslash\)
+\};\(\backslash\)
+\(\backslash\)
+struct \hyperlink{structgpio__pin}{gpio\_pin} Name = \{\(\backslash\)
+    .configuration = &Name##\_config,\(\backslash\)
+\};
+\end{DoxyCode}
+
+
+Declares a new G\+P\+I\+O pin and G\+P\+I\+O pin config. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & Variable name \\
+\hline
+{\em Port} & Pointer to struct \hyperlink{structgpio__port}{gpio\+\_\+port} to use \\
+\hline
+{\em Mode} & The G\+P\+I\+O pin mode \\
+\hline
+{\em Configuration} & The G\+P\+I\+O pin configuration \\
+\hline
+{\em Pin} & The G\+P\+I\+O pin mask \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct \hyperlink{structgpio__pin__config}{gpio\+\_\+pin\+\_\+config} Name\+\_\+config ~\newline
+ struct \hyperlink{structgpio__pin}{gpio\+\_\+pin} Name 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file gpio\+\_\+macro.\+h.
+
+\hypertarget{gpio__macro_8h_aecbaaaba532fce90bdbb37ff13fa220e}{}\index{gpio\+\_\+macro.\+h@{gpio\+\_\+macro.\+h}!G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}}
+\index{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}!gpio\+\_\+macro.\+h@{gpio\+\_\+macro.\+h}}
+\subsubsection[{G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Port, }
+\item[{}]{Rcc}
+\end{DoxyParamCaption}
+)}\label{gpio__macro_8h_aecbaaaba532fce90bdbb37ff13fa220e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\hyperlink{structgpio__port}{gpio\_port} Name = \{\(\backslash\)
+    .configuration = &((\textcolor{keyword}{struct }\hyperlink{structgpio__port__config}{gpio\_port\_config})\{\(\backslash\)
+        .port = Port,\(\backslash\)
+        .rcc = Rcc,\(\backslash\)
+    \}),\(\backslash\)
+\};
+\end{DoxyCode}
+
+
+Declares a new G\+P\+I\+O port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & Variable name \\
+\hline
+{\em Port} & The G\+P\+I\+O port base address \\
+\hline
+{\em Rcc} & The R\+C\+C index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct \hyperlink{structgpio__port}{gpio\+\_\+port} Name 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file gpio\+\_\+macro.\+h.
+

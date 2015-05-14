@@ -1,4 +1,5 @@
 <map id="src/timer.c" name="src/timer.c">
-<area shape="rect" id="node2" href="$timer_8h.html" title="Timer HAL include file. " alt="" coords="142,80,210,107"/>
-<area shape="rect" id="node3" href="$hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="5,155,56,181"/>
+<area shape="rect" id="node2" href="$timer_8h.html" title="Timer HAL include file. " alt="" coords="202,80,270,107"/>
+<area shape="rect" id="node3" href="$hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="5,229,56,256"/>
+<area shape="rect" id="node6" href="$dma_8h.html" title="DMA includes. " alt="" coords="281,155,343,181"/>
 </map>

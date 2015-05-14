@@ -1,0 +1,53 @@
+\hypertarget{dma_8h}{}\section{src/dma.h File Reference}
+\label{dma_8h}\index{src/dma.\+h@{src/dma.\+h}}
+
+
+D\+M\+A includes.  
+
+
+{\ttfamily \#include \char`\"{}hw.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$libopencm3/stm32/dma.\+h$>$}\\*
+{\ttfamily \#include $<$libopencm3/stm32/rcc.\+h$>$}\\*
+Include dependency graph for dma.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dma_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dma_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdma__config}{dma\+\_\+config}
+\item 
+struct \hyperlink{structdma__channel__config}{dma\+\_\+channel\+\_\+config}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{dma_8h_a4dd6c4a4e3e59a2a2508cc928c2cde64}{}void {\bfseries dma\+\_\+init} (struct \hyperlink{structdma__config}{dma\+\_\+config} $\ast$dma, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} state)\label{dma_8h_a4dd6c4a4e3e59a2a2508cc928c2cde64}
+
+\item 
+\hypertarget{dma_8h_aa1bc232b23b02bc61fcbcfbd0221f42f}{}void {\bfseries dma\+\_\+channel\+\_\+init} (struct \hyperlink{structdma__channel__config}{dma\+\_\+channel\+\_\+config} $\ast$channel, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} state)\label{dma_8h_aa1bc232b23b02bc61fcbcfbd0221f42f}
+
+\item 
+\hypertarget{dma_8h_aea2e8fc9d6568dc073cf2a3550bf9a3a}{}void {\bfseries dma\+\_\+channel\+\_\+send} (struct \hyperlink{structdma__channel__config}{dma\+\_\+channel\+\_\+config} $\ast$channel, volatile void $\ast$data, int length)\label{dma_8h_aea2e8fc9d6568dc073cf2a3550bf9a3a}
+
+\item 
+\hypertarget{dma_8h_a5b076ef642e2110268c7757c35c2d08d}{}void {\bfseries dma\+\_\+channel\+\_\+send\+\_\+blocking} (struct \hyperlink{structdma__channel__config}{dma\+\_\+channel\+\_\+config} $\ast$channel, volatile void $\ast$data, int length)\label{dma_8h_a5b076ef642e2110268c7757c35c2d08d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+M\+A includes. 
+

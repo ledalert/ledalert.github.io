@@ -1,0 +1,100 @@
+\hypertarget{timer__macro_8h}{}\section{src/timer\+\_\+macro.h File Reference}
+\label{timer__macro_8h}\index{src/timer\+\_\+macro.\+h@{src/timer\+\_\+macro.\+h}}
+
+
+Utility macros for timers.  
+
+
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\\*
+Include dependency graph for timer\+\_\+macro.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer__macro_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{timer__macro_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Timer,  Rcc,  Period)
+\item 
+\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Timer,  Channel,  Dma,  Start\+C\+C\+R)
+\item 
+\hypertarget{timer__macro_8h_a3279bcf4092c38d74426dae48169f4f0}{}\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F}(Name,  Timer,  Rcc)~T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(Name, Timer, Rcc, 0)\label{timer__macro_8h_a3279bcf4092c38d74426dae48169f4f0}
+
+\item 
+\hypertarget{timer__macro_8h_a882cfce62e6e6f7f3b0cbef9e2853d8a}{}\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F}(Name,  Timer,  Channel,  Dma)~T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(Name, Timer, Channel, Dma, 0)\label{timer__macro_8h_a882cfce62e6e6f7f3b0cbef9e2853d8a}
+
+\item 
+\hypertarget{timer__macro_8h_afcf9e00e37f249ee79898999ba9b79c7}{}\#define {\bfseries \+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}\label{timer__macro_8h_afcf9e00e37f249ee79898999ba9b79c7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility macros for timers. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{timer__macro_8h_aaffa297931f23f6b1d6acc68de84ba4b}{}\index{timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}!T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}}
+\index{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}!timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}}
+\subsubsection[{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Timer, }
+\item[{}]{Channel, }
+\item[{}]{Dma, }
+\item[{}]{Start\+C\+C\+R}
+\end{DoxyParamCaption}
+)}\label{timer__macro_8h_aaffa297931f23f6b1d6acc68de84ba4b}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\hyperlink{structtimer__ccr__config}{timer\_ccr\_config} Name##\_config = \{\(\backslash\)
+        .timer = Timer,\(\backslash\)
+        .channel = Channel,\(\backslash\)
+        .dma = Dma,\(\backslash\)
+    \};\(\backslash\)
+    struct \hyperlink{structtimer__ccr}{timer\_ccr} Name = \{\(\backslash\)
+        .configuration = &Name##\_config,\(\backslash\)
+        .ccr = StartCCR,\(\backslash\)
+    \};
+\end{DoxyCode}
+
+
+Definition at line 25 of file timer\+\_\+macro.\+h.
+
+\hypertarget{timer__macro_8h_af329da461fefeb6d28239adb02a75eef}{}\index{timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}!T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}}
+\index{T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}!timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}}
+\subsubsection[{T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Timer, }
+\item[{}]{Rcc, }
+\item[{}]{Period}
+\end{DoxyParamCaption}
+)}\label{timer__macro_8h_af329da461fefeb6d28239adb02a75eef}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\hyperlink{structtimer__config}{timer\_config} Name##\_config = \{\(\backslash\)
+        .timer = Timer,\(\backslash\)
+        .rcc = Rcc,\(\backslash\)
+    \};\(\backslash\)
+    \(\backslash\)
+    struct \hyperlink{structtimer}{timer} Name = \{\(\backslash\)
+        .configuration = &Name##\_config,\(\backslash\)
+        .auto\_reload = Period,\(\backslash\)
+    \};
+\end{DoxyCode}
+
+
+Definition at line 11 of file timer\+\_\+macro.\+h.
+

@@ -102,16 +102,25 @@ Include dependency graph for dma.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="dma_8c__incl.png" border="0" usemap="#src_2dma_8c" alt=""/></div>
 <map name="src_2dma_8c" id="src_2dma_8c">
-<area shape="rect" id="node2" href="dma_8h.html" title="DMA includes. " alt="" coords="67,80,130,107"/></map>
+<area shape="rect" id="node2" href="dma_8h.html" title="DMA includes. " alt="" coords="142,80,205,107"/><area shape="rect" id="node3" href="hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="5,155,56,181"/></map>
 </div>
 </div>
 <p><a href="dma_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad6763358f467b76f028e6672f7a56636"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6763358f467b76f028e6672f7a56636"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dma1_transmit_8_32</b> (uint32_t src, uint32_t dst, uint32_t length, uint32_t channel)</td></tr>
-<tr class="separator:ad6763358f467b76f028e6672f7a56636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd6c4a4e3e59a2a2508cc928c2cde64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dd6c4a4e3e59a2a2508cc928c2cde64"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dma_init</b> (struct <a class="el" href="structdma__config.html">dma_config</a> *dma, enum <a class="el" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> state)</td></tr>
+<tr class="separator:a4dd6c4a4e3e59a2a2508cc928c2cde64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1bc232b23b02bc61fcbcfbd0221f42f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1bc232b23b02bc61fcbcfbd0221f42f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dma_channel_init</b> (struct <a class="el" href="structdma__channel__config.html">dma_channel_config</a> *channel, enum <a class="el" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> state)</td></tr>
+<tr class="separator:aa1bc232b23b02bc61fcbcfbd0221f42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2e8fc9d6568dc073cf2a3550bf9a3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea2e8fc9d6568dc073cf2a3550bf9a3a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dma_channel_send</b> (struct <a class="el" href="structdma__channel__config.html">dma_channel_config</a> *channel, volatile void *data, int length)</td></tr>
+<tr class="separator:aea2e8fc9d6568dc073cf2a3550bf9a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b076ef642e2110268c7757c35c2d08d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b076ef642e2110268c7757c35c2d08d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dma_channel_send_blocking</b> (struct <a class="el" href="structdma__channel__config.html">dma_channel_config</a> *channel, volatile void *data, int length)</td></tr>
+<tr class="separator:a5b076ef642e2110268c7757c35c2d08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>DMA implementation. </p>
@@ -120,7 +129,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>dma1_transmit_8_32</b
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 16:31:08 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

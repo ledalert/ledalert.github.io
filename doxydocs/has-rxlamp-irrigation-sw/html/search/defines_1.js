@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['math_5framp',['math_ramp',['../math_8h.html#ae438218ebea16c798a26d459bf3dd264',1,'math.h']]],
-  ['max',['MAX',['../math_8h.html#a11511f39713c83a53bbf617c79d20cd6',1,'math.h']]],
-  ['min',['MIN',['../math_8h.html#a267dc8ee2dc059cbd022d1c92ee86b4d',1,'math.h']]]
+  ['gpio_5fpin_5finstance',['GPIO_PIN_INSTANCE',['../gpio__macro_8h.html#ac93174a4de27900671c09ea62ffb16b2',1,'gpio_macro.h']]],
+  ['gpio_5fport_5finstance',['GPIO_PORT_INSTANCE',['../gpio__macro_8h.html#aecbaaaba532fce90bdbb37ff13fa220e',1,'gpio_macro.h']]]
 ];

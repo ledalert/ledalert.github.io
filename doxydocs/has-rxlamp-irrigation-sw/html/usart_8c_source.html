@@ -104,147 +104,184 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;databits, 8);</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;parity, USART_PARITY_NONE);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;stopbits, USART_STOPBITS_1);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;mode, USART_MODE_RX);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;flowcontrol, USART_FLOWCONTROL_NONE);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/*! Configure USART GPIO default values */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="usart_8c.html#abd17fc525b9c36f671bedf0729741976">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#abd17fc525b9c36f671bedf0729741976">usart_configure_gpio</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (usart-&gt;configuration-&gt;tx_pin) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;tx_pin-&gt;configuration-&gt;mode, GPIO_MODE_OUTPUT_2_MHZ);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;tx_pin-&gt;configuration-&gt;configuration, GPIO_CNF_OUTPUT_ALTFN_PUSHPULL);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (usart-&gt;configuration-&gt;rx_pin) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;rx_pin-&gt;configuration-&gt;mode, GPIO_MODE_INPUT);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;rx_pin-&gt;configuration-&gt;configuration, GPIO_CNF_INPUT_FLOAT);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/*! Init usart device</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    @todo Check if we are inited already    */</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="usart_8c.html#a0e3103fc345dfb09aa255989c86805e8">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#a0e3103fc345dfb09aa255989c86805e8">usart_init</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keyword">enum</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> <a class="code" href="structstate.html">state</a>) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (state == <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a>) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="usart_8c.html#abd17fc525b9c36f671bedf0729741976">usart_configure_gpio</a>(usart);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        rcc_periph_clock_enable(usart-&gt;configuration-&gt;rcc);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (state == <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a>) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="usart_8c.html#a6c89d4ecfd052df4b706797c6b35ee9a">usart_set_defaults</a>(usart);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        usart_set_baudrate(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;baudrate);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        usart_set_databits(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;databits);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        usart_set_stopbits(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;stopbits);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        usart_set_mode(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;mode);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        usart_set_parity(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;parity);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        usart_set_flow_control(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;flowcontrol);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span> (state == <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a>) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        usart_enable(usart-&gt;configuration-&gt;usart);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span>(usart-&gt;configuration-&gt;tx_pin) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        gpio_pin_init(usart-&gt;configuration-&gt;tx_pin, state);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span>(usart-&gt;configuration-&gt;rx_pin) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        gpio_pin_init(usart-&gt;configuration-&gt;rx_pin, state);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">/*! Send data using blocking/polling method (no IRQ nor DMA) */</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="usart_8c.html#aeeebc4a9b5040f2c423773a4eea7a325">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#aeeebc4a9b5040f2c423773a4eea7a325">usart_blocking_send</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keyword">volatile</span> <span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> length) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    uint8_t* ptr = (uint8_t*)data;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;length; i++) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, ptr[i]);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">/*! Send zero terminated string using blocking/polling method (no IRQ nor DMA) */</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="usart_8c.html#ad39a26176dc8964ea1999629b1fd71f3">   79</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#ad39a26176dc8964ea1999629b1fd71f3">usart_blocking_strz</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keyword">volatile</span> <span class="keywordtype">char</span>* ptr) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">while</span>(*ptr) {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, *ptr++);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">/*! Send formatted integer using blocking/polling method (no IRQ nor DMA) */</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="usart_8c.html#a3af22e4da85d1cc56e9635c288cfee98">   87</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#a3af22e4da85d1cc56e9635c288cfee98">usart_blocking_int</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keywordtype">int</span> data) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">int</span> div = 1000000000;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">int</span> num;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">int</span> in_range=0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (data &lt; 0) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        data = -data;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=10; i; i--) {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        num = (data / div) % 10;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (num &amp;&amp; !in_range) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            in_range=1;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> (in_range || i==1) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;0&#39;</span> + num);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;flowcontrol, USART_FLOWCONTROL_NONE);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;mode, </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        (usart-&gt;configuration-&gt;rx_pin ? USART_MODE_RX : 0)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        | (usart-&gt;configuration-&gt;tx_pin ? USART_MODE_TX : 0)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    );</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*! Configure USART GPIO default values */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="usart_8c.html#abd17fc525b9c36f671bedf0729741976">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#abd17fc525b9c36f671bedf0729741976">usart_configure_gpio</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (usart-&gt;configuration-&gt;tx_pin) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;tx_pin-&gt;configuration-&gt;mode, GPIO_MODE_OUTPUT_2_MHZ);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;tx_pin-&gt;configuration-&gt;configuration, GPIO_CNF_OUTPUT_ALTFN_PUSHPULL);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span> (usart-&gt;configuration-&gt;rx_pin) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;rx_pin-&gt;configuration-&gt;mode, GPIO_MODE_INPUT);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(usart-&gt;configuration-&gt;rx_pin-&gt;configuration-&gt;configuration, GPIO_CNF_INPUT_FLOAT);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/*! Init usart device</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    @todo Check if we are inited already    */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="usart_8c.html#a0e3103fc345dfb09aa255989c86805e8">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#a0e3103fc345dfb09aa255989c86805e8">usart_init</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keyword">enum</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> state) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (state == <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a>) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="usart_8c.html#abd17fc525b9c36f671bedf0729741976">usart_configure_gpio</a>(usart);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        rcc_periph_clock_enable(usart-&gt;configuration-&gt;rcc);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (state == <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a>) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="usart_8c.html#a6c89d4ecfd052df4b706797c6b35ee9a">usart_set_defaults</a>(usart);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        usart_set_baudrate(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;baudrate);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        usart_set_databits(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;databits);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        usart_set_stopbits(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;stopbits);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        usart_set_mode(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;mode);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        usart_set_parity(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;parity);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        usart_set_flow_control(usart-&gt;configuration-&gt;usart, usart-&gt;configuration-&gt;flowcontrol);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (state == <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a>) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        usart_enable(usart-&gt;configuration-&gt;usart);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span>(usart-&gt;configuration-&gt;tx_pin) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        gpio_pin_init(usart-&gt;configuration-&gt;tx_pin, state);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">if</span>(usart-&gt;configuration-&gt;rx_pin) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        gpio_pin_init(usart-&gt;configuration-&gt;rx_pin, state);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">/*! Send data using blocking/polling method (no IRQ nor DMA) */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="usart_8c.html#aeeebc4a9b5040f2c423773a4eea7a325">   71</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#aeeebc4a9b5040f2c423773a4eea7a325">usart_blocking_send</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keyword">volatile</span> <span class="keywordtype">void</span>* data, <span class="keywordtype">int</span> length) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    uint8_t* ptr = (uint8_t*)data;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;length; i++) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, ptr[i]);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">/*! Send zero terminated string using blocking/polling method (no IRQ nor DMA) */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="usart_8c.html#ad39a26176dc8964ea1999629b1fd71f3">   82</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#ad39a26176dc8964ea1999629b1fd71f3">usart_blocking_strz</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keyword">volatile</span> <span class="keywordtype">char</span>* ptr) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">while</span>(*ptr) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, *ptr++);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">/*! Send formatted integer using blocking/polling method (no IRQ nor DMA) */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="usart_8c.html#a3af22e4da85d1cc56e9635c288cfee98">   90</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#a3af22e4da85d1cc56e9635c288cfee98">usart_blocking_int</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keywordtype">int</span> data) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> div = 1000000000;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> num;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> in_range=0;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span> (data &lt; 0) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        data = -data;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=10; i; i--) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        num = (data / div) % 10;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> (num &amp;&amp; !in_range) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            in_range=1;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        div/=10;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">/*! Send a formatted int with zeropadding using blocking/polling method (no IRQ nor DMA)</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">    @param usart Pointer to USART device </span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">    @param data Integer value to format and send</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">    @param dp Number of digits to use */</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">  111</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keywordtype">int</span> data, <span class="keywordtype">int</span> dp) {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">int</span> div = pow(10, dp-1);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">int</span> num;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span> (data &lt; 0) {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        data = -data;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=dp; i; i--) {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        num = (data / div) % 10;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;0&#39;</span> + num);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        div/=10;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">/*! Send a formatted float using blocking/polling method (no IRQ nor DMA) </span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">    @param usart Pointer to USART device </span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">    @param data Floating point value to format and send */</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="usart_8c.html#af3f4d75d88bd6796e15f0e756525ac2e">  128</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#af3f4d75d88bd6796e15f0e756525ac2e">usart_blocking_float</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keywordtype">float</span> data) {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="usart_8c.html#a3af22e4da85d1cc56e9635c288cfee98">usart_blocking_int</a>(usart, (<span class="keywordtype">int</span>)data);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;.&#39;</span>);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(usart, (<span class="keywordtype">int</span>)(fabs(data)*1000) % 1000, 3);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (in_range || i==1) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;0&#39;</span> + num);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        div/=10;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/*! Send a formatted int with zeropadding using blocking/polling method (no IRQ nor DMA)</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">    @param usart Pointer to USART device </span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">    @param data Integer value to format and send</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">    @param dp Number of digits to use */</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">  114</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keywordtype">int</span> data, <span class="keywordtype">int</span> dp) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> div = pow(10, dp-1);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">int</span> num;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> (data &lt; 0) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        data = -data;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=dp; i; i--) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        num = (data / div) % 10;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;0&#39;</span> + num);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        div/=10;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">/*! Send a formatted float using blocking/polling method (no IRQ nor DMA) </span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment">    @param usart Pointer to USART device </span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment">    @param data Floating point value to format and send */</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="usart_8c.html#af3f4d75d88bd6796e15f0e756525ac2e">  131</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#af3f4d75d88bd6796e15f0e756525ac2e">usart_blocking_float</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keywordtype">float</span> data) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="usart_8c.html#a3af22e4da85d1cc56e9635c288cfee98">usart_blocking_int</a>(usart, (<span class="keywordtype">int</span>)data);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    usart_send_blocking(usart-&gt;configuration-&gt;usart, <span class="charliteral">&#39;.&#39;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(usart, (<span class="keywordtype">int</span>)(fabs(data)*1000) % 1000, 3);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">/*! Send broken down time using blocking/polling (no dma/irq) */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="usart_8c.html#ab8505b37986de5265d35fdaa3569b9af">  140</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="usart_8c.html#ab8505b37986de5265d35fdaa3569b9af">usart_blocking_tm</a>(<span class="keyword">struct</span> <a class="code" href="structusart.html">usart</a>* <a class="code" href="structusart.html">usart</a>, <span class="keyword">struct</span> <a class="code" href="structsw__timer__system__time.html">sw_timer_system_time</a>* <a class="code" href="structtm.html">tm</a>) {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">struct </span>tm res;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="time_8c.html#a356fcdd74b8b159a7de9b87dcb694617">time_tm_from_epoch</a>(&amp;res, tm-&gt;<a class="code" href="structsw__timer__system__time.html#aa9f10bc219cafbf8c61f94fbb4138591">epoch</a>);    </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="usart_8c.html#a3af22e4da85d1cc56e9635c288cfee98">usart_blocking_int</a>(usart, res.<a class="code" href="structtm.html#a33adf78fd6476b2120ce3b9c4a852053">tm_year</a>+1900);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="uart_8h.html#a9b89b39092dbeafe93f42b15700ea1b0">usart_blocking_str</a>(usart, <span class="stringliteral">&quot;-&quot;</span>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(usart, res.<a class="code" href="structtm.html#a112ac36fa2f593777138a417cf031e17">tm_mon</a> + 1, 2);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="uart_8h.html#a9b89b39092dbeafe93f42b15700ea1b0">usart_blocking_str</a>(usart, <span class="stringliteral">&quot;-&quot;</span>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(usart, res.<a class="code" href="structtm.html#ab8d8904bad43b0c8b96e61941c5b5310">tm_mday</a>, 2);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="uart_8h.html#a9b89b39092dbeafe93f42b15700ea1b0">usart_blocking_str</a>(usart, <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(usart, res.<a class="code" href="structtm.html#a3e7ca4e37f1abcaf56b8a916c38eb9fe">tm_hour</a>, 2);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="uart_8h.html#a9b89b39092dbeafe93f42b15700ea1b0">usart_blocking_str</a>(usart, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(usart, res.<a class="code" href="structtm.html#af414eb7c86cc3099595211eee4d4211b">tm_min</a>, 2);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="uart_8h.html#a9b89b39092dbeafe93f42b15700ea1b0">usart_blocking_str</a>(usart, <span class="stringliteral">&quot;:&quot;</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(usart, res.<a class="code" href="structtm.html#a4d098a9a5c03a00b2ee61e10851de81e">tm_sec</a>, 2);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="uart_8h.html#a9b89b39092dbeafe93f42b15700ea1b0">usart_blocking_str</a>(usart, <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a>(usart, tm-&gt;<a class="code" href="structsw__timer__system__time.html#aafb47623ce45c3d1617e54d2025b679a">ms</a>, 3);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a></div><div class="ttdoc">After GPIOs have been initialized we might want to do some stuff before NVIC. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00045">hw.h:45</a></div></div>
 <div class="ttc" id="math_8h_html"><div class="ttname"><a href="math_8h.html">math.h</a></div><div class="ttdoc">Some math utilities. </div></div>
 <div class="ttc" id="uart_8h_html"><div class="ttname"><a href="uart_8h.html">uart.h</a></div><div class="ttdoc">UART HAL Include file. </div></div>
+<div class="ttc" id="structtm_html_af414eb7c86cc3099595211eee4d4211b"><div class="ttname"><a href="structtm.html#af414eb7c86cc3099595211eee4d4211b">tm::tm_min</a></div><div class="ttdeci">int tm_min</div><div class="ttdoc">minutes </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00010">time.h:10</a></div></div>
 <div class="ttc" id="structusart_html"><div class="ttname"><a href="structusart.html">usart</a></div><div class="ttdoc">Usart. </div><div class="ttdef"><b>Definition:</b> <a href="uart_8h_source.html#l00029">uart.h:29</a></div></div>
-<div class="ttc" id="usart_8c_html_abd17fc525b9c36f671bedf0729741976"><div class="ttname"><a href="usart_8c.html#abd17fc525b9c36f671bedf0729741976">usart_configure_gpio</a></div><div class="ttdeci">void usart_configure_gpio(struct usart *usart)</div><div class="ttdoc">Configure USART GPIO default values. </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00021">usart.c:21</a></div></div>
+<div class="ttc" id="structtm_html_ab8d8904bad43b0c8b96e61941c5b5310"><div class="ttname"><a href="structtm.html#ab8d8904bad43b0c8b96e61941c5b5310">tm::tm_mday</a></div><div class="ttdeci">int tm_mday</div><div class="ttdoc">day of the month </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00012">time.h:12</a></div></div>
+<div class="ttc" id="usart_8c_html_abd17fc525b9c36f671bedf0729741976"><div class="ttname"><a href="usart_8c.html#abd17fc525b9c36f671bedf0729741976">usart_configure_gpio</a></div><div class="ttdeci">void usart_configure_gpio(struct usart *usart)</div><div class="ttdoc">Configure USART GPIO default values. </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00024">usart.c:24</a></div></div>
+<div class="ttc" id="structtm_html_a33adf78fd6476b2120ce3b9c4a852053"><div class="ttname"><a href="structtm.html#a33adf78fd6476b2120ce3b9c4a852053">tm::tm_year</a></div><div class="ttdeci">int tm_year</div><div class="ttdoc">year </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00014">time.h:14</a></div></div>
 <div class="ttc" id="usart_8c_html_a6c89d4ecfd052df4b706797c6b35ee9a"><div class="ttname"><a href="usart_8c.html#a6c89d4ecfd052df4b706797c6b35ee9a">usart_set_defaults</a></div><div class="ttdeci">void usart_set_defaults(struct usart *usart)</div><div class="ttdoc">Configure USART to default values. </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00009">usart.c:9</a></div></div>
-<div class="ttc" id="usart_8c_html_ab51e225534a49a351524b2b5f26707b5"><div class="ttname"><a href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a></div><div class="ttdeci">void usart_blocking_int_zp(struct usart *usart, int data, int dp)</div><div class="ttdoc">Send a formatted int with zeropadding using blocking/polling method (no IRQ nor DMA) ...</div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00111">usart.c:111</a></div></div>
-<div class="ttc" id="usart_8c_html_a3af22e4da85d1cc56e9635c288cfee98"><div class="ttname"><a href="usart_8c.html#a3af22e4da85d1cc56e9635c288cfee98">usart_blocking_int</a></div><div class="ttdeci">void usart_blocking_int(struct usart *usart, int data)</div><div class="ttdoc">Send formatted integer using blocking/polling method (no IRQ nor DMA) </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00087">usart.c:87</a></div></div>
-<div class="ttc" id="usart_8c_html_a0e3103fc345dfb09aa255989c86805e8"><div class="ttname"><a href="usart_8c.html#a0e3103fc345dfb09aa255989c86805e8">usart_init</a></div><div class="ttdeci">void usart_init(struct usart *usart, enum hw_init_state state)</div><div class="ttdoc">Init usart device. </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00035">usart.c:35</a></div></div>
+<div class="ttc" id="usart_8c_html_ab51e225534a49a351524b2b5f26707b5"><div class="ttname"><a href="usart_8c.html#ab51e225534a49a351524b2b5f26707b5">usart_blocking_int_zp</a></div><div class="ttdeci">void usart_blocking_int_zp(struct usart *usart, int data, int dp)</div><div class="ttdoc">Send a formatted int with zeropadding using blocking/polling method (no IRQ nor DMA) ...</div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00114">usart.c:114</a></div></div>
+<div class="ttc" id="structsw__timer__system__time_html_aafb47623ce45c3d1617e54d2025b679a"><div class="ttname"><a href="structsw__timer__system__time.html#aafb47623ce45c3d1617e54d2025b679a">sw_timer_system_time::ms</a></div><div class="ttdeci">int ms</div><div class="ttdoc">Remaining milliseconds. </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00023">time.h:23</a></div></div>
+<div class="ttc" id="usart_8c_html_ab8505b37986de5265d35fdaa3569b9af"><div class="ttname"><a href="usart_8c.html#ab8505b37986de5265d35fdaa3569b9af">usart_blocking_tm</a></div><div class="ttdeci">void usart_blocking_tm(struct usart *usart, struct sw_timer_system_time *tm)</div><div class="ttdoc">Send broken down time using blocking/polling (no dma/irq) </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00140">usart.c:140</a></div></div>
+<div class="ttc" id="usart_8c_html_a3af22e4da85d1cc56e9635c288cfee98"><div class="ttname"><a href="usart_8c.html#a3af22e4da85d1cc56e9635c288cfee98">usart_blocking_int</a></div><div class="ttdeci">void usart_blocking_int(struct usart *usart, int data)</div><div class="ttdoc">Send formatted integer using blocking/polling method (no IRQ nor DMA) </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00090">usart.c:90</a></div></div>
+<div class="ttc" id="usart_8c_html_a0e3103fc345dfb09aa255989c86805e8"><div class="ttname"><a href="usart_8c.html#a0e3103fc345dfb09aa255989c86805e8">usart_init</a></div><div class="ttdeci">void usart_init(struct usart *usart, enum hw_init_state state)</div><div class="ttdoc">Init usart device. </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00038">usart.c:38</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a></div><div class="ttdoc">This is the first state entered and here hardware drivers may initialize any clocks needed...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00036">hw.h:36</a></div></div>
+<div class="ttc" id="structtm_html_a112ac36fa2f593777138a417cf031e17"><div class="ttname"><a href="structtm.html#a112ac36fa2f593777138a417cf031e17">tm::tm_mon</a></div><div class="ttdeci">int tm_mon</div><div class="ttdoc">month </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00013">time.h:13</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9b"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a></div><div class="ttdeci">hw_init_state</div><div class="ttdoc">This is the state of the hardware abstraction layer. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00033">hw.h:33</a></div></div>
+<div class="ttc" id="uart_8h_html_a9b89b39092dbeafe93f42b15700ea1b0"><div class="ttname"><a href="uart_8h.html#a9b89b39092dbeafe93f42b15700ea1b0">usart_blocking_str</a></div><div class="ttdeci">#define usart_blocking_str(uart, str)</div><div class="ttdoc">Send string literal using blocking/polling (no dma or irq) </div><div class="ttdef"><b>Definition:</b> <a href="uart_8h_source.html#l00011">uart.h:11</a></div></div>
+<div class="ttc" id="structsw__timer__system__time_html"><div class="ttname"><a href="structsw__timer__system__time.html">sw_timer_system_time</a></div><div class="ttdoc">Timestamp. </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00021">time.h:21</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a></div><div class="ttdoc">After NVIC is initialized there might be more stuff todo such as setting up perhipheral settings...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00051">hw.h:51</a></div></div>
-<div class="ttc" id="usart_8c_html_aeeebc4a9b5040f2c423773a4eea7a325"><div class="ttname"><a href="usart_8c.html#aeeebc4a9b5040f2c423773a4eea7a325">usart_blocking_send</a></div><div class="ttdeci">void usart_blocking_send(struct usart *usart, volatile void *data, int length)</div><div class="ttdoc">Send data using blocking/polling method (no IRQ nor DMA) </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00068">usart.c:68</a></div></div>
+<div class="ttc" id="usart_8c_html_aeeebc4a9b5040f2c423773a4eea7a325"><div class="ttname"><a href="usart_8c.html#aeeebc4a9b5040f2c423773a4eea7a325">usart_blocking_send</a></div><div class="ttdeci">void usart_blocking_send(struct usart *usart, volatile void *data, int length)</div><div class="ttdoc">Send data using blocking/polling method (no IRQ nor DMA) </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00071">usart.c:71</a></div></div>
 <div class="ttc" id="hw_8h_html_a40deaf267e014e0489a474b8eb6f7378"><div class="ttname"><a href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a></div><div class="ttdeci">#define DEFAULT(value, default)</div><div class="ttdoc">Sets a value if the value evaluates to false. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00015">hw.h:15</a></div></div>
-<div class="ttc" id="usart_8c_html_ad39a26176dc8964ea1999629b1fd71f3"><div class="ttname"><a href="usart_8c.html#ad39a26176dc8964ea1999629b1fd71f3">usart_blocking_strz</a></div><div class="ttdeci">void usart_blocking_strz(struct usart *usart, volatile char *ptr)</div><div class="ttdoc">Send zero terminated string using blocking/polling method (no IRQ nor DMA) </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00079">usart.c:79</a></div></div>
-<div class="ttc" id="structstate_html"><div class="ttname"><a href="structstate.html">state</a></div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00309">main.c:309</a></div></div>
-<div class="ttc" id="usart_8c_html_af3f4d75d88bd6796e15f0e756525ac2e"><div class="ttname"><a href="usart_8c.html#af3f4d75d88bd6796e15f0e756525ac2e">usart_blocking_float</a></div><div class="ttdeci">void usart_blocking_float(struct usart *usart, float data)</div><div class="ttdoc">Send a formatted float using blocking/polling method (no IRQ nor DMA) </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00128">usart.c:128</a></div></div>
+<div class="ttc" id="structtm_html"><div class="ttname"><a href="structtm.html">tm</a></div><div class="ttdoc">Broken down time. </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00008">time.h:8</a></div></div>
+<div class="ttc" id="usart_8c_html_ad39a26176dc8964ea1999629b1fd71f3"><div class="ttname"><a href="usart_8c.html#ad39a26176dc8964ea1999629b1fd71f3">usart_blocking_strz</a></div><div class="ttdeci">void usart_blocking_strz(struct usart *usart, volatile char *ptr)</div><div class="ttdoc">Send zero terminated string using blocking/polling method (no IRQ nor DMA) </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00082">usart.c:82</a></div></div>
+<div class="ttc" id="structsw__timer__system__time_html_aa9f10bc219cafbf8c61f94fbb4138591"><div class="ttname"><a href="structsw__timer__system__time.html#aa9f10bc219cafbf8c61f94fbb4138591">sw_timer_system_time::epoch</a></div><div class="ttdeci">int epoch</div><div class="ttdoc">Epoch time. </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00022">time.h:22</a></div></div>
+<div class="ttc" id="structtm_html_a4d098a9a5c03a00b2ee61e10851de81e"><div class="ttname"><a href="structtm.html#a4d098a9a5c03a00b2ee61e10851de81e">tm::tm_sec</a></div><div class="ttdeci">int tm_sec</div><div class="ttdoc">seconds </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00009">time.h:9</a></div></div>
+<div class="ttc" id="time_8c_html_a356fcdd74b8b159a7de9b87dcb694617"><div class="ttname"><a href="time_8c.html#a356fcdd74b8b159a7de9b87dcb694617">time_tm_from_epoch</a></div><div class="ttdeci">int time_tm_from_epoch(struct tm *tm, int t)</div><div class="ttdoc">Convert epoch time to struct tm. </div><div class="ttdef"><b>Definition:</b> <a href="time_8c_source.html#l00027">time.c:27</a></div></div>
+<div class="ttc" id="structtm_html_a3e7ca4e37f1abcaf56b8a916c38eb9fe"><div class="ttname"><a href="structtm.html#a3e7ca4e37f1abcaf56b8a916c38eb9fe">tm::tm_hour</a></div><div class="ttdeci">int tm_hour</div><div class="ttdoc">hours </div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00011">time.h:11</a></div></div>
+<div class="ttc" id="usart_8c_html_af3f4d75d88bd6796e15f0e756525ac2e"><div class="ttname"><a href="usart_8c.html#af3f4d75d88bd6796e15f0e756525ac2e">usart_blocking_float</a></div><div class="ttdeci">void usart_blocking_float(struct usart *usart, float data)</div><div class="ttdoc">Send a formatted float using blocking/polling method (no IRQ nor DMA) </div><div class="ttdef"><b>Definition:</b> <a href="usart_8c_source.html#l00131">usart.c:131</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 16:31:08 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

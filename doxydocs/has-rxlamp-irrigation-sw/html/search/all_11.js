@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['where_20the_20hardware_20is_20controlled',['Where the hardware is controlled',['../group__hardware__control.html',1,'']]],
   ['ws2812',['ws2812',['../structws2812.html',1,'']]],
   ['ws2812_2ec',['ws2812.c',['../ws2812_8c.html',1,'']]],
   ['ws2812_2eh',['ws2812.h',['../ws2812_8h.html',1,'']]],

@@ -1,0 +1,70 @@
+\hypertarget{group__state__validate}{}\section{Sensor validation state}
+\label{group__state__validate}\index{Sensor validation state@{Sensor validation state}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__state__validate_gac0d41d4685bd461b3a613f6320405b79}{state\+\_\+validate\+\_\+enter} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em We set up the validation timer and init the maximum and minim temperatured. \end{DoxyCompactList}\item 
+void \hyperlink{group__state__validate_gaec38509b93f8a850919aa7a36e543ed5}{state\+\_\+validate\+\_\+run} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em We have the heart beat L\+E\+D status and we update the minimum and maximum values while we continue to sample sensor data. \end{DoxyCompactList}\item 
+void \hyperlink{group__state__validate_gac480e756742ffd9acd9bd21ac1e8885c}{state\+\_\+validate\+\_\+exit} (struct \hyperlink{structirrigation__controller}{irrigation\+\_\+controller} $\ast$controller)
+\begin{DoxyCompactList}\small\item\em Nothing has to be done when we exit this state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__state__validate_gac0d41d4685bd461b3a613f6320405b79}{}\index{Sensor validation state@{Sensor validation state}!state\+\_\+validate\+\_\+enter@{state\+\_\+validate\+\_\+enter}}
+\index{state\+\_\+validate\+\_\+enter@{state\+\_\+validate\+\_\+enter}!Sensor validation state@{Sensor validation state}}
+\subsubsection[{state\+\_\+validate\+\_\+enter}]{\setlength{\rightskip}{0pt plus 5cm}void state\+\_\+validate\+\_\+enter (
+\begin{DoxyParamCaption}
+\item[{struct {\bf irrigation\+\_\+controller} $\ast$}]{controller}
+\end{DoxyParamCaption}
+)}\label{group__state__validate_gac0d41d4685bd461b3a613f6320405b79}
+
+
+We set up the validation timer and init the maximum and minim temperatured. 
+
+We also check that we have current sensor data availble 
+
+Definition at line 10 of file state\+\_\+validate.\+c.
+
+
+
+References irrigation\+\_\+status\+\_\+\+R\+E\+B\+O\+O\+T, irrigation\+\_\+controller\+\_\+status\+::iteration\+\_\+time, irrigation\+\_\+controller\+\_\+status\+::max\+\_\+temperature, irrigation\+\_\+controller\+\_\+status\+::min\+\_\+temperature, irrigation\+\_\+controller\+::pending\+\_\+state, irrigation\+\_\+events\+::report\+\_\+sensor\+\_\+malfunction, irrigation\+\_\+controller\+\_\+status\+::soil\+\_\+temperature, irrigation\+\_\+controller\+::status, irrigation\+\_\+temperature\+\_\+sample\+::temperature, time\+\_\+delta, irrigation\+\_\+temperature\+\_\+sample\+::timestamp, and irrigation\+\_\+controller\+\_\+status\+::validation\+\_\+timer.
+
+\hypertarget{group__state__validate_gac480e756742ffd9acd9bd21ac1e8885c}{}\index{Sensor validation state@{Sensor validation state}!state\+\_\+validate\+\_\+exit@{state\+\_\+validate\+\_\+exit}}
+\index{state\+\_\+validate\+\_\+exit@{state\+\_\+validate\+\_\+exit}!Sensor validation state@{Sensor validation state}}
+\subsubsection[{state\+\_\+validate\+\_\+exit}]{\setlength{\rightskip}{0pt plus 5cm}void state\+\_\+validate\+\_\+exit (
+\begin{DoxyParamCaption}
+\item[{struct {\bf irrigation\+\_\+controller} $\ast$}]{controller}
+\end{DoxyParamCaption}
+)}\label{group__state__validate_gac480e756742ffd9acd9bd21ac1e8885c}
+
+
+Nothing has to be done when we exit this state. 
+
+
+
+Definition at line 66 of file state\+\_\+validate.\+c.
+
+\hypertarget{group__state__validate_gaec38509b93f8a850919aa7a36e543ed5}{}\index{Sensor validation state@{Sensor validation state}!state\+\_\+validate\+\_\+run@{state\+\_\+validate\+\_\+run}}
+\index{state\+\_\+validate\+\_\+run@{state\+\_\+validate\+\_\+run}!Sensor validation state@{Sensor validation state}}
+\subsubsection[{state\+\_\+validate\+\_\+run}]{\setlength{\rightskip}{0pt plus 5cm}void state\+\_\+validate\+\_\+run (
+\begin{DoxyParamCaption}
+\item[{struct {\bf irrigation\+\_\+controller} $\ast$}]{controller}
+\end{DoxyParamCaption}
+)}\label{group__state__validate_gaec38509b93f8a850919aa7a36e543ed5}
+
+
+We have the heart beat L\+E\+D status and we update the minimum and maximum values while we continue to sample sensor data. 
+
+When timeout is reached we verify that the sensor data span is reasonable 
+
+Definition at line 26 of file state\+\_\+validate.\+c.
+
+
+
+References irrigation\+\_\+controller\+\_\+status\+::dt, irrigation\+\_\+status\+\_\+\+M\+E\+A\+S\+U\+R\+E, irrigation\+\_\+status\+\_\+\+R\+E\+B\+O\+O\+T, irrigation\+\_\+controller\+\_\+status\+::iteration\+\_\+time, math\+\_\+ramp, M\+A\+X, irrigation\+\_\+controller\+\_\+status\+::max\+\_\+temperature, M\+I\+N, irrigation\+\_\+controller\+\_\+status\+::min\+\_\+temperature, irrigation\+\_\+controller\+::pending\+\_\+state, irrigation\+\_\+events\+::report\+\_\+sensor\+\_\+fluctuations, irrigation\+\_\+events\+::report\+\_\+sensor\+\_\+malfunction, irrigation\+\_\+events\+::report\+\_\+validation\+\_\+temperatures, irrigation\+\_\+controller\+\_\+status\+::soil\+\_\+temperature, irrigation\+\_\+controller\+::status, irrigation\+\_\+temperature\+\_\+sample\+::temperature, time\+\_\+delta, irrigation\+\_\+temperature\+\_\+sample\+::timestamp, and irrigation\+\_\+controller\+\_\+status\+::validation\+\_\+timer.
+

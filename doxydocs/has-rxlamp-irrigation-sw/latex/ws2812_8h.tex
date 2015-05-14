@@ -1,0 +1,87 @@
+\hypertarget{ws2812_8h}{}\section{src/ws2812.h File Reference}
+\label{ws2812_8h}\index{src/ws2812.\+h@{src/ws2812.\+h}}
+
+
+W\+S2812 H\+A\+L include file.  
+
+
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dma.\+h\char`\"{}}\\*
+Include dependency graph for ws2812.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ws2812_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{ws2812_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structws2812__config}{ws2812\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Configuration for W\+S2812. \end{DoxyCompactList}\item 
+struct \hyperlink{structws2812}{ws2812}
+\begin{DoxyCompactList}\small\item\em W\+S2812 Instance. \end{DoxyCompactList}\item 
+struct \hyperlink{structws2812__rgb}{ws2812\+\_\+rgb}
+\begin{DoxyCompactList}\small\item\em 24 bit color \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ws2812_8h_adbff51511c0bd9a408d6065a5c2b9851}{ws2812\+\_\+init} (struct \hyperlink{structws2812}{ws2812} $\ast$led, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} state)
+\begin{DoxyCompactList}\small\item\em Initiate \hyperlink{structws2812}{ws2812} bus to state. \end{DoxyCompactList}\item 
+\hypertarget{ws2812_8h_a4dbb8822e64ed089eb01c8145817e3ed}{}void {\bfseries ws2812\+\_\+update} (struct \hyperlink{structws2812}{ws2812} $\ast$led)\label{ws2812_8h_a4dbb8822e64ed089eb01c8145817e3ed}
+
+\item 
+\hypertarget{ws2812_8h_a563ef0da6498fc194067eed2611705a9}{}void {\bfseries ws2812\+\_\+set\+\_\+led} (struct \hyperlink{structws2812}{ws2812} $\ast$led, int index, int r, int g, int b)\label{ws2812_8h_a563ef0da6498fc194067eed2611705a9}
+
+\item 
+\hypertarget{ws2812_8h_a82f2823a0771f8d6e1671ce1078aa5db}{}void {\bfseries ws2812\+\_\+update\+\_\+blocking} (struct \hyperlink{structws2812}{ws2812} $\ast$led)\label{ws2812_8h_a82f2823a0771f8d6e1671ce1078aa5db}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+W\+S2812 H\+A\+L include file. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ws2812_8h_adbff51511c0bd9a408d6065a5c2b9851}{}\index{ws2812.\+h@{ws2812.\+h}!ws2812\+\_\+init@{ws2812\+\_\+init}}
+\index{ws2812\+\_\+init@{ws2812\+\_\+init}!ws2812.\+h@{ws2812.\+h}}
+\subsubsection[{ws2812\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{ws2812_8h_adbff51511c0bd9a408d6065a5c2b9851}
+
+
+Initiate \hyperlink{structws2812}{ws2812} bus to state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & Bus to init \\
+\hline
+{\em state} & New H\+W state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file ws2812.\+c.
+
+
+
+References ws2812\+\_\+config\+::ccr, ws2812\+::configuration, H\+W\+\_\+\+I\+N\+I\+T\+\_\+\+G\+P\+I\+O, H\+W\+\_\+\+I\+N\+I\+T\+\_\+\+P\+O\+S\+T\+\_\+\+I\+N\+I\+T, H\+W\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+E\+\_\+\+N\+V\+I\+C, ws2812\+\_\+config\+::pin, timer\+\_\+ccr\+\_\+init(), ws2812\+\_\+configure\+\_\+gpio(), ws2812\+\_\+configure\+\_\+timer(), and ws2812\+\_\+set\+\_\+defaults().
+
+
+
+Referenced by hw\+\_\+init\+\_\+state().
+

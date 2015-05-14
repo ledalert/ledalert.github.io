@@ -96,121 +96,143 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> </span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="timer_8h.html">timer.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*! Upgrade timer_ccr state and init hardware  */</span><span class="comment"></span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*! @todo Add more CCR-channels */</span><span class="comment"></span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*! @todo Only upgrade state if needed */</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="timer_8h.html#a995539ac62815c22bad2313f304865b5">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="timer_8c.html#a995539ac62815c22bad2313f304865b5">timer_ccr_init</a>(<span class="keyword">struct</span> <a class="code" href="structtimer__ccr.html">timer_ccr</a>* ccr, <span class="keyword">enum</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> <a class="code" href="structstate.html">state</a>) {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="timer_8c.html#a1e33eb6cb5bd4bd99416edbb25790760">timer_init</a>(ccr-&gt;configuration-&gt;timer, state);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    ccr-&gt;state = state;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    uint32_t CCER_SET = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    uint32_t CCER_CLEAR = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    uint32_t CCMR2_SET = 0;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*! Upgrade timer_ccr state and init hardware  */</span><span class="comment"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*! @todo Add more CCR-channels */</span><span class="comment"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*! @todo Only upgrade state if needed */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="timer_8h.html#a995539ac62815c22bad2313f304865b5">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="timer_8c.html#a995539ac62815c22bad2313f304865b5">timer_ccr_init</a>(<span class="keyword">struct</span> <a class="code" href="structtimer__ccr.html">timer_ccr</a>* ccr, <span class="keyword">enum</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> state) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="timer_8c.html#a1e33eb6cb5bd4bd99416edbb25790760">timer_init</a>(ccr-&gt;configuration-&gt;timer, state);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    dma_channel_init(ccr-&gt;configuration-&gt;dma, state);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ccr-&gt;state = state;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    uint32_t CCER_SET = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    uint32_t CCER_CLEAR = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    uint32_t CCMR2_SET = 0;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="comment">/* Polarity and state */</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">switch</span> (ccr-&gt;configuration-&gt;channel) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">case</span> TIM_OC3N:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    CCER_SET = TIM_CCER_CC3NE;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    CCER_CLEAR = TIM_CCER_CC3NP;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    CCMR2_SET = TIM_CCMR2_OC3M_PWM1 | TIM_CCMR2_OC3PE;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    TIM_CCR3(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer) = ccr-&gt;configuration-&gt;start_ccr;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">case</span> TIM_OC3:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    CCER_SET = TIM_CCER_CC3E;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    CCMR2_SET = TIM_CCMR2_OC3M_PWM1 | TIM_CCMR2_OC3PE;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    TIM_CCR3(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer) = ccr-&gt;configuration-&gt;start_ccr;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="comment">/* Polarity and state */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">switch</span> (ccr-&gt;configuration-&gt;channel) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keywordflow">case</span> TIM_OC3N:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    CCER_SET = TIM_CCER_CC3NE;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    CCER_CLEAR = TIM_CCER_CC3NP;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    CCMR2_SET = TIM_CCMR2_OC3M_PWM1 | TIM_CCMR2_OC3PE;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    ccr-&gt;configuration-&gt;reg = &amp;TIM_CCR3(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(ccr-&gt;configuration-&gt;dma-&gt;perhipheral, ccr-&gt;configuration-&gt;reg);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(ccr-&gt;configuration-&gt;dma-&gt;enable_reg, &amp;TIM_DIER(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(ccr-&gt;configuration-&gt;dma-&gt;enable_flag, TIM_DIER_CC3DE);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            TIM_CCER(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer) |= CCER_SET;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            TIM_CCER(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer) &amp;= ~CCER_CLEAR;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            TIM_CCMR2(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer) |= CCMR2_SET;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">case</span> TIM_OC3:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    CCER_SET = TIM_CCER_CC3E;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    CCMR2_SET = TIM_CCMR2_OC3M_PWM1 | TIM_CCMR2_OC3PE;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/*! Set CCR value of timer_ccr */</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="timer_8h.html#a734417848b07d1d04bca5e224f13e319">   61</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="timer_8c.html#a734417848b07d1d04bca5e224f13e319">timer_ccr_set</a>(<span class="keyword">struct</span> <a class="code" href="structtimer__ccr.html">timer_ccr</a>* ccr, uint32_t value) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    *ccr-&gt;configuration-&gt;reg = value;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">/*! Upgrade timer_init state and init hardware  */</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="timer_8h.html#a1e33eb6cb5bd4bd99416edbb25790760">   66</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="timer_8c.html#a1e33eb6cb5bd4bd99416edbb25790760">timer_init</a>(<span class="keyword">struct</span> <a class="code" href="structtimer.html">timer</a>* <a class="code" href="structtimer.html">timer</a>, <span class="keyword">enum</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> <a class="code" href="structstate.html">state</a>) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    timer-&gt;state = state;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">switch</span> (state) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            rcc_periph_clock_enable(timer-&gt;configuration-&gt;rcc); </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">if</span> (timer-&gt;configuration-&gt;dma_rcc) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                rcc_periph_clock_enable(timer-&gt;configuration-&gt;dma_rcc); </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    ccr-&gt;configuration-&gt;reg = &amp;TIM_CCR3(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(ccr-&gt;configuration-&gt;dma-&gt;perhipheral, ccr-&gt;configuration-&gt;reg);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(ccr-&gt;configuration-&gt;dma-&gt;enable_reg, &amp;TIM_DIER(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <a class="code" href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a>(ccr-&gt;configuration-&gt;dma-&gt;enable_flag, TIM_DIER_CC3DE);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">//&amp;TIM1_CCR3, &amp;TIM1_DIER, TIM_DIER_CC3DE</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            TIM_CCER(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer) |= CCER_SET;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            TIM_CCER(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer) &amp;= ~CCER_CLEAR;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            TIM_CCMR2(ccr-&gt;configuration-&gt;timer-&gt;configuration-&gt;timer) |= CCMR2_SET;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            TIM_CR1(timer-&gt;configuration-&gt;timer) = TIM_CR1_CKD_CK_INT | TIM_CR1_CMS_EDGE;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="comment">/* Period */</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            TIM_ARR(timer-&gt;configuration-&gt;timer) = timer-&gt;configuration-&gt;auto_reload;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            timer-&gt;reload = timer-&gt;configuration-&gt;auto_reload;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="comment">/* Prescaler */</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            TIM_PSC(timer-&gt;configuration-&gt;timer) = 0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            TIM_EGR(timer-&gt;configuration-&gt;timer) = TIM_EGR_UG;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">/*! Set CCR value of timer_ccr */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="timer_8h.html#a734417848b07d1d04bca5e224f13e319">   79</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="timer_8c.html#a734417848b07d1d04bca5e224f13e319">timer_ccr_set</a>(<span class="keyword">struct</span> <a class="code" href="structtimer__ccr.html">timer_ccr</a>* ccr, uint32_t value) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    *ccr-&gt;configuration-&gt;reg = value;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/*! Upgrade timer_init state and init hardware  */</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="timer_8h.html#a1e33eb6cb5bd4bd99416edbb25790760">   84</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="timer_8c.html#a1e33eb6cb5bd4bd99416edbb25790760">timer_init</a>(<span class="keyword">struct</span> <a class="code" href="structtimer.html">timer</a>* <a class="code" href="structtimer.html">timer</a>, <span class="keyword">enum</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> state) {</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (timer-&gt;configuration-&gt;timer == TIM1) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                TIM_BDTR(timer-&gt;configuration-&gt;timer) |= TIM_BDTR_MOE; <span class="comment">/* Advanced timer have master output enable */</span> </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="comment">/* ARR reload enable */</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            TIM_CR1(timer-&gt;configuration-&gt;timer) |= TIM_CR1_ARPE;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    timer-&gt;state = state;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">switch</span> (state) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            rcc_periph_clock_enable(timer-&gt;configuration-&gt;rcc); </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a>:</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">/* Counter enable */</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            TIM_CR1(timer-&gt;configuration-&gt;timer) |= TIM_CR1_CEN;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="comment">// if (timer-&gt;configuration-&gt;dma_rcc) {</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="comment">//  rcc_periph_clock_enable(timer-&gt;configuration-&gt;dma_rcc); </span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="comment">// }</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            TIM_CR1(timer-&gt;configuration-&gt;timer) = TIM_CR1_CKD_CK_INT | TIM_CR1_CMS_EDGE;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">/* Period */</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            TIM_ARR(timer-&gt;configuration-&gt;timer) = timer-&gt;auto_reload;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">// timer-&gt;reload = timer-&gt;configuration-&gt;auto_reload;</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="comment">/* Prescaler */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            TIM_PSC(timer-&gt;configuration-&gt;timer) = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            TIM_EGR(timer-&gt;configuration-&gt;timer) = TIM_EGR_UG;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">if</span> (timer-&gt;configuration-&gt;timer == TIM1) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                TIM_BDTR(timer-&gt;configuration-&gt;timer) |= TIM_BDTR_MOE; <span class="comment">/* Advanced timer have master output enable */</span> </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">/* ARR reload enable */</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            TIM_CR1(timer-&gt;configuration-&gt;timer) |= TIM_CR1_ARPE;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="comment">/* Counter enable */</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            TIM_CR1(timer-&gt;configuration-&gt;timer) |= TIM_CR1_CEN;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a></div><div class="ttdoc">After GPIOs have been initialized we might want to do some stuff before NVIC. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00045">hw.h:45</a></div></div>
-<div class="ttc" id="timer_8c_html_a734417848b07d1d04bca5e224f13e319"><div class="ttname"><a href="timer_8c.html#a734417848b07d1d04bca5e224f13e319">timer_ccr_set</a></div><div class="ttdeci">void timer_ccr_set(struct timer_ccr *ccr, uint32_t value)</div><div class="ttdoc">Set CCR value of timer_ccr. </div><div class="ttdef"><b>Definition:</b> <a href="timer_8c_source.html#l00061">timer.c:61</a></div></div>
-<div class="ttc" id="structtimer_html"><div class="ttname"><a href="structtimer.html">timer</a></div><div class="ttdef"><b>Definition:</b> <a href="timer_8h_source.html#l00033">timer.h:33</a></div></div>
+<div class="ttc" id="timer_8c_html_a734417848b07d1d04bca5e224f13e319"><div class="ttname"><a href="timer_8c.html#a734417848b07d1d04bca5e224f13e319">timer_ccr_set</a></div><div class="ttdeci">void timer_ccr_set(struct timer_ccr *ccr, uint32_t value)</div><div class="ttdoc">Set CCR value of timer_ccr. </div><div class="ttdef"><b>Definition:</b> <a href="timer_8c_source.html#l00079">timer.c:79</a></div></div>
+<div class="ttc" id="structtimer_html"><div class="ttname"><a href="structtimer.html">timer</a></div><div class="ttdef"><b>Definition:</b> <a href="timer_8h_source.html#l00034">timer.h:34</a></div></div>
 <div class="ttc" id="timer_8h_html"><div class="ttname"><a href="timer_8h.html">timer.h</a></div><div class="ttdoc">Timer HAL include file. </div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a></div><div class="ttdoc">This is the first state entered and here hardware drivers may initialize any clocks needed...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00036">hw.h:36</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9b"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a></div><div class="ttdeci">hw_init_state</div><div class="ttdoc">This is the state of the hardware abstraction layer. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00033">hw.h:33</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a></div><div class="ttdoc">After NVIC is initialized there might be more stuff todo such as setting up perhipheral settings...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00051">hw.h:51</a></div></div>
-<div class="ttc" id="structtimer__ccr_html"><div class="ttname"><a href="structtimer__ccr.html">timer_ccr</a></div><div class="ttdef"><b>Definition:</b> <a href="timer_8h_source.html#l00012">timer.h:12</a></div></div>
-<div class="ttc" id="structstate_html"><div class="ttname"><a href="structstate.html">state</a></div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00309">main.c:309</a></div></div>
-<div class="ttc" id="timer_8c_html_a995539ac62815c22bad2313f304865b5"><div class="ttname"><a href="timer_8c.html#a995539ac62815c22bad2313f304865b5">timer_ccr_init</a></div><div class="ttdeci">void timer_ccr_init(struct timer_ccr *ccr, enum hw_init_state state)</div><div class="ttdoc">Upgrade timer_ccr state and init hardware. </div><div class="ttdef"><b>Definition:</b> <a href="timer_8c_source.html#l00010">timer.c:10</a></div></div>
-<div class="ttc" id="timer_8c_html_a1e33eb6cb5bd4bd99416edbb25790760"><div class="ttname"><a href="timer_8c.html#a1e33eb6cb5bd4bd99416edbb25790760">timer_init</a></div><div class="ttdeci">void timer_init(struct timer *timer, enum hw_init_state state)</div><div class="ttdoc">Upgrade timer_init state and init hardware. </div><div class="ttdef"><b>Definition:</b> <a href="timer_8c_source.html#l00066">timer.c:66</a></div></div>
+<div class="ttc" id="hw_8h_html_a40deaf267e014e0489a474b8eb6f7378"><div class="ttname"><a href="hw_8h.html#a40deaf267e014e0489a474b8eb6f7378">DEFAULT</a></div><div class="ttdeci">#define DEFAULT(value, default)</div><div class="ttdoc">Sets a value if the value evaluates to false. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00015">hw.h:15</a></div></div>
+<div class="ttc" id="structtimer__ccr_html"><div class="ttname"><a href="structtimer__ccr.html">timer_ccr</a></div><div class="ttdef"><b>Definition:</b> <a href="timer_8h_source.html#l00022">timer.h:22</a></div></div>
+<div class="ttc" id="timer_8c_html_a995539ac62815c22bad2313f304865b5"><div class="ttname"><a href="timer_8c.html#a995539ac62815c22bad2313f304865b5">timer_ccr_init</a></div><div class="ttdeci">void timer_ccr_init(struct timer_ccr *ccr, enum hw_init_state state)</div><div class="ttdoc">Upgrade timer_ccr state and init hardware. </div><div class="ttdef"><b>Definition:</b> <a href="timer_8c_source.html#l00012">timer.c:12</a></div></div>
+<div class="ttc" id="timer_8c_html_a1e33eb6cb5bd4bd99416edbb25790760"><div class="ttname"><a href="timer_8c.html#a1e33eb6cb5bd4bd99416edbb25790760">timer_init</a></div><div class="ttdeci">void timer_init(struct timer *timer, enum hw_init_state state)</div><div class="ttdoc">Upgrade timer_init state and init hardware. </div><div class="ttdef"><b>Definition:</b> <a href="timer_8c_source.html#l00084">timer.c:84</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 16:31:08 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

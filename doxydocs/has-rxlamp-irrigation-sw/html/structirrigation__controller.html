@@ -110,10 +110,10 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a68a854df15c9234d24f2ad36b990bfa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status and measurements.  <a href="#a68a854df15c9234d24f2ad36b990bfa8">More...</a><br /></td></tr>
 <tr class="separator:a68a854df15c9234d24f2ad36b990bfa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80bec16de2d6f98564ed1487dee041c5"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="irrigation_8h.html#ac40bd72ec6942e213e454ebcacc92dc7">irrigation_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structirrigation__controller.html#a80bec16de2d6f98564ed1487dee041c5">current_state</a></td></tr>
-<tr class="memdesc:a80bec16de2d6f98564ed1487dee041c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state in the <a class="el" href="group__state__machine.html">The main state machine</a>.  <a href="#a80bec16de2d6f98564ed1487dee041c5">More...</a><br /></td></tr>
+<tr class="memdesc:a80bec16de2d6f98564ed1487dee041c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current state in the state_machine.  <a href="#a80bec16de2d6f98564ed1487dee041c5">More...</a><br /></td></tr>
 <tr class="separator:a80bec16de2d6f98564ed1487dee041c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e1c5689983d2b8aae434c2d5442c935"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="irrigation_8h.html#ac40bd72ec6942e213e454ebcacc92dc7">irrigation_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structirrigation__controller.html#a7e1c5689983d2b8aae434c2d5442c935">pending_state</a></td></tr>
-<tr class="memdesc:a7e1c5689983d2b8aae434c2d5442c935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pending state in the <a class="el" href="group__state__machine.html">The main state machine</a>.  <a href="#a7e1c5689983d2b8aae434c2d5442c935">More...</a><br /></td></tr>
+<tr class="memdesc:a7e1c5689983d2b8aae434c2d5442c935"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pending state in the state_machine.  <a href="#a7e1c5689983d2b8aae434c2d5442c935">More...</a><br /></td></tr>
 <tr class="separator:a7e1c5689983d2b8aae434c2d5442c935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ae62413005c2121bee0ac25a0119cbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ae62413005c2121bee0ac25a0119cbc"></a>
 struct <a class="el" href="structirrigation__events.html">irrigation_events</a>&#160;</td><td class="memItemRight" valign="bottom"><b>events</b></td></tr>
@@ -128,7 +128,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pump</b></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Holds everything related to the irrigation controller. </p>
 
-<p>Definition at line <a class="el" href="irrigation_8h_source.html#l00081">81</a> of file <a class="el" href="irrigation_8h_source.html">irrigation.h</a>.</p>
+<p>Definition at line <a class="el" href="irrigation_8h_source.html#l00083">83</a> of file <a class="el" href="irrigation_8h_source.html">irrigation.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a80bec16de2d6f98564ed1487dee041c5"></a>
 <div class="memitem">
@@ -140,9 +140,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pump</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Current state in the <a class="el" href="group__state__machine.html">The main state machine</a>. </p>
+<p>Current state in the state_machine. </p>
 
-<p>Definition at line <a class="el" href="irrigation_8h_source.html#l00083">83</a> of file <a class="el" href="irrigation_8h_source.html">irrigation.h</a>.</p>
+<p>Definition at line <a class="el" href="irrigation_8h_source.html#l00085">85</a> of file <a class="el" href="irrigation_8h_source.html">irrigation.h</a>.</p>
 
 </div>
 </div>
@@ -156,9 +156,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pump</b></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pending state in the <a class="el" href="group__state__machine.html">The main state machine</a>. </p>
+<p>Pending state in the state_machine. </p>
 
-<p>Definition at line <a class="el" href="irrigation_8h_source.html#l00084">84</a> of file <a class="el" href="irrigation_8h_source.html">irrigation.h</a>.</p>
+<p>Definition at line <a class="el" href="irrigation_8h_source.html#l00086">86</a> of file <a class="el" href="irrigation_8h_source.html">irrigation.h</a>.</p>
 
 <p>Referenced by <a class="el" href="state__init_8c_source.html#l00014">state_init_run()</a>, <a class="el" href="state__measure_8c_source.html#l00012">state_measure_enter()</a>, <a class="el" href="state__validate_8c_source.html#l00010">state_validate_enter()</a>, and <a class="el" href="state__validate_8c_source.html#l00026">state_validate_run()</a>.</p>
 
@@ -176,9 +176,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pump</b></td></tr>
 
 <p>Status and measurements. </p>
 
-<p>Definition at line <a class="el" href="irrigation_8h_source.html#l00082">82</a> of file <a class="el" href="irrigation_8h_source.html">irrigation.h</a>.</p>
+<p>Definition at line <a class="el" href="irrigation_8h_source.html#l00084">84</a> of file <a class="el" href="irrigation_8h_source.html">irrigation.h</a>.</p>
 
-<p>Referenced by <a class="el" href="main_8c_source.html#l00339">report_current_temperature()</a>, <a class="el" href="main_8c_source.html#l00379">report_measurement_data()</a>, <a class="el" href="main_8c_source.html#l00371">report_msg_note()</a>, <a class="el" href="main_8c_source.html#l00365">report_sensor_fluctuations()</a>, <a class="el" href="main_8c_source.html#l00359">report_sensor_malfunction()</a>, <a class="el" href="main_8c_source.html#l00347">report_validation_temperatures()</a>, <a class="el" href="state__init_8c_source.html#l00008">state_init_enter()</a>, <a class="el" href="state__init_8c_source.html#l00014">state_init_run()</a>, <a class="el" href="state__measure_8c_source.html#l00012">state_measure_enter()</a>, <a class="el" href="state__validate_8c_source.html#l00010">state_validate_enter()</a>, and <a class="el" href="state__validate_8c_source.html#l00026">state_validate_run()</a>.</p>
+<p>Referenced by <a class="el" href="state__init_8c_source.html#l00008">state_init_enter()</a>, <a class="el" href="state__init_8c_source.html#l00014">state_init_run()</a>, <a class="el" href="state__measure_8c_source.html#l00012">state_measure_enter()</a>, <a class="el" href="state__validate_8c_source.html#l00010">state_validate_enter()</a>, and <a class="el" href="state__validate_8c_source.html#l00026">state_validate_run()</a>.</p>
 
 </div>
 </div>
@@ -188,7 +188,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pump</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 16:31:08 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

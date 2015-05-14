@@ -1,0 +1,114 @@
+\hypertarget{structws2812}{}\section{ws2812 Struct Reference}
+\label{structws2812}\index{ws2812@{ws2812}}
+
+
+W\+S2812 Instance.  
+
+
+
+
+{\ttfamily \#include $<$ws2812.\+h$>$}
+
+
+
+Collaboration diagram for ws2812\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structws2812__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structws2812__config}{ws2812\+\_\+config} $\ast$ \hyperlink{structws2812_a4b69cc515557cd305ebfd3372fc09f81}{configuration}
+\begin{DoxyCompactList}\small\item\em Pointer to configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{structws2812__rgb}{ws2812\+\_\+rgb} $\ast$ \hyperlink{structws2812_a9d672a2d9ea381c7fcd940ba4ebdebe2}{led\+\_\+buffer}
+\begin{DoxyCompactList}\small\item\em Pointer to L\+E\+D array. \end{DoxyCompactList}\item 
+volatile uint8\+\_\+t $\ast$ \hyperlink{structws2812_a864f88183104cfbdd144cb301870e655}{pwm\+\_\+buffer}
+\begin{DoxyCompactList}\small\item\em Pointer to buffer for P\+W\+M data. \end{DoxyCompactList}\item 
+enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} \hyperlink{structws2812_a396b295c928e75adc5688c49c832e631}{state}
+\begin{DoxyCompactList}\small\item\em Device state. \end{DoxyCompactList}\item 
+int \hyperlink{structws2812_aaed6db83ce4a0e8e58b73650f2b4638e}{led\+\_\+count}
+\begin{DoxyCompactList}\small\item\em Number of L\+E\+Ds connected to the bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+W\+S2812 Instance. 
+
+Definition at line 21 of file ws2812.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structws2812_a4b69cc515557cd305ebfd3372fc09f81}{}\index{ws2812@{ws2812}!configuration@{configuration}}
+\index{configuration@{configuration}!ws2812@{ws2812}}
+\subsubsection[{configuration}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ws2812\+\_\+config}$\ast$ ws2812\+::configuration}\label{structws2812_a4b69cc515557cd305ebfd3372fc09f81}
+
+
+Pointer to configuration. 
+
+
+
+Definition at line 22 of file ws2812.\+h.
+
+
+
+Referenced by ws2812\+\_\+configure\+\_\+gpio(), ws2812\+\_\+configure\+\_\+timer(), ws2812\+\_\+init(), and ws2812\+\_\+set\+\_\+defaults().
+
+\hypertarget{structws2812_a9d672a2d9ea381c7fcd940ba4ebdebe2}{}\index{ws2812@{ws2812}!led\+\_\+buffer@{led\+\_\+buffer}}
+\index{led\+\_\+buffer@{led\+\_\+buffer}!ws2812@{ws2812}}
+\subsubsection[{led\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ws2812\+\_\+rgb}$\ast$ ws2812\+::led\+\_\+buffer}\label{structws2812_a9d672a2d9ea381c7fcd940ba4ebdebe2}
+
+
+Pointer to L\+E\+D array. 
+
+\begin{DoxyNote}{Note}
+This should contain as many elements as there are L\+E\+Ds 
+\end{DoxyNote}
+
+
+Definition at line 23 of file ws2812.\+h.
+
+\hypertarget{structws2812_aaed6db83ce4a0e8e58b73650f2b4638e}{}\index{ws2812@{ws2812}!led\+\_\+count@{led\+\_\+count}}
+\index{led\+\_\+count@{led\+\_\+count}!ws2812@{ws2812}}
+\subsubsection[{led\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}int ws2812\+::led\+\_\+count}\label{structws2812_aaed6db83ce4a0e8e58b73650f2b4638e}
+
+
+Number of L\+E\+Ds connected to the bus. 
+
+
+
+Definition at line 26 of file ws2812.\+h.
+
+\hypertarget{structws2812_a864f88183104cfbdd144cb301870e655}{}\index{ws2812@{ws2812}!pwm\+\_\+buffer@{pwm\+\_\+buffer}}
+\index{pwm\+\_\+buffer@{pwm\+\_\+buffer}!ws2812@{ws2812}}
+\subsubsection[{pwm\+\_\+buffer}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint8\+\_\+t$\ast$ ws2812\+::pwm\+\_\+buffer}\label{structws2812_a864f88183104cfbdd144cb301870e655}
+
+
+Pointer to buffer for P\+W\+M data. 
+
+\begin{DoxyNote}{Note}
+This should contain 24 $\ast$ N + 1 elements where N is number of L\+E\+Ds 
+\end{DoxyNote}
+
+
+Definition at line 24 of file ws2812.\+h.
+
+\hypertarget{structws2812_a396b295c928e75adc5688c49c832e631}{}\index{ws2812@{ws2812}!state@{state}}
+\index{state@{state}!ws2812@{ws2812}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf hw\+\_\+init\+\_\+state} ws2812\+::state}\label{structws2812_a396b295c928e75adc5688c49c832e631}
+
+
+Device state. 
+
+
+
+Definition at line 25 of file ws2812.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{ws2812_8h}{ws2812.\+h}\end{DoxyCompactItemize}

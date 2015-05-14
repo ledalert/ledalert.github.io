@@ -1,0 +1,36 @@
+\hypertarget{dma_8c}{}\section{src/dma.c File Reference}
+\label{dma_8c}\index{src/dma.\+c@{src/dma.\+c}}
+
+
+D\+M\+A implementation.  
+
+
+{\ttfamily \#include \char`\"{}dma.\+h\char`\"{}}\\*
+Include dependency graph for dma.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dma_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{dma_8c_a4dd6c4a4e3e59a2a2508cc928c2cde64}{}void {\bfseries dma\+\_\+init} (struct \hyperlink{structdma__config}{dma\+\_\+config} $\ast$dma, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} state)\label{dma_8c_a4dd6c4a4e3e59a2a2508cc928c2cde64}
+
+\item 
+\hypertarget{dma_8c_aa1bc232b23b02bc61fcbcfbd0221f42f}{}void {\bfseries dma\+\_\+channel\+\_\+init} (struct \hyperlink{structdma__channel__config}{dma\+\_\+channel\+\_\+config} $\ast$channel, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} state)\label{dma_8c_aa1bc232b23b02bc61fcbcfbd0221f42f}
+
+\item 
+\hypertarget{dma_8c_aea2e8fc9d6568dc073cf2a3550bf9a3a}{}void {\bfseries dma\+\_\+channel\+\_\+send} (struct \hyperlink{structdma__channel__config}{dma\+\_\+channel\+\_\+config} $\ast$channel, volatile void $\ast$data, int length)\label{dma_8c_aea2e8fc9d6568dc073cf2a3550bf9a3a}
+
+\item 
+\hypertarget{dma_8c_a5b076ef642e2110268c7757c35c2d08d}{}void {\bfseries dma\+\_\+channel\+\_\+send\+\_\+blocking} (struct \hyperlink{structdma__channel__config}{dma\+\_\+channel\+\_\+config} $\ast$channel, volatile void $\ast$data, int length)\label{dma_8c_a5b076ef642e2110268c7757c35c2d08d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\+M\+A implementation. 
+

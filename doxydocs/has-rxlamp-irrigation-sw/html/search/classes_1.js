@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['filter_5frms',['filter_rms',['../structfilter__rms.html',1,'']]],
-  ['filter_5fsample_5frange',['filter_sample_range',['../structfilter__sample__range.html',1,'']]]
+  ['dma_5fchannel_5fconfig',['dma_channel_config',['../structdma__channel__config.html',1,'']]],
+  ['dma_5fconfig',['dma_config',['../structdma__config.html',1,'']]]
 ];

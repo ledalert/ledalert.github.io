@@ -5,6 +5,8 @@
 <area shape="rect" id="node5" href="$structgpio__port__config.html" title="gpio_port_config" alt="" coords="5,5,132,32"/>
 <area shape="rect" id="node6" href="$structtimer__ccr.html" title="timer_ccr" alt="" coords="161,273,243,300"/>
 <area shape="rect" id="node7" href="$structtimer__ccr__config.html" title="timer_ccr_config" alt="" coords="153,184,280,211"/>
-<area shape="rect" id="node8" href="$structtimer.html" title="timer" alt="" coords="189,95,245,121"/>
-<area shape="rect" id="node9" href="$structtimer__config.html" title="timer_config" alt="" coords="166,5,267,32"/>
+<area shape="rect" id="node8" href="$structdma__channel__config.html" title="dma_channel_config" alt="" coords="136,95,289,121"/>
+<area shape="rect" id="node9" href="$structdma__config.html" title="dma_config" alt="" coords="165,5,261,32"/>
+<area shape="rect" id="node10" href="$structtimer.html" title="timer" alt="" coords="313,95,369,121"/>
+<area shape="rect" id="node11" href="$structtimer__config.html" title="timer_config" alt="" coords="290,5,391,32"/>
 </map>

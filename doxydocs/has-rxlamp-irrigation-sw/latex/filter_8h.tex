@@ -1,0 +1,68 @@
+\hypertarget{filter_8h}{}\section{src/filter.h File Reference}
+\label{filter_8h}\index{src/filter.\+h@{src/filter.\+h}}
+
+
+Filter functions for filtering sensor data.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+Include dependency graph for filter.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{filter_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{filter_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfilter__sample__range}{filter\+\_\+sample\+\_\+range}
+\begin{DoxyCompactList}\small\item\em A valid range for samples. \end{DoxyCompactList}\item 
+struct \hyperlink{structfilter__rms}{filter\+\_\+rms}
+\begin{DoxyCompactList}\small\item\em R\+M\+S filter configuration and state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{filter_8h_a8fc1140a49d6a81bfa6fb23dcce45e23}{filter\+\_\+rms\+\_\+process} (volatile struct \hyperlink{structfilter__rms}{filter\+\_\+rms} $\ast$data, int sample)
+\begin{DoxyCompactList}\small\item\em Adds a sample to the filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Filter functions for filtering sensor data. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{filter_8h_a8fc1140a49d6a81bfa6fb23dcce45e23}{}\index{filter.\+h@{filter.\+h}!filter\+\_\+rms\+\_\+process@{filter\+\_\+rms\+\_\+process}}
+\index{filter\+\_\+rms\+\_\+process@{filter\+\_\+rms\+\_\+process}!filter.\+h@{filter.\+h}}
+\subsubsection[{filter\+\_\+rms\+\_\+process}]{\setlength{\rightskip}{0pt plus 5cm}int filter\+\_\+rms\+\_\+process (
+\begin{DoxyParamCaption}
+\item[{volatile struct {\bf filter\+\_\+rms} $\ast$}]{data, }
+\item[{int}]{sample}
+\end{DoxyParamCaption}
+)}\label{filter_8h_a8fc1140a49d6a81bfa6fb23dcce45e23}
+
+
+Adds a sample to the filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Filter state \\
+\hline
+{\em sample} & New sample \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Filtered result if possible, otherwise -\/1 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file filter.\+c.
+

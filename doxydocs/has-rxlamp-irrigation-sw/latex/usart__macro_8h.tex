@@ -1,0 +1,70 @@
+\hypertarget{usart__macro_8h}{}\section{src/usart\+\_\+macro.h File Reference}
+\label{usart__macro_8h}\index{src/usart\+\_\+macro.\+h@{src/usart\+\_\+macro.\+h}}
+
+
+Helper macros for U\+S\+A\+R\+T.  
+
+
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+Include dependency graph for usart\+\_\+macro.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{usart__macro_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{usart__macro_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries U\+S\+A\+R\+T\+\_\+8\+N1}(Name,  Usart,  Rcc,  Baudrate,  Rx\+\_\+pin,  Tx\+\_\+pin)
+\item 
+\hypertarget{usart__macro_8h_a16db80b3de545c6de81da706d1dd2aba}{}\#define {\bfseries \+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}\label{usart__macro_8h_a16db80b3de545c6de81da706d1dd2aba}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper macros for U\+S\+A\+R\+T. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{usart__macro_8h_aecf43678b0c09f7c3c6b8a0751e9e1c9}{}\index{usart\+\_\+macro.\+h@{usart\+\_\+macro.\+h}!U\+S\+A\+R\+T\+\_\+8\+N1@{U\+S\+A\+R\+T\+\_\+8\+N1}}
+\index{U\+S\+A\+R\+T\+\_\+8\+N1@{U\+S\+A\+R\+T\+\_\+8\+N1}!usart\+\_\+macro.\+h@{usart\+\_\+macro.\+h}}
+\subsubsection[{U\+S\+A\+R\+T\+\_\+8\+N1}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+S\+A\+R\+T\+\_\+8\+N1(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Usart, }
+\item[{}]{Rcc, }
+\item[{}]{Baudrate, }
+\item[{}]{Rx\+\_\+pin, }
+\item[{}]{Tx\+\_\+pin}
+\end{DoxyParamCaption}
+)}\label{usart__macro_8h_aecf43678b0c09f7c3c6b8a0751e9e1c9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\(\backslash\)
+    struct \hyperlink{structusart__config}{usart\_config} Name##\_config = \{\(\backslash\)
+        .tx\_pin = Tx\_pin,\(\backslash\)
+        .rx\_pin = Rx\_pin,\(\backslash\)
+        .usart = Usart,\(\backslash\)
+        .rcc = Rcc,\(\backslash\)
+        .baudrate = Baudrate,\(\backslash\)
+    \};\(\backslash\)
+    \(\backslash\)
+    struct \hyperlink{structusart}{usart} Serial = \{\(\backslash\)
+        .configuration = &Name##\_config,\(\backslash\)
+    \};
+\end{DoxyCode}
+
+
+Definition at line 10 of file usart\+\_\+macro.\+h.
+

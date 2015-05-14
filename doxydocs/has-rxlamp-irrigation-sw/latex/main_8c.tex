@@ -1,0 +1,196 @@
+\hypertarget{main_8c}{}\section{src/main.c File Reference}
+\label{main_8c}\index{src/main.\+c@{src/main.\+c}}
+
+
+Irrigation controller main file.  
+
+
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ws2812\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}usart\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dma\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}led\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}timer\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}systick\+\_\+macro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}filter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}irrigation.\+h\char`\"{}}\\*
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries H\+W\+\_\+\+P\+R\+E\+\_\+\+I\+N\+I\+T}(call,  obj)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{main_8c_aa423cbe2bea57704cca655826b2338c1}{}{\bfseries G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (G\+P\+I\+O\+\_\+\+P\+A, G\+P\+I\+O\+A, R\+C\+C\+\_\+\+G\+P\+I\+O\+A)\label{main_8c_aa423cbe2bea57704cca655826b2338c1}
+
+\item 
+\hypertarget{main_8c_abebbe5a8f2ebcfc52329af1a2a452c32}{}{\bfseries G\+P\+I\+O\+\_\+\+P\+O\+R\+T\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (G\+P\+I\+O\+\_\+\+P\+B, G\+P\+I\+O\+B, R\+C\+C\+\_\+\+G\+P\+I\+O\+B)\label{main_8c_abebbe5a8f2ebcfc52329af1a2a452c32}
+
+\item 
+\hypertarget{main_8c_af239d1be6128c2cf9470dddd0736206d}{}{\bfseries G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+N\+O\+C\+O\+N\+F} (Serial\+\_\+tx,\&G\+P\+I\+O\+\_\+\+P\+A, G\+P\+I\+O\+\_\+\+U\+S\+A\+R\+T1\+\_\+\+T\+X)\label{main_8c_af239d1be6128c2cf9470dddd0736206d}
+
+\item 
+\hypertarget{main_8c_a4e07380dc740e8c8320b9ecf6fc1bd6d}{}{\bfseries U\+S\+A\+R\+T\+\_\+8\+N1} (Serial, U\+S\+A\+R\+T1, R\+C\+C\+\_\+\+U\+S\+A\+R\+T1, 921600, 0,\&Serial\+\_\+tx)\label{main_8c_a4e07380dc740e8c8320b9ecf6fc1bd6d}
+
+\item 
+\hypertarget{main_8c_ab6e1a812398e2960f55569f1becf22f8}{}{\bfseries D\+M\+A\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (Dma, D\+M\+A1, R\+C\+C\+\_\+\+D\+M\+A1)\label{main_8c_ab6e1a812398e2960f55569f1becf22f8}
+
+\item 
+\hypertarget{main_8c_a2aeeaba0bf350894e16dca95c3433371}{}{\bfseries G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+\+N\+O\+C\+O\+N\+F} (Status\+L\+E\+D\+\_\+pin,\&G\+P\+I\+O\+\_\+\+P\+B, G\+P\+I\+O15)\label{main_8c_a2aeeaba0bf350894e16dca95c3433371}
+
+\item 
+\hypertarget{main_8c_a62bc4a3e73a3bda284d20e2d99aa9c3e}{}{\bfseries T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F} (Status\+L\+E\+D\+\_\+timer, T\+I\+M1, R\+C\+C\+\_\+\+T\+I\+M1)\label{main_8c_a62bc4a3e73a3bda284d20e2d99aa9c3e}
+
+\item 
+\hypertarget{main_8c_a65e33b62baadd843fc4d336930ffc80a}{}{\bfseries D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+O\+C\+O\+N\+F} (Status\+L\+E\+D\+\_\+dma,\&Dma, D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L6)\label{main_8c_a65e33b62baadd843fc4d336930ffc80a}
+
+\item 
+\hypertarget{main_8c_a4b692da9c42d4defd8814f963d1d2da0}{}{\bfseries T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F} (Status\+L\+E\+D\+\_\+pwm,\&Status\+L\+E\+D\+\_\+timer, T\+I\+M\+\_\+\+O\+C3\+N,\&Status\+L\+E\+D\+\_\+dma)\label{main_8c_a4b692da9c42d4defd8814f963d1d2da0}
+
+\item 
+\hypertarget{main_8c_ac01d8360f2847c41f234b2d6333879cc}{}{\bfseries S\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+U\+T\+O\+\_\+\+C\+O\+N\+F\+I\+G} (Systick, 1000)\label{main_8c_ac01d8360f2847c41f234b2d6333879cc}
+
+\item 
+\hypertarget{main_8c_a1f98adee46907f4bd29dc153ce25dcb7}{}{\bfseries G\+A\+M\+M\+A\+\_\+\+L\+U\+T\+\_\+8\+\_\+8\+\_\+\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E} (L\+E\+D\+\_\+\+Gamma)\label{main_8c_a1f98adee46907f4bd29dc153ce25dcb7}
+
+\item 
+void \hyperlink{main_8c_aabae29cd362c0001a2b417c9206cb330}{hw\+\_\+init\+\_\+state} (enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} state)
+\begin{DoxyCompactList}\small\item\em This function prototype calls all perhipherals with the state as argument. \end{DoxyCompactList}\item 
+\hypertarget{main_8c_afdd94f850b193691f1bfc60c724b542a}{}void {\bfseries sys\+\_\+tick\+\_\+handler} (void)\label{main_8c_afdd94f850b193691f1bfc60c724b542a}
+
+\item 
+\hypertarget{main_8c_a359616b69ef6be09a3cb5680893c25cb}{}void {\bfseries ms\+\_\+sleep} (int time)\label{main_8c_a359616b69ef6be09a3cb5680893c25cb}
+
+\item 
+\hypertarget{main_8c_a42ca7c9b89c22fcd9ec9aeed3e96b6c4}{}void {\bfseries get\+\_\+system\+\_\+time\+\_\+blocking} (struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time} $\ast$result)\label{main_8c_a42ca7c9b89c22fcd9ec9aeed3e96b6c4}
+
+\item 
+\hypertarget{main_8c_ac10cd1ff6b8d3726905397fc86b44bb1}{}void {\bfseries set\+\_\+status\+\_\+color} (int r, int g, int b)\label{main_8c_ac10cd1ff6b8d3726905397fc86b44bb1}
+
+\item 
+\hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{}int {\bfseries main} (void)\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structws2812__config}{ws2812\+\_\+config} {\bfseries Status\+L\+E\+D\+\_\+config}
+\item 
+\hypertarget{main_8c_ab0455c70d0edcf1a2a1c9ffc77fe5bee}{}struct \hyperlink{structws2812__rgb}{ws2812\+\_\+rgb} {\bfseries Status\+L\+E\+D\+\_\+buf} \mbox{[}1\mbox{]}\label{main_8c_ab0455c70d0edcf1a2a1c9ffc77fe5bee}
+
+\item 
+\hypertarget{main_8c_ae7d46441394e3638418869dda13a2970}{}volatile uint8\+\_\+t {\bfseries Status\+L\+E\+D\+\_\+pwmbuf} \mbox{[}1 $\ast$24+1\mbox{]}\label{main_8c_ae7d46441394e3638418869dda13a2970}
+
+\item 
+struct \hyperlink{structws2812}{ws2812} {\bfseries Status\+L\+E\+D}
+\item 
+\hypertarget{main_8c_ad6626ba12fbadd1981081605f892a7bb}{}volatile int {\bfseries sleep\+\_\+ms} = 0\label{main_8c_ad6626ba12fbadd1981081605f892a7bb}
+
+\item 
+\hypertarget{main_8c_a2d39b8e4f9506f28e2bdff70929287f6}{}volatile int {\bfseries N\+T\+C\+\_\+filtered\+\_\+value} = -\/1\label{main_8c_a2d39b8e4f9506f28e2bdff70929287f6}
+
+\item 
+\hypertarget{main_8c_a9d12c8106f421683f94175dd1c572624}{}volatile struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time} {\bfseries system\+\_\+time} = \{1420070400, 0\}\label{main_8c_a9d12c8106f421683f94175dd1c572624}
+
+\item 
+\hypertarget{main_8c_a153e3e14841d1967017a21ab4feacc19}{}volatile bool {\bfseries system\+\_\+time\+\_\+updated} =0\label{main_8c_a153e3e14841d1967017a21ab4feacc19}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Irrigation controller main file. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}]systick, adc, moisture sensor, pwm output, filter 
+
+explain port and rcc better\end{DoxyRefDesc}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{main_8c_a3c3fdab7e413cd726f82bfba92630a39}{}\index{main.\+c@{main.\+c}!H\+W\+\_\+\+P\+R\+E\+\_\+\+I\+N\+I\+T@{H\+W\+\_\+\+P\+R\+E\+\_\+\+I\+N\+I\+T}}
+\index{H\+W\+\_\+\+P\+R\+E\+\_\+\+I\+N\+I\+T@{H\+W\+\_\+\+P\+R\+E\+\_\+\+I\+N\+I\+T}!main.\+c@{main.\+c}}
+\subsubsection[{H\+W\+\_\+\+P\+R\+E\+\_\+\+I\+N\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+W\+\_\+\+P\+R\+E\+\_\+\+I\+N\+I\+T(
+\begin{DoxyParamCaption}
+\item[{}]{call, }
+\item[{}]{obj}
+\end{DoxyParamCaption}
+)}\label{main_8c_a3c3fdab7e413cd726f82bfba92630a39}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+call(obj, \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf}{HW\_INIT\_RCC});\(\backslash\)
+    call(obj, \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9ba4e9b2d4b7e946d95c2e41f3de17035a0}{HW\_INIT\_GPIO});\(\backslash\)
+    call(obj, \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d}{HW\_INIT\_PRE\_NVIC});\(\backslash\)
+    call(obj, \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9ba3f137ea5dd6b2ac372bb6d175434b3fa}{HW\_INIT\_NVIC});\(\backslash\)
+    call(obj, \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201}{HW\_INIT\_POST\_INIT});
+\end{DoxyCode}
+
+
+Definition at line 16 of file main.\+c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8c_aabae29cd362c0001a2b417c9206cb330}{}\index{main.\+c@{main.\+c}!hw\+\_\+init\+\_\+state@{hw\+\_\+init\+\_\+state}}
+\index{hw\+\_\+init\+\_\+state@{hw\+\_\+init\+\_\+state}!main.\+c@{main.\+c}}
+\subsubsection[{hw\+\_\+init\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf hw\+\_\+init\+\_\+state} (
+\begin{DoxyParamCaption}
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{main_8c_aabae29cd362c0001a2b417c9206cb330}
+
+
+This function prototype calls all perhipherals with the state as argument. 
+
+
+
+Definition at line 76 of file main.\+c.
+
+
+
+References usart\+\_\+init(), and ws2812\+\_\+init().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{main_8c_a155a1d3f9591d851bbbe4d7d7ff71af7}{}\index{main.\+c@{main.\+c}!Status\+L\+E\+D@{Status\+L\+E\+D}}
+\index{Status\+L\+E\+D@{Status\+L\+E\+D}!main.\+c@{main.\+c}}
+\subsubsection[{Status\+L\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ws2812} Status\+L\+E\+D}\label{main_8c_a155a1d3f9591d851bbbe4d7d7ff71af7}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    .configuration = &StatusLED\_config,
+    .led\_buffer = StatusLED\_buf,
+    .pwm\_buffer = StatusLED\_pwmbuf,
+    .led\_count = 1,
+\}
+\end{DoxyCode}
+
+
+Definition at line 59 of file main.\+c.
+
+\hypertarget{main_8c_aca1a1694194ca69da59aac0a1443da6e}{}\index{main.\+c@{main.\+c}!Status\+L\+E\+D\+\_\+config@{Status\+L\+E\+D\+\_\+config}}
+\index{Status\+L\+E\+D\+\_\+config@{Status\+L\+E\+D\+\_\+config}!main.\+c@{main.\+c}}
+\subsubsection[{Status\+L\+E\+D\+\_\+config}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ws2812\+\_\+config} Status\+L\+E\+D\+\_\+config}\label{main_8c_aca1a1694194ca69da59aac0a1443da6e}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    .ccr = &StatusLED\_pwm,
+    .pin = &StatusLED\_pin,  
+\}
+\end{DoxyCode}
+
+
+Definition at line 51 of file main.\+c.
+

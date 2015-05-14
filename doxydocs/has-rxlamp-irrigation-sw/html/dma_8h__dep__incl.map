@@ -1,7 +1,12 @@
 <map id="src/dma.h" name="src/dma.h">
-<area shape="rect" id="node2" href="$dma_8c.html" title="DMA implementation. " alt="" coords="5,80,91,107"/>
-<area shape="rect" id="node3" href="$ws2812_8h.html" title="WS2812 HAL include file. " alt="" coords="115,80,221,107"/>
-<area shape="rect" id="node4" href="$ws2812__macro_8h.html" title="Helper macros for ws2812. " alt="" coords="15,155,169,181"/>
-<area shape="rect" id="node6" href="$ws2812_8c.html" title="Implementation of WS2812 HAL. " alt="" coords="193,155,297,181"/>
-<area shape="rect" id="node5" href="$main_8c.html" title="Irrigation controller main file. " alt="" coords="48,229,136,256"/>
+<area shape="rect" id="node2" href="$timer_8h.html" title="Timer HAL include file. " alt="" coords="195,80,286,107"/>
+<area shape="rect" id="node4" href="$ws2812_8h.html" title="WS2812 HAL include file. " alt="" coords="5,155,111,181"/>
+<area shape="rect" id="node10" href="$dma_8c.html" title="DMA implementation. " alt="" coords="310,80,395,107"/>
+<area shape="rect" id="node11" href="$dma__macro_8h_source.html" title="src/dma_macro.h" alt="" coords="436,229,571,256"/>
+<area shape="rect" id="node3" href="$adc_8c.html" title="ADC HAL implementation. " alt="" coords="135,155,213,181"/>
+<area shape="rect" id="node8" href="$timer__macro_8h.html" title="Utility macros for timers. " alt="" coords="238,155,377,181"/>
+<area shape="rect" id="node9" href="$timer_8c.html" title="Timer HAL implementation. " alt="" coords="401,155,491,181"/>
+<area shape="rect" id="node5" href="$ws2812__macro_8h.html" title="Helper macros for ws2812. " alt="" coords="183,229,336,256"/>
+<area shape="rect" id="node7" href="$ws2812_8c.html" title="Implementation of WS2812 HAL. " alt="" coords="6,229,110,256"/>
+<area shape="rect" id="node6" href="$main_8c.html" title="Irrigation controller main file. " alt="" coords="330,304,418,331"/>
 </map>

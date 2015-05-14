@@ -1,5 +1,6 @@
 <map id="src/usart_macro.h" name="src/usart_macro.h">
-<area shape="rect" id="node2" href="$uart_8h.html" title="UART HAL Include file. " alt="" coords="217,80,277,107"/>
+<area shape="rect" id="node2" href="$uart_8h.html" title="UART HAL Include file. " alt="" coords="229,80,289,107"/>
 <area shape="rect" id="node3" href="$gpio_8h.html" title="GPIO HAL includes. " alt="" coords="141,155,203,181"/>
+<area shape="rect" id="node7" href="$time_8h.html" title="Time keeping and converting include file. " alt="" coords="227,155,290,181"/>
 <area shape="rect" id="node4" href="$hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="5,229,56,256"/>
 </map>

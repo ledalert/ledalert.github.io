@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ic',['ic',['../main_8c.html#a2c433a8720f4e75971c7f216723aba26',1,'main.c']]],
+  ['irrigation_20controller',['Irrigation Controller',['../index.html',1,'']]],
   ['initial_5ftimer',['initial_timer',['../structirrigation__controller__status.html#a9d70c74fe395ec2720089b929a32e1e9',1,'irrigation_controller_status']]],
   ['irrigation_2eh',['irrigation.h',['../irrigation_8h.html',1,'']]],
   ['irrigation_5fcontroller',['irrigation_controller',['../structirrigation__controller.html',1,'']]],

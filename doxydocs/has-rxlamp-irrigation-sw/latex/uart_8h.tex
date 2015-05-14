@@ -1,0 +1,244 @@
+\hypertarget{uart_8h}{}\section{src/uart.h File Reference}
+\label{uart_8h}\index{src/uart.\+h@{src/uart.\+h}}
+
+
+U\+A\+R\+T H\+A\+L Include file.  
+
+
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$libopencm3/stm32/usart.\+h$>$}\\*
+Include dependency graph for uart.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{uart_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{uart_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structusart__config}{usart\+\_\+config}
+\begin{DoxyCompactList}\small\item\em Usart configuration. \end{DoxyCompactList}\item 
+struct \hyperlink{structusart}{usart}
+\begin{DoxyCompactList}\small\item\em Usart. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{uart_8h_a9b89b39092dbeafe93f42b15700ea1b0}{usart\+\_\+blocking\+\_\+str}(uart,  str)~\hyperlink{usart_8c_aeeebc4a9b5040f2c423773a4eea7a325}{usart\+\_\+blocking\+\_\+send}(uart, str, sizeof(str)-\/1)
+\begin{DoxyCompactList}\small\item\em Send string literal using blocking/polling (no dma or irq) \end{DoxyCompactList}\item 
+\hypertarget{uart_8h_a7f24fb48ba75250866b828a8bc005f85}{}\#define {\bfseries \+\_\+\+U\+A\+R\+T\+\_\+\+H\+\_\+}\label{uart_8h_a7f24fb48ba75250866b828a8bc005f85}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uart_8h_a0e3103fc345dfb09aa255989c86805e8}{usart\+\_\+init} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} state)
+\begin{DoxyCompactList}\small\item\em Init usart device. \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_aeeebc4a9b5040f2c423773a4eea7a325}{usart\+\_\+blocking\+\_\+send} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, volatile void $\ast$data, int length)
+\begin{DoxyCompactList}\small\item\em Send data using blocking/polling method (no I\+R\+Q nor D\+M\+A) \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_af3f4d75d88bd6796e15f0e756525ac2e}{usart\+\_\+blocking\+\_\+float} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, float data)
+\begin{DoxyCompactList}\small\item\em Send a formatted float using blocking/polling method (no I\+R\+Q nor D\+M\+A) \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_a3af22e4da85d1cc56e9635c288cfee98}{usart\+\_\+blocking\+\_\+int} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, int data)
+\begin{DoxyCompactList}\small\item\em Send formatted integer using blocking/polling method (no I\+R\+Q nor D\+M\+A) \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_ab51e225534a49a351524b2b5f26707b5}{usart\+\_\+blocking\+\_\+int\+\_\+zp} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, int data, int dp)
+\begin{DoxyCompactList}\small\item\em Send a formatted int with zeropadding using blocking/polling method (no I\+R\+Q nor D\+M\+A) \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_a01c4691720757b4c3f21d6c277417459}{usart\+\_\+blocking\+\_\+strz} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, volatile char $\ast$data)
+\begin{DoxyCompactList}\small\item\em Send zero terminated string using blocking/polling method (no I\+R\+Q nor D\+M\+A) \end{DoxyCompactList}\item 
+void \hyperlink{uart_8h_ab8505b37986de5265d35fdaa3569b9af}{usart\+\_\+blocking\+\_\+tm} (struct \hyperlink{structusart}{usart} $\ast$\hyperlink{structusart}{usart}, struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time} $\ast$\hyperlink{structtm}{tm})
+\begin{DoxyCompactList}\small\item\em Send broken down time using blocking/polling (no dma/irq) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+U\+A\+R\+T H\+A\+L Include file. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{uart_8h_a9b89b39092dbeafe93f42b15700ea1b0}{}\index{uart.\+h@{uart.\+h}!usart\+\_\+blocking\+\_\+str@{usart\+\_\+blocking\+\_\+str}}
+\index{usart\+\_\+blocking\+\_\+str@{usart\+\_\+blocking\+\_\+str}!uart.\+h@{uart.\+h}}
+\subsubsection[{usart\+\_\+blocking\+\_\+str}]{\setlength{\rightskip}{0pt plus 5cm}\#define usart\+\_\+blocking\+\_\+str(
+\begin{DoxyParamCaption}
+\item[{}]{uart, }
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~{\bf usart\+\_\+blocking\+\_\+send}(uart, str, sizeof(str)-\/1)}\label{uart_8h_a9b89b39092dbeafe93f42b15700ea1b0}
+
+
+Send string literal using blocking/polling (no dma or irq) 
+
+
+
+Definition at line 11 of file uart.\+h.
+
+
+
+Referenced by usart\+\_\+blocking\+\_\+tm().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{uart_8h_af3f4d75d88bd6796e15f0e756525ac2e}{}\index{uart.\+h@{uart.\+h}!usart\+\_\+blocking\+\_\+float@{usart\+\_\+blocking\+\_\+float}}
+\index{usart\+\_\+blocking\+\_\+float@{usart\+\_\+blocking\+\_\+float}!uart.\+h@{uart.\+h}}
+\subsubsection[{usart\+\_\+blocking\+\_\+float}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{float}]{data}
+\end{DoxyParamCaption}
+)}\label{uart_8h_af3f4d75d88bd6796e15f0e756525ac2e}
+
+
+Send a formatted float using blocking/polling method (no I\+R\+Q nor D\+M\+A) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usart} & Pointer to U\+S\+A\+R\+T device \\
+\hline
+{\em data} & Floating point value to format and send \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 131 of file usart.\+c.
+
+
+
+References usart\+\_\+blocking\+\_\+int(), and usart\+\_\+blocking\+\_\+int\+\_\+zp().
+
+\hypertarget{uart_8h_a3af22e4da85d1cc56e9635c288cfee98}{}\index{uart.\+h@{uart.\+h}!usart\+\_\+blocking\+\_\+int@{usart\+\_\+blocking\+\_\+int}}
+\index{usart\+\_\+blocking\+\_\+int@{usart\+\_\+blocking\+\_\+int}!uart.\+h@{uart.\+h}}
+\subsubsection[{usart\+\_\+blocking\+\_\+int}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{int}]{data}
+\end{DoxyParamCaption}
+)}\label{uart_8h_a3af22e4da85d1cc56e9635c288cfee98}
+
+
+Send formatted integer using blocking/polling method (no I\+R\+Q nor D\+M\+A) 
+
+
+
+Definition at line 90 of file usart.\+c.
+
+
+
+Referenced by usart\+\_\+blocking\+\_\+float(), and usart\+\_\+blocking\+\_\+tm().
+
+\hypertarget{uart_8h_ab51e225534a49a351524b2b5f26707b5}{}\index{uart.\+h@{uart.\+h}!usart\+\_\+blocking\+\_\+int\+\_\+zp@{usart\+\_\+blocking\+\_\+int\+\_\+zp}}
+\index{usart\+\_\+blocking\+\_\+int\+\_\+zp@{usart\+\_\+blocking\+\_\+int\+\_\+zp}!uart.\+h@{uart.\+h}}
+\subsubsection[{usart\+\_\+blocking\+\_\+int\+\_\+zp}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+int\+\_\+zp (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{int}]{data, }
+\item[{int}]{dp}
+\end{DoxyParamCaption}
+)}\label{uart_8h_ab51e225534a49a351524b2b5f26707b5}
+
+
+Send a formatted int with zeropadding using blocking/polling method (no I\+R\+Q nor D\+M\+A) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usart} & Pointer to U\+S\+A\+R\+T device \\
+\hline
+{\em data} & Integer value to format and send \\
+\hline
+{\em dp} & Number of digits to use \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 114 of file usart.\+c.
+
+
+
+Referenced by usart\+\_\+blocking\+\_\+float(), and usart\+\_\+blocking\+\_\+tm().
+
+\hypertarget{uart_8h_aeeebc4a9b5040f2c423773a4eea7a325}{}\index{uart.\+h@{uart.\+h}!usart\+\_\+blocking\+\_\+send@{usart\+\_\+blocking\+\_\+send}}
+\index{usart\+\_\+blocking\+\_\+send@{usart\+\_\+blocking\+\_\+send}!uart.\+h@{uart.\+h}}
+\subsubsection[{usart\+\_\+blocking\+\_\+send}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+send (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{volatile void $\ast$}]{data, }
+\item[{int}]{length}
+\end{DoxyParamCaption}
+)}\label{uart_8h_aeeebc4a9b5040f2c423773a4eea7a325}
+
+
+Send data using blocking/polling method (no I\+R\+Q nor D\+M\+A) 
+
+
+
+Definition at line 71 of file usart.\+c.
+
+\hypertarget{uart_8h_a01c4691720757b4c3f21d6c277417459}{}\index{uart.\+h@{uart.\+h}!usart\+\_\+blocking\+\_\+strz@{usart\+\_\+blocking\+\_\+strz}}
+\index{usart\+\_\+blocking\+\_\+strz@{usart\+\_\+blocking\+\_\+strz}!uart.\+h@{uart.\+h}}
+\subsubsection[{usart\+\_\+blocking\+\_\+strz}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+strz (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{volatile char $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{uart_8h_a01c4691720757b4c3f21d6c277417459}
+
+
+Send zero terminated string using blocking/polling method (no I\+R\+Q nor D\+M\+A) 
+
+
+
+Definition at line 82 of file usart.\+c.
+
+\hypertarget{uart_8h_ab8505b37986de5265d35fdaa3569b9af}{}\index{uart.\+h@{uart.\+h}!usart\+\_\+blocking\+\_\+tm@{usart\+\_\+blocking\+\_\+tm}}
+\index{usart\+\_\+blocking\+\_\+tm@{usart\+\_\+blocking\+\_\+tm}!uart.\+h@{uart.\+h}}
+\subsubsection[{usart\+\_\+blocking\+\_\+tm}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+blocking\+\_\+tm (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{struct {\bf sw\+\_\+timer\+\_\+system\+\_\+time} $\ast$}]{tm}
+\end{DoxyParamCaption}
+)}\label{uart_8h_ab8505b37986de5265d35fdaa3569b9af}
+
+
+Send broken down time using blocking/polling (no dma/irq) 
+
+
+
+Definition at line 140 of file usart.\+c.
+
+
+
+References sw\+\_\+timer\+\_\+system\+\_\+time\+::epoch, sw\+\_\+timer\+\_\+system\+\_\+time\+::ms, time\+\_\+tm\+\_\+from\+\_\+epoch(), tm\+::tm\+\_\+hour, tm\+::tm\+\_\+mday, tm\+::tm\+\_\+min, tm\+::tm\+\_\+mon, tm\+::tm\+\_\+sec, tm\+::tm\+\_\+year, usart\+\_\+blocking\+\_\+int(), usart\+\_\+blocking\+\_\+int\+\_\+zp(), and usart\+\_\+blocking\+\_\+str.
+
+\hypertarget{uart_8h_a0e3103fc345dfb09aa255989c86805e8}{}\index{uart.\+h@{uart.\+h}!usart\+\_\+init@{usart\+\_\+init}}
+\index{usart\+\_\+init@{usart\+\_\+init}!uart.\+h@{uart.\+h}}
+\subsubsection[{usart\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void usart\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf usart} $\ast$}]{usart, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{uart_8h_a0e3103fc345dfb09aa255989c86805e8}
+
+
+Init usart device. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000008}{Todo}]Check if we are inited already \end{DoxyRefDesc}
+
+
+Definition at line 38 of file usart.\+c.
+
+
+
+References H\+W\+\_\+\+I\+N\+I\+T\+\_\+\+P\+O\+S\+T\+\_\+\+I\+N\+I\+T, H\+W\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+E\+\_\+\+N\+V\+I\+C, H\+W\+\_\+\+I\+N\+I\+T\+\_\+\+R\+C\+C, usart\+\_\+configure\+\_\+gpio(), and usart\+\_\+set\+\_\+defaults().
+
+
+
+Referenced by hw\+\_\+init\+\_\+state().
+

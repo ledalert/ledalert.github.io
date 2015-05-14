@@ -1,5 +1,6 @@
 <map id="src/adc.c" name="src/adc.c">
-<area shape="rect" id="node2" href="$adc_8h.html" title="ADC HAL include. " alt="" coords="360,80,417,107"/>
-<area shape="rect" id="node6" href="$timer_8h.html" title="Timer HAL include file. " alt="" coords="469,80,537,107"/>
-<area shape="rect" id="node3" href="$hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="421,155,471,181"/>
+<area shape="rect" id="node2" href="$adc_8h.html" title="ADC HAL include. " alt="" coords="289,155,347,181"/>
+<area shape="rect" id="node6" href="$timer_8h.html" title="Timer HAL include file. " alt="" coords="467,80,535,107"/>
+<area shape="rect" id="node3" href="$hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="421,229,471,256"/>
+<area shape="rect" id="node9" href="$dma_8h.html" title="DMA includes. " alt="" coords="400,155,463,181"/>
 </map>

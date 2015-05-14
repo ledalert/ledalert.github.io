@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['the_20main_20state_20machine',['The main state machine',['../group__state__machine.html',1,'']]],
   ['this_20state_20makes_20the_20actual_20soil_20measure',['This state makes the actual soil measure',['../group__state__measure.html',1,'']]],
   ['temperature',['temperature',['../structirrigation__temperature__sample.html#ae72c8bc3c16a24366685eecbf9493a2e',1,'irrigation_temperature_sample']]],
   ['time_2ec',['time.c',['../time_8c.html',1,'']]],
@@ -13,8 +12,6 @@ var searchData=
   ['timer_5fccr',['timer_ccr',['../structtimer__ccr.html',1,'']]],
   ['timer_5fccr_5fconfig',['timer_ccr_config',['../structtimer__ccr__config.html',1,'']]],
   ['timer_5fccr_5finit',['timer_ccr_init',['../timer_8c.html#a995539ac62815c22bad2313f304865b5',1,'timer_ccr_init(struct timer_ccr *ccr, enum hw_init_state state):&#160;timer.c'],['../timer_8h.html#a995539ac62815c22bad2313f304865b5',1,'timer_ccr_init(struct timer_ccr *ccr, enum hw_init_state state):&#160;timer.c']]],
-  ['timer_5fccr_5finstance',['TIMER_CCR_INSTANCE',['../timer__macro_8h.html#acfdba0f1d3b17882da247eb83455eefe',1,'timer_macro.h']]],
-  ['timer_5fccr_5finstance_5fexp',['TIMER_CCR_INSTANCE_EXP',['../timer__macro_8h.html#aced3395bc29579b110934d3550338607',1,'timer_macro.h']]],
   ['timer_5fccr_5fset',['timer_ccr_set',['../timer_8c.html#a734417848b07d1d04bca5e224f13e319',1,'timer_ccr_set(struct timer_ccr *ccr, uint32_t value):&#160;timer.c'],['../timer_8h.html#a734417848b07d1d04bca5e224f13e319',1,'timer_ccr_set(struct timer_ccr *ccr, uint32_t value):&#160;timer.c']]],
   ['timer_5fconfig',['timer_config',['../structtimer__config.html',1,'']]],
   ['timer_5finit',['timer_init',['../timer_8c.html#a1e33eb6cb5bd4bd99416edbb25790760',1,'timer_init(struct timer *timer, enum hw_init_state state):&#160;timer.c'],['../timer_8h.html#a1e33eb6cb5bd4bd99416edbb25790760',1,'timer_init(struct timer *timer, enum hw_init_state state):&#160;timer.c']]],

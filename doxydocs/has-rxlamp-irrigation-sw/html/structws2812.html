@@ -101,7 +101,7 @@ Collaboration diagram for ws2812:</div>
 <div class="dyncontent">
 <div class="center"><img src="structws2812__coll__graph.png" border="0" usemap="#ws2812_coll__map" alt="Collaboration graph"/></div>
 <map name="ws2812_coll__map" id="ws2812_coll__map">
-<area shape="rect" id="node2" href="structws2812__rgb.html" title="24 bit color " alt="" coords="5,363,104,389"/><area shape="rect" id="node3" href="structws2812__config.html" title="Configuration for WS2812. " alt="" coords="128,363,243,389"/><area shape="rect" id="node4" href="structgpio__pin.html" title="gpio_pin" alt="" coords="87,273,161,300"/><area shape="rect" id="node5" href="structgpio__pin__config.html" title="gpio_pin_config" alt="" coords="39,184,159,211"/><area shape="rect" id="node6" href="structgpio__port.html" title="gpio_port" alt="" coords="57,95,140,121"/><area shape="rect" id="node7" href="structgpio__port__config.html" title="gpio_port_config" alt="" coords="35,5,162,32"/><area shape="rect" id="node8" href="structtimer__ccr.html" title="timer_ccr" alt="" coords="191,273,273,300"/><area shape="rect" id="node9" href="structtimer__ccr__config.html" title="timer_ccr_config" alt="" coords="183,184,310,211"/><area shape="rect" id="node10" href="structtimer.html" title="timer" alt="" coords="219,95,275,121"/><area shape="rect" id="node11" href="structtimer__config.html" title="timer_config" alt="" coords="196,5,297,32"/></map>
+<area shape="rect" id="node2" href="structws2812__rgb.html" title="24 bit color " alt="" coords="5,363,104,389"/><area shape="rect" id="node3" href="structws2812__config.html" title="Configuration for WS2812. " alt="" coords="128,363,243,389"/><area shape="rect" id="node4" href="structgpio__pin.html" title="gpio_pin" alt="" coords="87,273,161,300"/><area shape="rect" id="node5" href="structgpio__pin__config.html" title="gpio_pin_config" alt="" coords="39,184,159,211"/><area shape="rect" id="node6" href="structgpio__port.html" title="gpio_port" alt="" coords="57,95,140,121"/><area shape="rect" id="node7" href="structgpio__port__config.html" title="gpio_port_config" alt="" coords="35,5,162,32"/><area shape="rect" id="node8" href="structtimer__ccr.html" title="timer_ccr" alt="" coords="191,273,273,300"/><area shape="rect" id="node9" href="structtimer__ccr__config.html" title="timer_ccr_config" alt="" coords="183,184,310,211"/><area shape="rect" id="node10" href="structdma__channel__config.html" title="dma_channel_config" alt="" coords="166,95,319,121"/><area shape="rect" id="node11" href="structdma__config.html" title="dma_config" alt="" coords="195,5,291,32"/><area shape="rect" id="node12" href="structtimer.html" title="timer" alt="" coords="343,95,399,121"/><area shape="rect" id="node13" href="structtimer__config.html" title="timer_config" alt="" coords="320,5,421,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -112,9 +112,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a9d672a2d9ea381c7fcd940ba4ebdebe2"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structws2812__rgb.html">ws2812_rgb</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws2812.html#a9d672a2d9ea381c7fcd940ba4ebdebe2">led_buffer</a></td></tr>
 <tr class="memdesc:a9d672a2d9ea381c7fcd940ba4ebdebe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to LED array.  <a href="#a9d672a2d9ea381c7fcd940ba4ebdebe2">More...</a><br /></td></tr>
 <tr class="separator:a9d672a2d9ea381c7fcd940ba4ebdebe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61297f46cd5f505ca589214d93bcbc13"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws2812.html#a61297f46cd5f505ca589214d93bcbc13">pwm_buffer</a></td></tr>
-<tr class="memdesc:a61297f46cd5f505ca589214d93bcbc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to buffer for PWM data.  <a href="#a61297f46cd5f505ca589214d93bcbc13">More...</a><br /></td></tr>
-<tr class="separator:a61297f46cd5f505ca589214d93bcbc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864f88183104cfbdd144cb301870e655"><td class="memItemLeft" align="right" valign="top">volatile uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws2812.html#a864f88183104cfbdd144cb301870e655">pwm_buffer</a></td></tr>
+<tr class="memdesc:a864f88183104cfbdd144cb301870e655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to buffer for PWM data.  <a href="#a864f88183104cfbdd144cb301870e655">More...</a><br /></td></tr>
+<tr class="separator:a864f88183104cfbdd144cb301870e655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a396b295c928e75adc5688c49c832e631"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structws2812.html#a396b295c928e75adc5688c49c832e631">state</a></td></tr>
 <tr class="memdesc:a396b295c928e75adc5688c49c832e631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device state.  <a href="#a396b295c928e75adc5688c49c832e631">More...</a><br /></td></tr>
 <tr class="separator:a396b295c928e75adc5688c49c832e631"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,7 +141,7 @@ Public Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="ws2812_8h_source.html#l00022">22</a> of file <a class="el" href="ws2812_8h_source.html">ws2812.h</a>.</p>
 
-<p>Referenced by <a class="el" href="ws2812_8c_source.html#l00018">ws2812_configure_gpio()</a>, <a class="el" href="ws2812_8c_source.html#l00011">ws2812_configure_timer()</a>, <a class="el" href="ws2812_8c_source.html#l00036">ws2812_init()</a>, and <a class="el" href="ws2812_8c_source.html#l00026">ws2812_set_defaults()</a>.</p>
+<p>Referenced by <a class="el" href="ws2812_8c_source.html#l00022">ws2812_configure_gpio()</a>, <a class="el" href="ws2812_8c_source.html#l00015">ws2812_configure_timer()</a>, <a class="el" href="ws2812_8c_source.html#l00040">ws2812_init()</a>, and <a class="el" href="ws2812_8c_source.html#l00030">ws2812_set_defaults()</a>.</p>
 
 </div>
 </div>
@@ -178,12 +178,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a61297f46cd5f505ca589214d93bcbc13"></a>
+<a class="anchor" id="a864f88183104cfbdd144cb301870e655"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t* ws2812::pwm_buffer</td>
+          <td class="memname">volatile uint8_t* ws2812::pwm_buffer</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -217,7 +217,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 16:31:08 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,0 +1,143 @@
+\hypertarget{math_8h}{}\section{src/math.h File Reference}
+\label{math_8h}\index{src/math.\+h@{src/math.\+h}}
+
+
+Some math utilities.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\\*
+Include dependency graph for math.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{math_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{math_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{math_8h_a11511f39713c83a53bbf617c79d20cd6}{M\+A\+X}(v,  x)~((v $>$ x) ? v \+: x)
+\begin{DoxyCompactList}\small\item\em Maximum of two scalars. \end{DoxyCompactList}\item 
+\#define \hyperlink{math_8h_a267dc8ee2dc059cbd022d1c92ee86b4d}{M\+I\+N}(v,  x)~((v $<$ x) ? v \+: x)
+\begin{DoxyCompactList}\small\item\em Minimum of two scalars. \end{DoxyCompactList}\item 
+\#define \hyperlink{math_8h_ae438218ebea16c798a26d459bf3dd264}{math\+\_\+ramp}(var,  value)
+\begin{DoxyCompactList}\small\item\em Triangle wave function with period 2.\+0. \end{DoxyCompactList}\item 
+\hypertarget{math_8h_a2b382466fb3d64baed3a25a37fdd5beb}{}\#define {\bfseries \+\_\+\+M\+A\+T\+H\+\_\+\+H\+\_\+}\label{math_8h_a2b382466fb3d64baed3a25a37fdd5beb}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{math_8h_abc217116da1a947f370109db2274a714}{}unsigned long {\bfseries xorshf96} (void)\label{math_8h_abc217116da1a947f370109db2274a714}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Some math utilities. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{math_8h_ae438218ebea16c798a26d459bf3dd264}{}\index{math.\+h@{math.\+h}!math\+\_\+ramp@{math\+\_\+ramp}}
+\index{math\+\_\+ramp@{math\+\_\+ramp}!math.\+h@{math.\+h}}
+\subsubsection[{math\+\_\+ramp}]{\setlength{\rightskip}{0pt plus 5cm}\#define math\+\_\+ramp(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}\label{math_8h_ae438218ebea16c798a26d459bf3dd264}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordtype}{float} var = fmod(value, 2.0);\(\backslash\)
+    if (var > 1) var = 2.0-var;
+\end{DoxyCode}
+
+
+Triangle wave function with period 2.\+0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & Variable of result \\
+\hline
+{\em value} & Position in function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float named var containing the function value 
+\end{DoxyReturn}
+
+
+Definition at line 24 of file math.\+h.
+
+
+
+Referenced by state\+\_\+init\+\_\+run(), and state\+\_\+validate\+\_\+run().
+
+\hypertarget{math_8h_a11511f39713c83a53bbf617c79d20cd6}{}\index{math.\+h@{math.\+h}!M\+A\+X@{M\+A\+X}}
+\index{M\+A\+X@{M\+A\+X}!math.\+h@{math.\+h}}
+\subsubsection[{M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X(
+\begin{DoxyParamCaption}
+\item[{}]{v, }
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((v $>$ x) ? v \+: x)}\label{math_8h_a11511f39713c83a53bbf617c79d20cd6}
+
+
+Maximum of two scalars. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & First scalar \\
+\hline
+{\em x} & Second scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The greates scalar 
+\end{DoxyReturn}
+
+
+Definition at line 12 of file math.\+h.
+
+
+
+Referenced by state\+\_\+validate\+\_\+run().
+
+\hypertarget{math_8h_a267dc8ee2dc059cbd022d1c92ee86b4d}{}\index{math.\+h@{math.\+h}!M\+I\+N@{M\+I\+N}}
+\index{M\+I\+N@{M\+I\+N}!math.\+h@{math.\+h}}
+\subsubsection[{M\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N(
+\begin{DoxyParamCaption}
+\item[{}]{v, }
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~((v $<$ x) ? v \+: x)}\label{math_8h_a267dc8ee2dc059cbd022d1c92ee86b4d}
+
+
+Minimum of two scalars. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & First scalar \\
+\hline
+{\em x} & Second scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The less scalar 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file math.\+h.
+
+
+
+Referenced by state\+\_\+validate\+\_\+run().
+

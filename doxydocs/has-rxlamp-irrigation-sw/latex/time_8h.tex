@@ -1,0 +1,71 @@
+\hypertarget{time_8h}{}\section{src/time.h File Reference}
+\label{time_8h}\index{src/time.\+h@{src/time.\+h}}
+
+
+Time keeping and converting include file.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{time_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtm}{tm}
+\begin{DoxyCompactList}\small\item\em Broken down time. \end{DoxyCompactList}\item 
+struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time}
+\begin{DoxyCompactList}\small\item\em Timestamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{time_8h_a5820d1723388d23f68df400cc4a6a065}{time\+\_\+tm\+\_\+from\+\_\+epoch} (struct \hyperlink{structtm}{tm} $\ast$result, int epoch)
+\begin{DoxyCompactList}\small\item\em Convert epoch time to struct tm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Time keeping and converting include file. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{time_8h_a5820d1723388d23f68df400cc4a6a065}{}\index{time.\+h@{time.\+h}!time\+\_\+tm\+\_\+from\+\_\+epoch@{time\+\_\+tm\+\_\+from\+\_\+epoch}}
+\index{time\+\_\+tm\+\_\+from\+\_\+epoch@{time\+\_\+tm\+\_\+from\+\_\+epoch}!time.\+h@{time.\+h}}
+\subsubsection[{time\+\_\+tm\+\_\+from\+\_\+epoch}]{\setlength{\rightskip}{0pt plus 5cm}int time\+\_\+tm\+\_\+from\+\_\+epoch (
+\begin{DoxyParamCaption}
+\item[{struct {\bf tm} $\ast$}]{tm, }
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)}\label{time_8h_a5820d1723388d23f68df400cc4a6a065}
+
+
+Convert epoch time to struct tm. 
+
+Based on \href{http://git.musl-libc.org/cgit/musl/tree/src/time/__secs_to_tm.c}{\tt http\+://git.\+musl-\/libc.\+org/cgit/musl/tree/src/time/\+\_\+\+\_\+secs\+\_\+to\+\_\+tm.\+c}
+
+
+\begin{DoxyParams}{Parameters}
+{\em tm} & Pointer to target struct tm \\
+\hline
+{\em t} & Epoch time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file time.\+c.
+
+
+
+References tm\+::tm\+\_\+hour, tm\+::tm\+\_\+mday, tm\+::tm\+\_\+min, tm\+::tm\+\_\+mon, tm\+::tm\+\_\+sec, tm\+::tm\+\_\+wday, tm\+::tm\+\_\+yday, and tm\+::tm\+\_\+year.
+
+
+
+Referenced by usart\+\_\+blocking\+\_\+tm().
+

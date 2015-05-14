@@ -1,0 +1,162 @@
+\hypertarget{ws2812_8c}{}\section{src/ws2812.c File Reference}
+\label{ws2812_8c}\index{src/ws2812.\+c@{src/ws2812.\+c}}
+
+
+Implementation of W\+S2812 H\+A\+L.  
+
+
+{\ttfamily \#include \char`\"{}ws2812.\+h\char`\"{}}\\*
+Include dependency graph for ws2812.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ws2812_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ws2812_8c_abe4c1d1365ba3b842e733f00ff5b8cb4}{ws2812\+\_\+configure\+\_\+timer} (struct \hyperlink{structws2812}{ws2812} $\ast$led)
+\begin{DoxyCompactList}\small\item\em Apply default configuration to the timer. \end{DoxyCompactList}\item 
+void \hyperlink{ws2812_8c_a35b250d1bf6fa32e168ca7d559309c9a}{ws2812\+\_\+configure\+\_\+gpio} (struct \hyperlink{structws2812}{ws2812} $\ast$led)
+\begin{DoxyCompactList}\small\item\em Apply default configuration to G\+P\+I\+O. \end{DoxyCompactList}\item 
+void \hyperlink{ws2812_8c_a077cfeecec2b7fbefaed4e75631e76c7}{ws2812\+\_\+set\+\_\+defaults} (struct \hyperlink{structws2812}{ws2812} $\ast$led)
+\begin{DoxyCompactList}\small\item\em Apply default configration to \hyperlink{structws2812}{ws2812}. \end{DoxyCompactList}\item 
+void \hyperlink{ws2812_8c_adbff51511c0bd9a408d6065a5c2b9851}{ws2812\+\_\+init} (struct \hyperlink{structws2812}{ws2812} $\ast$led, enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} state)
+\begin{DoxyCompactList}\small\item\em Initiate \hyperlink{structws2812}{ws2812} bus to state. \end{DoxyCompactList}\item 
+\hypertarget{ws2812_8c_a76c614084b51bd6644076828269cecf6}{}void {\bfseries ws2812\+\_\+process\+\_\+buffer} (struct \hyperlink{structws2812}{ws2812} $\ast$led)\label{ws2812_8c_a76c614084b51bd6644076828269cecf6}
+
+\item 
+\hypertarget{ws2812_8c_a4dbb8822e64ed089eb01c8145817e3ed}{}void {\bfseries ws2812\+\_\+update} (struct \hyperlink{structws2812}{ws2812} $\ast$led)\label{ws2812_8c_a4dbb8822e64ed089eb01c8145817e3ed}
+
+\item 
+\hypertarget{ws2812_8c_a82f2823a0771f8d6e1671ce1078aa5db}{}void {\bfseries ws2812\+\_\+update\+\_\+blocking} (struct \hyperlink{structws2812}{ws2812} $\ast$led)\label{ws2812_8c_a82f2823a0771f8d6e1671ce1078aa5db}
+
+\item 
+\hypertarget{ws2812_8c_a563ef0da6498fc194067eed2611705a9}{}void {\bfseries ws2812\+\_\+set\+\_\+led} (struct \hyperlink{structws2812}{ws2812} $\ast$led, int index, int r, int g, int b)\label{ws2812_8c_a563ef0da6498fc194067eed2611705a9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of W\+S2812 H\+A\+L. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{ws2812_8c_a35b250d1bf6fa32e168ca7d559309c9a}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+configure\+\_\+gpio@{ws2812\+\_\+configure\+\_\+gpio}}
+\index{ws2812\+\_\+configure\+\_\+gpio@{ws2812\+\_\+configure\+\_\+gpio}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+configure\+\_\+gpio}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+configure\+\_\+gpio (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_a35b250d1bf6fa32e168ca7d559309c9a}
+
+
+Apply default configuration to G\+P\+I\+O. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & Bus to use \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file ws2812.\+c.
+
+
+
+References ws2812\+::configuration, D\+E\+F\+A\+U\+L\+T, and ws2812\+\_\+config\+::pin.
+
+
+
+Referenced by ws2812\+\_\+init().
+
+\hypertarget{ws2812_8c_abe4c1d1365ba3b842e733f00ff5b8cb4}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+configure\+\_\+timer@{ws2812\+\_\+configure\+\_\+timer}}
+\index{ws2812\+\_\+configure\+\_\+timer@{ws2812\+\_\+configure\+\_\+timer}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+configure\+\_\+timer}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+configure\+\_\+timer (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_abe4c1d1365ba3b842e733f00ff5b8cb4}
+
+
+Apply default configuration to the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & Bus to use \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file ws2812.\+c.
+
+
+
+References ws2812\+\_\+config\+::ccr, ws2812\+::configuration, D\+E\+F\+A\+U\+L\+T, and ws2812\+\_\+config\+::frequency.
+
+
+
+Referenced by ws2812\+\_\+init().
+
+\hypertarget{ws2812_8c_adbff51511c0bd9a408d6065a5c2b9851}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+init@{ws2812\+\_\+init}}
+\index{ws2812\+\_\+init@{ws2812\+\_\+init}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led, }
+\item[{enum {\bf hw\+\_\+init\+\_\+state}}]{state}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_adbff51511c0bd9a408d6065a5c2b9851}
+
+
+Initiate \hyperlink{structws2812}{ws2812} bus to state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & Bus to init \\
+\hline
+{\em state} & New H\+W state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file ws2812.\+c.
+
+
+
+References ws2812\+\_\+config\+::ccr, ws2812\+::configuration, H\+W\+\_\+\+I\+N\+I\+T\+\_\+\+G\+P\+I\+O, H\+W\+\_\+\+I\+N\+I\+T\+\_\+\+P\+O\+S\+T\+\_\+\+I\+N\+I\+T, H\+W\+\_\+\+I\+N\+I\+T\+\_\+\+P\+R\+E\+\_\+\+N\+V\+I\+C, ws2812\+\_\+config\+::pin, timer\+\_\+ccr\+\_\+init(), ws2812\+\_\+configure\+\_\+gpio(), ws2812\+\_\+configure\+\_\+timer(), and ws2812\+\_\+set\+\_\+defaults().
+
+
+
+Referenced by hw\+\_\+init\+\_\+state().
+
+\hypertarget{ws2812_8c_a077cfeecec2b7fbefaed4e75631e76c7}{}\index{ws2812.\+c@{ws2812.\+c}!ws2812\+\_\+set\+\_\+defaults@{ws2812\+\_\+set\+\_\+defaults}}
+\index{ws2812\+\_\+set\+\_\+defaults@{ws2812\+\_\+set\+\_\+defaults}!ws2812.\+c@{ws2812.\+c}}
+\subsubsection[{ws2812\+\_\+set\+\_\+defaults}]{\setlength{\rightskip}{0pt plus 5cm}void ws2812\+\_\+set\+\_\+defaults (
+\begin{DoxyParamCaption}
+\item[{struct {\bf ws2812} $\ast$}]{led}
+\end{DoxyParamCaption}
+)}\label{ws2812_8c_a077cfeecec2b7fbefaed4e75631e76c7}
+
+
+Apply default configration to \hyperlink{structws2812}{ws2812}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em led} & Bus to use \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file ws2812.\+c.
+
+
+
+References ws2812\+\_\+config\+::bit0, ws2812\+\_\+config\+::bit1, ws2812\+::configuration, D\+E\+F\+A\+U\+L\+T, and ws2812\+\_\+config\+::frequency.
+
+
+
+Referenced by ws2812\+\_\+init().
+

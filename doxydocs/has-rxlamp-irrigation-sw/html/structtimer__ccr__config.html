@@ -96,7 +96,7 @@ Collaboration diagram for timer_ccr_config:</div>
 <div class="dyncontent">
 <div class="center"><img src="structtimer__ccr__config__coll__graph.png" border="0" usemap="#timer__ccr__config_coll__map" alt="Collaboration graph"/></div>
 <map name="timer__ccr__config_coll__map" id="timer__ccr__config_coll__map">
-<area shape="rect" id="node2" href="structtimer.html" title="timer" alt="" coords="41,95,97,121"/><area shape="rect" id="node3" href="structtimer__config.html" title="timer_config" alt="" coords="18,5,119,32"/></map>
+<area shape="rect" id="node2" href="structdma__channel__config.html" title="dma_channel_config" alt="" coords="5,95,159,121"/><area shape="rect" id="node3" href="structdma__config.html" title="dma_config" alt="" coords="34,5,130,32"/><area shape="rect" id="node4" href="structtimer.html" title="timer" alt="" coords="182,95,238,121"/><area shape="rect" id="node5" href="structtimer__config.html" title="timer_config" alt="" coords="159,5,261,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -107,29 +107,23 @@ struct <a class="el" href="structtimer.html">timer</a> *&#160;</td><td class="me
 <tr class="memitem:ae497ec8b539565c6fe34b2849989336a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae497ec8b539565c6fe34b2849989336a"></a>
 enum tim_oc_id&#160;</td><td class="memItemRight" valign="bottom"><b>channel</b></td></tr>
 <tr class="separator:ae497ec8b539565c6fe34b2849989336a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fb041bdd23dfe84fc7aebb6c51fc149"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fb041bdd23dfe84fc7aebb6c51fc149"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_ccr</b></td></tr>
-<tr class="separator:a2fb041bdd23dfe84fc7aebb6c51fc149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e92f7221c14d90562bd42830fa2427d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e92f7221c14d90562bd42830fa2427d"></a>
+struct <a class="el" href="structdma__channel__config.html">dma_channel_config</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>dma</b></td></tr>
+<tr class="separator:a1e92f7221c14d90562bd42830fa2427d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3876bca410f69a23790a94f8eb9d73f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3876bca410f69a23790a94f8eb9d73f8"></a>
 volatile uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><b>reg</b></td></tr>
 <tr class="separator:a3876bca410f69a23790a94f8eb9d73f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a191d86d5e9bc07494477cb7cb39f3a6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a191d86d5e9bc07494477cb7cb39f3a6c"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dma_channel</b></td></tr>
-<tr class="separator:a191d86d5e9bc07494477cb7cb39f3a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa53eb7bbe594fdffff8537f281167e2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa53eb7bbe594fdffff8537f281167e2d"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dma_enable_flag</b></td></tr>
-<tr class="separator:aa53eb7bbe594fdffff8537f281167e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="timer_8h_source.html#l00017">17</a> of file <a class="el" href="timer_8h_source.html">timer.h</a>.</p>
+<p>Definition at line <a class="el" href="timer_8h_source.html#l00014">14</a> of file <a class="el" href="timer_8h_source.html">timer.h</a>.</p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/<a class="el" href="timer_8h_source.html">timer.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 16:31:08 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

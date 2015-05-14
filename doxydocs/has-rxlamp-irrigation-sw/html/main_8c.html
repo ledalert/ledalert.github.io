@@ -88,7 +88,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -102,9 +101,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &quot;<a class="el" href="math_8h_source.html">math.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ws2812__macro_8h_source.html">ws2812_macro.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="usart__macro_8h_source.html">usart_macro.h</a>&quot;</code><br />
+<code>#include &quot;dma_macro.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="led__macro_8h_source.html">led_macro.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="timer__macro_8h_source.html">timer_macro.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="systick_8h_source.html">systick.h</a>&quot;</code><br />
+<code>#include &quot;systick_macro.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="adc_8h_source.html">adc.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="time_8h_source.html">time.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="filter_8h_source.html">filter.h</a>&quot;</code><br />
@@ -114,21 +114,15 @@ Include dependency graph for main.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#src_2main_8c" alt=""/></div>
 <map name="src_2main_8c" id="src_2main_8c">
-<area shape="rect" id="node2" href="math_8h.html" title="Some math utilities. " alt="" coords="607,155,675,181"/><area shape="rect" id="node3" href="ws2812__macro_8h.html" title="Helper macros for ws2812. " alt="" coords="238,80,369,107"/><area shape="rect" id="node14" href="timer__macro_8h.html" title="Utility macros for timers. " alt="" coords="140,155,256,181"/><area shape="rect" id="node15" href="usart__macro_8h.html" title="Helper macros for USART. " alt="" coords="393,80,507,107"/><area shape="rect" id="node18" href="led__macro_8h.html" title="Helper macros for LED control. " alt="" coords="582,80,683,107"/><area shape="rect" id="node19" href="systick_8h.html" title="systick HAL include " alt="" coords="873,80,950,107"/><area shape="rect" id="node22" href="adc_8h.html" title="ADC HAL include. " alt="" coords="920,229,977,256"/><area shape="rect" id="node24" href="time_8h.html" title="Time keeping and converting include file. " alt="" coords="724,155,787,181"/><area shape="rect" id="node25" href="filter_8h.html" title="Filter functions for filtering sensor data. " alt="" coords="975,80,1037,107"/><area shape="rect" id="node26" href="irrigation_8h.html" title="Irrigation main include file. " alt="" coords="707,80,798,107"/><area shape="rect" id="node4" href="ws2812_8h.html" title="WS2812 HAL include file. " alt="" coords="414,155,497,181"/><area shape="rect" id="node13" href="gpio__macro_8h.html" title="Helper macros for GPIO. " alt="" coords="281,155,390,181"/><area shape="rect" id="node5" href="gpio_8h.html" title="GPIO HAL includes. " alt="" coords="425,229,486,256"/><area shape="rect" id="node9" href="timer_8h.html" title="Timer HAL include file. " alt="" coords="275,229,343,256"/><area shape="rect" id="node11" href="dma_8h.html" title="DMA includes. " alt="" coords="511,229,573,256"/><area shape="rect" id="node6" href="hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="629,304,679,331"/><area shape="rect" id="node16" href="uart_8h.html" title="UART HAL Include file. " alt="" coords="521,155,581,181"/></map>
+<area shape="rect" id="node2" href="math_8h.html" title="Some math utilities. " alt="" coords="703,155,771,181"/><area shape="rect" id="node3" href="ws2812__macro_8h.html" title="Helper macros for ws2812. " alt="" coords="195,80,326,107"/><area shape="rect" id="node14" href="timer__macro_8h.html" title="Utility macros for timers. " alt="" coords="5,155,121,181"/><area shape="rect" id="node15" href="usart__macro_8h.html" title="Helper macros for USART. " alt="" coords="467,80,582,107"/><area shape="rect" id="node17" href="time_8h.html" title="Time keeping and converting include file. " alt="" coords="744,229,807,256"/><area shape="rect" id="node19" href="dma__macro_8h_source.html" title="dma_macro.h" alt="" coords="387,155,497,181"/><area shape="rect" id="node20" href="led__macro_8h.html" title="Helper macros for LED control. " alt="" coords="707,80,809,107"/><area shape="rect" id="node21" href="systick__macro_8h_source.html" title="systick_macro.h" alt="" coords="947,80,1073,107"/><area shape="rect" id="node25" href="adc_8h.html" title="ADC HAL include. " alt="" coords="883,304,940,331"/><area shape="rect" id="node27" href="filter_8h.html" title="Filter functions for filtering sensor data. " alt="" coords="1097,80,1160,107"/><area shape="rect" id="node28" href="irrigation_8h.html" title="Irrigation main include file. " alt="" coords="833,80,923,107"/><area shape="rect" id="node4" href="ws2812_8h.html" title="WS2812 HAL include file. " alt="" coords="279,155,362,181"/><area shape="rect" id="node13" href="gpio__macro_8h.html" title="Helper macros for GPIO. " alt="" coords="146,155,255,181"/><area shape="rect" id="node5" href="gpio_8h.html" title="GPIO HAL includes. " alt="" coords="443,229,505,256"/><area shape="rect" id="node9" href="timer_8h.html" title="Timer HAL include file. " alt="" coords="249,229,317,256"/><area shape="rect" id="node11" href="dma_8h.html" title="DMA includes. " alt="" coords="373,304,436,331"/><area shape="rect" id="node6" href="hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="507,379,558,405"/><area shape="rect" id="node16" href="uart_8h.html" title="UART HAL Include file. " alt="" coords="521,155,581,181"/><area shape="rect" id="node22" href="systick_8h.html" title="systick HAL include " alt="" coords="971,155,1049,181"/></map>
 </div>
 </div>
 <p><a href="main_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstate.html">state</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:abedacb9f24c8951e3091cbbb69e35b9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abedacb9f24c8951e3091cbbb69e35b9f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>NTC_Filter_Size</b>&#160;&#160;&#160;250</td></tr>
-<tr class="separator:abedacb9f24c8951e3091cbbb69e35b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c3fdab7e413cd726f82bfba92630a39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>HW_PRE_INIT</b>(call,  obj)</td></tr>
+<tr class="separator:a3c3fdab7e413cd726f82bfba92630a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -138,82 +132,64 @@ Functions</h2></td></tr>
 <tr class="memitem:abebbe5a8f2ebcfc52329af1a2a452c32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abebbe5a8f2ebcfc52329af1a2a452c32"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>GPIO_PORT_INSTANCE</b> (GPIO_PB, GPIOB, RCC_GPIOB)</td></tr>
 <tr class="separator:abebbe5a8f2ebcfc52329af1a2a452c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab051ec5725126430e405e5a598ccfe70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab051ec5725126430e405e5a598ccfe70"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WS2812_INSTANCE</b> (StatusLED, TIMER1_CCR3N_DMA,&amp;GPIO_PB, GPIO15, 1)</td></tr>
-<tr class="separator:ab051ec5725126430e405e5a598ccfe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80f5b1b0fc5eac69c761e7388600dc59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80f5b1b0fc5eac69c761e7388600dc59"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>USART_TXONLY_INSTANCE</b> (Serial, USART1, RCC_USART1, 921600, 0, 0, 0, 0,&amp;GPIO_PA, GPIO_USART1_TX)</td></tr>
-<tr class="separator:a80f5b1b0fc5eac69c761e7388600dc59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853c3748541a5efcdc0a0aef2a523eb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a853c3748541a5efcdc0a0aef2a523eb9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TIMER_CCR_INSTANCE</b> (Pump,&amp;GPIO_PB, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_ALTFN_PUSHPULL, GPIO0, TIMER3_CCR3, 4095, 0)</td></tr>
-<tr class="separator:a853c3748541a5efcdc0a0aef2a523eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9454d469f767dc72f29f51487317ba6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9454d469f767dc72f29f51487317ba6d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TIMER_CCR_INSTANCE</b> (Heater,&amp;GPIO_PA, GPIO_MODE_OUTPUT_2_MHZ, GPIO_CNF_OUTPUT_ALTFN_PUSHPULL, GPIO2, TIMER2_CCR3, 4095, 0)</td></tr>
-<tr class="separator:a9454d469f767dc72f29f51487317ba6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af239d1be6128c2cf9470dddd0736206d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af239d1be6128c2cf9470dddd0736206d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GPIO_PIN_NOCONF</b> (Serial_tx,&amp;GPIO_PA, GPIO_USART1_TX)</td></tr>
+<tr class="separator:af239d1be6128c2cf9470dddd0736206d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e07380dc740e8c8320b9ecf6fc1bd6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e07380dc740e8c8320b9ecf6fc1bd6d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>USART_8N1</b> (Serial, USART1, RCC_USART1, 921600, 0,&amp;Serial_tx)</td></tr>
+<tr class="separator:a4e07380dc740e8c8320b9ecf6fc1bd6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e1a812398e2960f55569f1becf22f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6e1a812398e2960f55569f1becf22f8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DMA_INSTANCE</b> (Dma, DMA1, RCC_DMA1)</td></tr>
+<tr class="separator:ab6e1a812398e2960f55569f1becf22f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aeeaba0bf350894e16dca95c3433371"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2aeeaba0bf350894e16dca95c3433371"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>GPIO_PIN_NOCONF</b> (StatusLED_pin,&amp;GPIO_PB, GPIO15)</td></tr>
+<tr class="separator:a2aeeaba0bf350894e16dca95c3433371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62bc4a3e73a3bda284d20e2d99aa9c3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62bc4a3e73a3bda284d20e2d99aa9c3e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TIMER_NOCONF</b> (StatusLED_timer, TIM1, RCC_TIM1)</td></tr>
+<tr class="separator:a62bc4a3e73a3bda284d20e2d99aa9c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e33b62baadd843fc4d336930ffc80a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65e33b62baadd843fc4d336930ffc80a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DMA_CHANNEL_NOCONF</b> (StatusLED_dma,&amp;Dma, DMA_CHANNEL6)</td></tr>
+<tr class="separator:a65e33b62baadd843fc4d336930ffc80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b692da9c42d4defd8814f963d1d2da0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b692da9c42d4defd8814f963d1d2da0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TIMER_CCR_NOCONF</b> (StatusLED_pwm,&amp;StatusLED_timer, TIM_OC3N,&amp;StatusLED_dma)</td></tr>
+<tr class="separator:a4b692da9c42d4defd8814f963d1d2da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01d8360f2847c41f234b2d6333879cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac01d8360f2847c41f234b2d6333879cc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SYSTICK_AUTO_CONFIG</b> (Systick, 1000)</td></tr>
+<tr class="separator:ac01d8360f2847c41f234b2d6333879cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f98adee46907f4bd29dc153ce25dcb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f98adee46907f4bd29dc153ce25dcb7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>GAMMA_LUT_8_8_E_INSTANCE</b> (LED_Gamma)</td></tr>
 <tr class="separator:a1f98adee46907f4bd29dc153ce25dcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ffc4d6ea2a7a8039f889967b7a7d7e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ffc4d6ea2a7a8039f889967b7a7d7e3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GPIO_PIN_INSTANCE</b> (NTC_pin,&amp;GPIO_PA, GPIO_MODE_INPUT, GPIO_CNF_INPUT_ANALOG, GPIO3)</td></tr>
-<tr class="separator:a3ffc4d6ea2a7a8039f889967b7a7d7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabae29cd362c0001a2b417c9206cb330"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aabae29cd362c0001a2b417c9206cb330">hw_init_state</a> (enum <a class="el" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> <a class="el" href="structstate.html">state</a>)</td></tr>
+<tr class="memitem:aabae29cd362c0001a2b417c9206cb330"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aabae29cd362c0001a2b417c9206cb330">hw_init_state</a> (enum <a class="el" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> state)</td></tr>
 <tr class="memdesc:aabae29cd362c0001a2b417c9206cb330"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function prototype calls all perhipherals with the state as argument.  <a href="#aabae29cd362c0001a2b417c9206cb330">More...</a><br /></td></tr>
 <tr class="separator:aabae29cd362c0001a2b417c9206cb330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdd94f850b193691f1bfc60c724b542a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdd94f850b193691f1bfc60c724b542a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>sys_tick_handler</b> (void)</td></tr>
 <tr class="separator:afdd94f850b193691f1bfc60c724b542a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a359616b69ef6be09a3cb5680893c25cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a359616b69ef6be09a3cb5680893c25cb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ms_sleep</b> (int time)</td></tr>
+<tr class="separator:a359616b69ef6be09a3cb5680893c25cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ca7c9b89c22fcd9ec9aeed3e96b6c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42ca7c9b89c22fcd9ec9aeed3e96b6c4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_system_time_blocking</b> (struct <a class="el" href="structsw__timer__system__time.html">sw_timer_system_time</a> *result)</td></tr>
 <tr class="separator:a42ca7c9b89c22fcd9ec9aeed3e96b6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e3d66f43880efbd56cc2f68347b9b19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e3d66f43880efbd56cc2f68347b9b19"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dma1_channel1_isr</b> (void)</td></tr>
-<tr class="separator:a8e3d66f43880efbd56cc2f68347b9b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6440cc6e50bc4445698e203198648185"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6440cc6e50bc4445698e203198648185">status_color</a> (int r, int g, int b)</td></tr>
-<tr class="memdesc:a6440cc6e50bc4445698e203198648185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set color of indicator LED.  <a href="#a6440cc6e50bc4445698e203198648185">More...</a><br /></td></tr>
-<tr class="separator:a6440cc6e50bc4445698e203198648185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8505b37986de5265d35fdaa3569b9af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab8505b37986de5265d35fdaa3569b9af">usart_blocking_tm</a> (struct <a class="el" href="structusart.html">usart</a> *<a class="el" href="structusart.html">usart</a>, struct <a class="el" href="structsw__timer__system__time.html">sw_timer_system_time</a> *<a class="el" href="structtm.html">tm</a>)</td></tr>
-<tr class="memdesc:ab8505b37986de5265d35fdaa3569b9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send broken down time using blocking/polling (no dma/irq)  <a href="#ab8505b37986de5265d35fdaa3569b9af">More...</a><br /></td></tr>
-<tr class="separator:ab8505b37986de5265d35fdaa3569b9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85b9fa287bbc4012266648cbfe73ef47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85b9fa287bbc4012266648cbfe73ef47"></a>
-struct <a class="el" href="structstate.html">state</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_state</b> (enum <a class="el" href="irrigation_8h.html#ac40bd72ec6942e213e454ebcacc92dc7">irrigation_status</a> status)</td></tr>
-<tr class="separator:a85b9fa287bbc4012266648cbfe73ef47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a095a7fe46cf30b7abfbc4aac4b02c257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a095a7fe46cf30b7abfbc4aac4b02c257">report_current_temperature</a> (struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *controller)</td></tr>
-<tr class="memdesc:a095a7fe46cf30b7abfbc4aac4b02c257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports current temperature.  <a href="#a095a7fe46cf30b7abfbc4aac4b02c257">More...</a><br /></td></tr>
-<tr class="separator:a095a7fe46cf30b7abfbc4aac4b02c257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d729620635ca5fd1fe6d397b013ad06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2d729620635ca5fd1fe6d397b013ad06">report_validation_temperatures</a> (struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *controller)</td></tr>
-<tr class="memdesc:a2d729620635ca5fd1fe6d397b013ad06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report the measured temperatures for validation.  <a href="#a2d729620635ca5fd1fe6d397b013ad06">More...</a><br /></td></tr>
-<tr class="separator:a2d729620635ca5fd1fe6d397b013ad06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a328fcba3c5cf7d17f02b4c5b76495653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a328fcba3c5cf7d17f02b4c5b76495653">report_sensor_malfunction</a> (struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *controller)</td></tr>
-<tr class="memdesc:a328fcba3c5cf7d17f02b4c5b76495653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report that sensordata is invalid.  <a href="#a328fcba3c5cf7d17f02b4c5b76495653">More...</a><br /></td></tr>
-<tr class="separator:a328fcba3c5cf7d17f02b4c5b76495653"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe20ef6128c561c493413063e7924081"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#afe20ef6128c561c493413063e7924081">report_sensor_fluctuations</a> (struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *controller)</td></tr>
-<tr class="memdesc:afe20ef6128c561c493413063e7924081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report that sensordata fluctuates.  <a href="#afe20ef6128c561c493413063e7924081">More...</a><br /></td></tr>
-<tr class="separator:afe20ef6128c561c493413063e7924081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8259bbc867800edd5b8dc218f1a6693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae8259bbc867800edd5b8dc218f1a6693">report_msg_note</a> (struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *controller, char *msg)</td></tr>
-<tr class="memdesc:ae8259bbc867800edd5b8dc218f1a6693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic note as a string, used for debugging.  <a href="#ae8259bbc867800edd5b8dc218f1a6693">More...</a><br /></td></tr>
-<tr class="separator:ae8259bbc867800edd5b8dc218f1a6693"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ce529588e4fc671f721721ca40e9f2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a4ce529588e4fc671f721721ca40e9f2e">report_measurement_data</a> (struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *controller, char *msg)</td></tr>
-<tr class="memdesc:a4ce529588e4fc671f721721ca40e9f2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report water content data.  <a href="#a4ce529588e4fc671f721721ca40e9f2e">More...</a><br /></td></tr>
-<tr class="separator:a4ce529588e4fc671f721721ca40e9f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10cd1ff6b8d3726905397fc86b44bb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac10cd1ff6b8d3726905397fc86b44bb1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_status_color</b> (int r, int g, int b)</td></tr>
+<tr class="separator:ac10cd1ff6b8d3726905397fc86b44bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a840291bc02cba5474a4cb46a9b9566fe"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> (void)</td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4fb87b3684142c82865003df813ef052"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsystick__config.html">systick_config</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Systick_config</b></td></tr>
-<tr class="separator:a4fb87b3684142c82865003df813ef052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d0d8fb8a23aac2b6ac6d9e81e7b58e2"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsystick.html">systick</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Systick</b></td></tr>
-<tr class="separator:a8d0d8fb8a23aac2b6ac6d9e81e7b58e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9036c54a901bdc13978408f1babe6f78"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structadc__config.html">adc_config</a>&#160;</td><td class="memItemRight" valign="bottom"><b>NTC_adc_config</b></td></tr>
-<tr class="separator:a9036c54a901bdc13978408f1babe6f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58930016c740c92d9007715fd9262f27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58930016c740c92d9007715fd9262f27"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>NTC_buffer</b> [1]</td></tr>
-<tr class="separator:a58930016c740c92d9007715fd9262f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab08aed4305f11ea61ea2ac93a524d34b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structadc.html">adc</a>&#160;</td><td class="memItemRight" valign="bottom"><b>NTC_adc</b></td></tr>
-<tr class="separator:ab08aed4305f11ea61ea2ac93a524d34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5333e724c49577c06758ac990228568b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5333e724c49577c06758ac990228568b"></a>
-volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>NTC_filter_buffer</b> [NTC_Filter_Size]</td></tr>
-<tr class="separator:a5333e724c49577c06758ac990228568b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0e81558ffe64a96a635a1a6af8ad8bd"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfilter__rms.html">filter_rms</a>&#160;</td><td class="memItemRight" valign="bottom"><b>NTC_filter</b></td></tr>
-<tr class="separator:ab0e81558ffe64a96a635a1a6af8ad8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca1a1694194ca69da59aac0a1443da6e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structws2812__config.html">ws2812_config</a>&#160;</td><td class="memItemRight" valign="bottom"><b>StatusLED_config</b></td></tr>
+<tr class="separator:aca1a1694194ca69da59aac0a1443da6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0455c70d0edcf1a2a1c9ffc77fe5bee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0455c70d0edcf1a2a1c9ffc77fe5bee"></a>
+struct <a class="el" href="structws2812__rgb.html">ws2812_rgb</a>&#160;</td><td class="memItemRight" valign="bottom"><b>StatusLED_buf</b> [1]</td></tr>
+<tr class="separator:ab0455c70d0edcf1a2a1c9ffc77fe5bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d46441394e3638418869dda13a2970"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7d46441394e3638418869dda13a2970"></a>
+volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>StatusLED_pwmbuf</b> [1 *24+1]</td></tr>
+<tr class="separator:ae7d46441394e3638418869dda13a2970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a155a1d3f9591d851bbbe4d7d7ff71af7"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structws2812.html">ws2812</a>&#160;</td><td class="memItemRight" valign="bottom"><b>StatusLED</b></td></tr>
+<tr class="separator:a155a1d3f9591d851bbbe4d7d7ff71af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6626ba12fbadd1981081605f892a7bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6626ba12fbadd1981081605f892a7bb"></a>
 volatile int&#160;</td><td class="memItemRight" valign="bottom"><b>sleep_ms</b> = 0</td></tr>
 <tr class="separator:ad6626ba12fbadd1981081605f892a7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,28 +202,54 @@ volatile struct <a class="el" href="structsw__timer__system__time.html">sw_timer
 <tr class="memitem:a153e3e14841d1967017a21ab4feacc19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a153e3e14841d1967017a21ab4feacc19"></a>
 volatile bool&#160;</td><td class="memItemRight" valign="bottom"><b>system_time_updated</b> =0</td></tr>
 <tr class="separator:a153e3e14841d1967017a21ab4feacc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82cbd1bddefe1e9d0229cb36b068ec6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82cbd1bddefe1e9d0229cb36b068ec6d"></a>
-const struct <a class="el" href="structstate.html">state</a>&#160;</td><td class="memItemRight" valign="bottom"><b>state_init</b> = {<a class="el" href="group__state__init.html#gaeca2f683660bf42f5258acd6aac353d0">state_init_enter</a>, <a class="el" href="group__state__init.html#ga5b5f5a7ec8534a643fb599efdee6ed4f">state_init_run</a>, <a class="el" href="group__state__init.html#ga52863e306edb45d15c12acdecb7e5555">state_init_exit</a>, &quot;Init&quot;}</td></tr>
-<tr class="separator:a82cbd1bddefe1e9d0229cb36b068ec6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5282fd583ec6d89886f7f7790721e29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5282fd583ec6d89886f7f7790721e29"></a>
-const struct <a class="el" href="structstate.html">state</a>&#160;</td><td class="memItemRight" valign="bottom"><b>state_validate</b> = {<a class="el" href="group__state__validate.html#gac0d41d4685bd461b3a613f6320405b79">state_validate_enter</a>, <a class="el" href="group__state__validate.html#gaec38509b93f8a850919aa7a36e543ed5">state_validate_run</a>, <a class="el" href="group__state__validate.html#gac480e756742ffd9acd9bd21ac1e8885c">state_validate_exit</a>, &quot;Validate temperature sensor&quot;}</td></tr>
-<tr class="separator:af5282fd583ec6d89886f7f7790721e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc9312d41f1b93fd44e0cdad05313483"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc9312d41f1b93fd44e0cdad05313483"></a>
-const struct <a class="el" href="structstate.html">state</a>&#160;</td><td class="memItemRight" valign="bottom"><b>state_reboot</b> = {state_reboot_enter, state_reboot_run, state_reboot_exit, &quot;Reboot&quot;}</td></tr>
-<tr class="separator:abc9312d41f1b93fd44e0cdad05313483"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce37ea920e9b7c6b383d70fe40233e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ce37ea920e9b7c6b383d70fe40233e7"></a>
-const struct <a class="el" href="structstate.html">state</a>&#160;</td><td class="memItemRight" valign="bottom"><b>state_measure</b> = {<a class="el" href="group__state__measure.html#ga24a42892ba25be220bff68fc151e0be7">state_measure_enter</a>, state_measure_run, state_measure_exit, &quot;Measure soil water content&quot;}</td></tr>
-<tr class="separator:a3ce37ea920e9b7c6b383d70fe40233e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c433a8720f4e75971c7f216723aba26"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2c433a8720f4e75971c7f216723aba26">ic</a></td></tr>
-<tr class="memdesc:a2c433a8720f4e75971c7f216723aba26"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the main irrigation controller state.  <a href="#a2c433a8720f4e75971c7f216723aba26">More...</a><br /></td></tr>
-<tr class="separator:a2c433a8720f4e75971c7f216723aba26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Irrigation controller main file. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>systick, adc, moisture sensor, pwm output, filter</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd><p class="startdd">systick, adc, moisture sensor, pwm output, filter </p>
+<p class="enddd">explain port and rcc better</p>
+</dd></dl>
 
 <p>Definition in file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a3c3fdab7e413cd726f82bfba92630a39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HW_PRE_INIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">call, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">obj&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">call(obj, <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a>);\</div>
+<div class="line">    call(obj, <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba4e9b2d4b7e946d95c2e41f3de17035a0">HW_INIT_GPIO</a>);\</div>
+<div class="line">    call(obj, <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a>);\</div>
+<div class="line">    call(obj, <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba3f137ea5dd6b2ac372bb6d175434b3fa">HW_INIT_NVIC</a>);\</div>
+<div class="line">    call(obj, <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a>);</div>
+<div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a></div><div class="ttdoc">After GPIOs have been initialized we might want to do some stuff before NVIC. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00045">hw.h:45</a></div></div>
+<div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9ba3f137ea5dd6b2ac372bb6d175434b3fa"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba3f137ea5dd6b2ac372bb6d175434b3fa">HW_INIT_NVIC</a></div><div class="ttdoc">After GPIO have been initialized all NVIC will be initialized. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00048">hw.h:48</a></div></div>
+<div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a></div><div class="ttdoc">This is the first state entered and here hardware drivers may initialize any clocks needed...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00036">hw.h:36</a></div></div>
+<div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a></div><div class="ttdoc">After NVIC is initialized there might be more stuff todo such as setting up perhipheral settings...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00051">hw.h:51</a></div></div>
+<div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9ba4e9b2d4b7e946d95c2e41f3de17035a0"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba4e9b2d4b7e946d95c2e41f3de17035a0">HW_INIT_GPIO</a></div><div class="ttdoc">After clocks have been initialized all GPIO will be initialized, this also puts pins to their default...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00039">hw.h:39</a></div></div>
+</div><!-- fragment -->
+<p>Definition at line <a class="el" href="main_8c_source.html#l00016">16</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aabae29cd362c0001a2b417c9206cb330"></a>
 <div class="memitem">
 <div class="memproto">
@@ -264,368 +266,55 @@ const struct <a class="el" href="structstate.html">state</a>&#160;</td><td class
 
 <p>This function prototype calls all perhipherals with the state as argument. </p>
 
-<p>Definition at line <a class="el" href="main_8c_source.html#l00075">75</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00076">76</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
-<p>References <a class="el" href="timer_8c_source.html#l00010">timer_ccr_init()</a>, <a class="el" href="usart_8c_source.html#l00035">usart_init()</a>, and <a class="el" href="ws2812_8c_source.html#l00036">ws2812_init()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a095a7fe46cf30b7abfbc4aac4b02c257"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void report_current_temperature </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *&#160;</td>
-          <td class="paramname"><em>controller</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reports current temperature. </p>
-
-<p>Definition at line <a class="el" href="main_8c_source.html#l00339">339</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-<p>References <a class="el" href="irrigation_8h_source.html#l00049">irrigation_controller_status::iteration_time</a>, <a class="el" href="irrigation_8h_source.html#l00056">irrigation_controller_status::soil_temperature</a>, <a class="el" href="irrigation_8h_source.html#l00082">irrigation_controller::status</a>, <a class="el" href="irrigation_8h_source.html#l00036">irrigation_temperature_sample::temperature</a>, <a class="el" href="usart_8c_source.html#l00128">usart_blocking_float()</a>, <a class="el" href="uart_8h_source.html#l00011">usart_blocking_str</a>, and <a class="el" href="main_8c_source.html#l00289">usart_blocking_tm()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4ce529588e4fc671f721721ca40e9f2e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void report_measurement_data </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *&#160;</td>
-          <td class="paramname"><em>controller</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Report water content data. </p>
-
-<p>Definition at line <a class="el" href="main_8c_source.html#l00379">379</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-<p>References <a class="el" href="irrigation_8h_source.html#l00049">irrigation_controller_status::iteration_time</a>, <a class="el" href="irrigation_8h_source.html#l00082">irrigation_controller::status</a>, <a class="el" href="usart_8c_source.html#l00128">usart_blocking_float()</a>, <a class="el" href="uart_8h_source.html#l00011">usart_blocking_str</a>, and <a class="el" href="main_8c_source.html#l00289">usart_blocking_tm()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae8259bbc867800edd5b8dc218f1a6693"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void report_msg_note </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *&#160;</td>
-          <td class="paramname"><em>controller</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>msg</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Generic note as a string, used for debugging. </p>
-
-<p>Definition at line <a class="el" href="main_8c_source.html#l00371">371</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-<p>References <a class="el" href="irrigation_8h_source.html#l00049">irrigation_controller_status::iteration_time</a>, <a class="el" href="irrigation_8h_source.html#l00082">irrigation_controller::status</a>, <a class="el" href="uart_8h_source.html#l00011">usart_blocking_str</a>, <a class="el" href="usart_8c_source.html#l00079">usart_blocking_strz()</a>, and <a class="el" href="main_8c_source.html#l00289">usart_blocking_tm()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="afe20ef6128c561c493413063e7924081"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void report_sensor_fluctuations </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *&#160;</td>
-          <td class="paramname"><em>controller</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Report that sensordata fluctuates. </p>
-
-<p>Definition at line <a class="el" href="main_8c_source.html#l00365">365</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-<p>References <a class="el" href="irrigation_8h_source.html#l00049">irrigation_controller_status::iteration_time</a>, <a class="el" href="irrigation_8h_source.html#l00082">irrigation_controller::status</a>, <a class="el" href="uart_8h_source.html#l00011">usart_blocking_str</a>, and <a class="el" href="main_8c_source.html#l00289">usart_blocking_tm()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a328fcba3c5cf7d17f02b4c5b76495653"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void report_sensor_malfunction </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *&#160;</td>
-          <td class="paramname"><em>controller</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Report that sensordata is invalid. </p>
-
-<p>Definition at line <a class="el" href="main_8c_source.html#l00359">359</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-<p>References <a class="el" href="irrigation_8h_source.html#l00049">irrigation_controller_status::iteration_time</a>, <a class="el" href="irrigation_8h_source.html#l00082">irrigation_controller::status</a>, <a class="el" href="uart_8h_source.html#l00011">usart_blocking_str</a>, and <a class="el" href="main_8c_source.html#l00289">usart_blocking_tm()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2d729620635ca5fd1fe6d397b013ad06"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void report_validation_temperatures </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> *&#160;</td>
-          <td class="paramname"><em>controller</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Report the measured temperatures for validation. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__state__validate.html#gac0d41d4685bd461b3a613f6320405b79" title="We set up the validation timer and init the maximum and minim temperatured. ">state_validate_enter</a> min_temperature max_temperature </dd></dl>
-
-<p>Definition at line <a class="el" href="main_8c_source.html#l00347">347</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-<p>References <a class="el" href="irrigation_8h_source.html#l00049">irrigation_controller_status::iteration_time</a>, <a class="el" href="irrigation_8h_source.html#l00062">irrigation_controller_status::max_temperature</a>, <a class="el" href="irrigation_8h_source.html#l00061">irrigation_controller_status::min_temperature</a>, <a class="el" href="irrigation_8h_source.html#l00082">irrigation_controller::status</a>, <a class="el" href="usart_8c_source.html#l00128">usart_blocking_float()</a>, <a class="el" href="uart_8h_source.html#l00011">usart_blocking_str</a>, and <a class="el" href="main_8c_source.html#l00289">usart_blocking_tm()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a6440cc6e50bc4445698e203198648185"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void status_color </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set color of indicator LED. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Move this to the events API </dd></dl>
-
-<p>Definition at line <a class="el" href="main_8c_source.html#l00150">150</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-<p>Referenced by <a class="el" href="state__init_8c_source.html#l00014">state_init_run()</a>, and <a class="el" href="state__validate_8c_source.html#l00026">state_validate_run()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab8505b37986de5265d35fdaa3569b9af"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void usart_blocking_tm </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structusart.html">usart</a> *&#160;</td>
-          <td class="paramname"><em>usart</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structsw__timer__system__time.html">sw_timer_system_time</a> *&#160;</td>
-          <td class="paramname"><em>tm</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Send broken down time using blocking/polling (no dma/irq) </p>
-
-<p>Definition at line <a class="el" href="main_8c_source.html#l00289">289</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-<p>References <a class="el" href="time_8h_source.html#l00022">sw_timer_system_time::epoch</a>, <a class="el" href="time_8h_source.html#l00023">sw_timer_system_time::ms</a>, <a class="el" href="time_8c_source.html#l00027">time_tm_from_epoch()</a>, <a class="el" href="time_8h_source.html#l00011">tm::tm_hour</a>, <a class="el" href="time_8h_source.html#l00012">tm::tm_mday</a>, <a class="el" href="time_8h_source.html#l00010">tm::tm_min</a>, <a class="el" href="time_8h_source.html#l00013">tm::tm_mon</a>, <a class="el" href="time_8h_source.html#l00009">tm::tm_sec</a>, <a class="el" href="time_8h_source.html#l00014">tm::tm_year</a>, <a class="el" href="usart_8c_source.html#l00087">usart_blocking_int()</a>, <a class="el" href="usart_8c_source.html#l00111">usart_blocking_int_zp()</a>, and <a class="el" href="uart_8h_source.html#l00011">usart_blocking_str</a>.</p>
-
-<p>Referenced by <a class="el" href="main_8c_source.html#l00339">report_current_temperature()</a>, <a class="el" href="main_8c_source.html#l00379">report_measurement_data()</a>, <a class="el" href="main_8c_source.html#l00371">report_msg_note()</a>, <a class="el" href="main_8c_source.html#l00365">report_sensor_fluctuations()</a>, <a class="el" href="main_8c_source.html#l00359">report_sensor_malfunction()</a>, and <a class="el" href="main_8c_source.html#l00347">report_validation_temperatures()</a>.</p>
+<p>References <a class="el" href="usart_8c_source.html#l00038">usart_init()</a>, and <a class="el" href="ws2812_8c_source.html#l00040">ws2812_init()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a2c433a8720f4e75971c7f216723aba26"></a>
+<a class="anchor" id="a155a1d3f9591d851bbbe4d7d7ff71af7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structirrigation__controller.html">irrigation_controller</a> ic</td>
+          <td class="memname">struct <a class="el" href="structws2812.html">ws2812</a> StatusLED</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .events = {</div>
-<div class="line">        .report_validation_temperatures = <a class="code" href="main_8c.html#a2d729620635ca5fd1fe6d397b013ad06">report_validation_temperatures</a>,</div>
-<div class="line">        .report_sensor_malfunction = <a class="code" href="main_8c.html#a328fcba3c5cf7d17f02b4c5b76495653">report_sensor_malfunction</a>,</div>
-<div class="line">        .report_sensor_fluctuations = <a class="code" href="main_8c.html#afe20ef6128c561c493413063e7924081">report_sensor_fluctuations</a>,</div>
-<div class="line">        .report_current_temperature = <a class="code" href="main_8c.html#a095a7fe46cf30b7abfbc4aac4b02c257">report_current_temperature</a>,</div>
-<div class="line">        .report_msg_note = <a class="code" href="main_8c.html#ae8259bbc867800edd5b8dc218f1a6693">report_msg_note</a>,</div>
-<div class="line">        .report_measurement_data = <a class="code" href="main_8c.html#a4ce529588e4fc671f721721ca40e9f2e">report_measurement_data</a>,</div>
-<div class="line">    }</div>
+<div class="line">    .configuration = &amp;StatusLED_config,</div>
+<div class="line">    .led_buffer = StatusLED_buf,</div>
+<div class="line">    .pwm_buffer = StatusLED_pwmbuf,</div>
+<div class="line">    .led_count = 1,</div>
 <div class="line">}</div>
-<div class="ttc" id="main_8c_html_a328fcba3c5cf7d17f02b4c5b76495653"><div class="ttname"><a href="main_8c.html#a328fcba3c5cf7d17f02b4c5b76495653">report_sensor_malfunction</a></div><div class="ttdeci">void report_sensor_malfunction(struct irrigation_controller *controller)</div><div class="ttdoc">Report that sensordata is invalid. </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00359">main.c:359</a></div></div>
-<div class="ttc" id="main_8c_html_afe20ef6128c561c493413063e7924081"><div class="ttname"><a href="main_8c.html#afe20ef6128c561c493413063e7924081">report_sensor_fluctuations</a></div><div class="ttdeci">void report_sensor_fluctuations(struct irrigation_controller *controller)</div><div class="ttdoc">Report that sensordata fluctuates. </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00365">main.c:365</a></div></div>
-<div class="ttc" id="main_8c_html_a095a7fe46cf30b7abfbc4aac4b02c257"><div class="ttname"><a href="main_8c.html#a095a7fe46cf30b7abfbc4aac4b02c257">report_current_temperature</a></div><div class="ttdeci">void report_current_temperature(struct irrigation_controller *controller)</div><div class="ttdoc">Reports current temperature. </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00339">main.c:339</a></div></div>
-<div class="ttc" id="main_8c_html_a2d729620635ca5fd1fe6d397b013ad06"><div class="ttname"><a href="main_8c.html#a2d729620635ca5fd1fe6d397b013ad06">report_validation_temperatures</a></div><div class="ttdeci">void report_validation_temperatures(struct irrigation_controller *controller)</div><div class="ttdoc">Report the measured temperatures for validation. </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00347">main.c:347</a></div></div>
-<div class="ttc" id="main_8c_html_ae8259bbc867800edd5b8dc218f1a6693"><div class="ttname"><a href="main_8c.html#ae8259bbc867800edd5b8dc218f1a6693">report_msg_note</a></div><div class="ttdeci">void report_msg_note(struct irrigation_controller *controller, char *msg)</div><div class="ttdoc">Generic note as a string, used for debugging. </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00371">main.c:371</a></div></div>
-<div class="ttc" id="main_8c_html_a4ce529588e4fc671f721721ca40e9f2e"><div class="ttname"><a href="main_8c.html#a4ce529588e4fc671f721721ca40e9f2e">report_measurement_data</a></div><div class="ttdeci">void report_measurement_data(struct irrigation_controller *controller, char *msg)</div><div class="ttdoc">Report water content data. </div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00379">main.c:379</a></div></div>
 </div><!-- fragment -->
-<p>This is the main irrigation controller state. </p>
-
-<p>Definition at line <a class="el" href="main_8c_source.html#l00391">391</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Definition at line <a class="el" href="main_8c_source.html#l00059">59</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab08aed4305f11ea61ea2ac93a524d34b"></a>
+<a class="anchor" id="aca1a1694194ca69da59aac0a1443da6e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structadc.html">adc</a> NTC_adc</td>
+          <td class="memname">struct <a class="el" href="structws2812__config.html">ws2812_config</a> StatusLED_config</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .configuration = &amp;NTC_adc_config,</div>
-<div class="line">    .adc_buffer = NTC_buffer,</div>
+<div class="line">    .ccr = &amp;StatusLED_pwm,</div>
+<div class="line">    .pin = &amp;StatusLED_pin,  </div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Definition at line <a class="el" href="main_8c_source.html#l00051">51</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9036c54a901bdc13978408f1babe6f78"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structadc__config.html">adc_config</a> NTC_adc_config</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .channel_map = &amp;(uint8_t){3},</div>
-<div class="line">    .channel_count = 1,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p>Definition at line <a class="el" href="main_8c_source.html#l00044">44</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab0e81558ffe64a96a635a1a6af8ad8bd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structfilter__rms.html">filter_rms</a> NTC_filter</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .buffer = NTC_filter_buffer,</div>
-<div class="line">    .size = NTC_Filter_Size,</div>
-<div class="line">    .valid_range = {    </div>
-<div class="line">        .min = 1200,</div>
-<div class="line">        .max = 3400,</div>
-<div class="line">    },</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p>Definition at line <a class="el" href="main_8c_source.html#l00061">61</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8d0d8fb8a23aac2b6ac6d9e81e7b58e2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structsystick.html">systick</a> Systick</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .configuration = &amp;Systick_config,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p>Definition at line <a class="el" href="main_8c_source.html#l00039">39</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a4fb87b3684142c82865003df813ef052"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct <a class="el" href="structsystick__config.html">systick_config</a> Systick_config</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    .frequency = 1000,</div>
-<div class="line">    .auto_start = 1,</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p>Definition at line <a class="el" href="main_8c_source.html#l00034">34</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 16:31:08 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
