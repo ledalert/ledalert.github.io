@@ -1,0 +1,9 @@
+<map id="src/math.h" name="src/math.h">
+<area shape="rect" id="node2" href="$irrigation_8h.html" title="Irrigation main include file. " alt="" coords="197,81,310,107"/>
+<area shape="rect" id="node3" href="$main_8c.html" title="Irrigation controller main file. " alt="" coords="5,155,93,182"/>
+<area shape="rect" id="node8" href="$usart_8c.html" title="USART HAL driver. " alt="" coords="334,81,423,107"/>
+<area shape="rect" id="node4" href="$state__init_8c.html" title="Initial state. " alt="" coords="117,155,232,182"/>
+<area shape="rect" id="node5" href="$state__measure_8c.html" title="Measurement state. " alt="" coords="257,155,410,182"/>
+<area shape="rect" id="node6" href="$state__reboot_8c.html" title="Rebooting state. " alt="" coords="435,155,573,182"/>
+<area shape="rect" id="node7" href="$state__validate_8c.html" title="Sensor validation state. " alt="" coords="597,155,744,182"/>
+</map>

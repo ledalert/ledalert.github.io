@@ -1,0 +1,19 @@
+<map id="src/main.c" name="src/main.c">
+<area shape="rect" id="node2" href="$math_8h.html" title="Some math utilities. " alt="" coords="607,155,675,181"/>
+<area shape="rect" id="node3" href="$ws2812__macro_8h.html" title="Helper macros for ws2812. " alt="" coords="238,80,369,107"/>
+<area shape="rect" id="node14" href="$timer__macro_8h.html" title="Utility macros for timers. " alt="" coords="140,155,256,181"/>
+<area shape="rect" id="node15" href="$usart__macro_8h.html" title="Helper macros for USART. " alt="" coords="393,80,507,107"/>
+<area shape="rect" id="node18" href="$led__macro_8h.html" title="Helper macros for LED control. " alt="" coords="582,80,683,107"/>
+<area shape="rect" id="node19" href="$systick_8h.html" title="systick HAL include " alt="" coords="873,80,950,107"/>
+<area shape="rect" id="node22" href="$adc_8h.html" title="ADC HAL include. " alt="" coords="920,229,977,256"/>
+<area shape="rect" id="node24" href="$time_8h.html" title="Time keeping and converting include file. " alt="" coords="724,155,787,181"/>
+<area shape="rect" id="node25" href="$filter_8h.html" title="Filter functions for filtering sensor data. " alt="" coords="975,80,1037,107"/>
+<area shape="rect" id="node26" href="$irrigation_8h.html" title="Irrigation main include file. " alt="" coords="707,80,798,107"/>
+<area shape="rect" id="node4" href="$ws2812_8h.html" title="WS2812 HAL include file. " alt="" coords="414,155,497,181"/>
+<area shape="rect" id="node13" href="$gpio__macro_8h.html" title="Helper macros for GPIO. " alt="" coords="281,155,390,181"/>
+<area shape="rect" id="node5" href="$gpio_8h.html" title="GPIO HAL includes. " alt="" coords="425,229,486,256"/>
+<area shape="rect" id="node9" href="$timer_8h.html" title="Timer HAL include file. " alt="" coords="275,229,343,256"/>
+<area shape="rect" id="node11" href="$dma_8h.html" title="DMA includes. " alt="" coords="511,229,573,256"/>
+<area shape="rect" id="node6" href="$hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="629,304,679,331"/>
+<area shape="rect" id="node16" href="$uart_8h.html" title="UART HAL Include file. " alt="" coords="521,155,581,181"/>
+</map>

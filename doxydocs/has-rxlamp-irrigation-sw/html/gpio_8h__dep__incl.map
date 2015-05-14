@@ -1,0 +1,10 @@
+<map id="src/gpio.h" name="src/gpio.h">
+<area shape="rect" id="node2" href="$gpio_8c.html" title="GPIO HAL implementation. " alt="" coords="77,80,159,107"/>
+<area shape="rect" id="node3" href="$ws2812_8h.html" title="WS2812 HAL include file. " alt="" coords="183,80,288,107"/>
+<area shape="rect" id="node7" href="$uart_8h.html" title="UART HAL Include file. " alt="" coords="339,80,422,107"/>
+<area shape="rect" id="node4" href="$ws2812__macro_8h.html" title="Helper macros for ws2812. " alt="" coords="5,155,159,181"/>
+<area shape="rect" id="node6" href="$ws2812_8c.html" title="Implementation of WS2812 HAL. " alt="" coords="183,155,287,181"/>
+<area shape="rect" id="node5" href="$main_8c.html" title="Irrigation controller main file. " alt="" coords="187,229,275,256"/>
+<area shape="rect" id="node8" href="$usart__macro_8h.html" title="Helper macros for USART. " alt="" coords="311,155,450,181"/>
+<area shape="rect" id="node9" href="$usart_8c.html" title="USART HAL driver. " alt="" coords="475,155,564,181"/>
+</map>

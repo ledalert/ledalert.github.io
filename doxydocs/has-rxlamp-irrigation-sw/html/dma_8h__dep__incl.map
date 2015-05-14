@@ -1,0 +1,7 @@
+<map id="src/dma.h" name="src/dma.h">
+<area shape="rect" id="node2" href="$dma_8c.html" title="DMA implementation. " alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node3" href="$ws2812_8h.html" title="WS2812 HAL include file. " alt="" coords="115,80,221,107"/>
+<area shape="rect" id="node4" href="$ws2812__macro_8h.html" title="Helper macros for ws2812. " alt="" coords="15,155,169,181"/>
+<area shape="rect" id="node6" href="$ws2812_8c.html" title="Implementation of WS2812 HAL. " alt="" coords="193,155,297,181"/>
+<area shape="rect" id="node5" href="$main_8c.html" title="Irrigation controller main file. " alt="" coords="48,229,136,256"/>
+</map>

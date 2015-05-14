@@ -1,0 +1,9 @@
+<map id="src/ws2812_macro.h" name="src/ws2812_macro.h">
+<area shape="rect" id="node2" href="$ws2812_8h.html" title="WS2812 HAL include file. " alt="" coords="471,80,553,107"/>
+<area shape="rect" id="node11" href="$gpio__macro_8h.html" title="Helper macros for GPIO. " alt="" coords="719,80,828,107"/>
+<area shape="rect" id="node12" href="$timer__macro_8h.html" title="Utility macros for timers. " alt="" coords="578,80,694,107"/>
+<area shape="rect" id="node3" href="$gpio_8h.html" title="GPIO HAL includes. " alt="" coords="481,155,543,181"/>
+<area shape="rect" id="node7" href="$timer_8h.html" title="Timer HAL include file. " alt="" coords="602,155,670,181"/>
+<area shape="rect" id="node9" href="$dma_8h.html" title="DMA includes. " alt="" coords="231,155,294,181"/>
+<area shape="rect" id="node4" href="$hw_8h.html" title="Hardware abstraction layer include file. " alt="" coords="624,229,675,256"/>
+</map>
