@@ -1,0 +1,65 @@
+\hypertarget{systick__macro_8h}{}\section{src/systick\+\_\+macro.h File Reference}
+\label{systick__macro_8h}\index{src/systick\+\_\+macro.\+h@{src/systick\+\_\+macro.\+h}}
+
+
+Helper macros for systick H\+A\+L.  
+
+
+{\ttfamily \#include \char`\"{}systick.\+h\char`\"{}}\\*
+Include dependency graph for systick\+\_\+macro.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{systick__macro_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{systick__macro_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{systick__macro_8h_abf9235222ff6ace610624f67afca2e6f}{S\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+U\+T\+O\+\_\+\+C\+O\+N\+F\+I\+G}(Name,  Frequency)
+\begin{DoxyCompactList}\small\item\em Automatic systick set to frequency, autostarts. \end{DoxyCompactList}\item 
+\hypertarget{systick__macro_8h_a18eff149e6b3ec9d3d6005a7235b3661}{}\#define {\bfseries \+\_\+\+S\+Y\+S\+T\+I\+C\+K\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}\label{systick__macro_8h_a18eff149e6b3ec9d3d6005a7235b3661}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper macros for systick H\+A\+L. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{systick__macro_8h_abf9235222ff6ace610624f67afca2e6f}{}\index{systick\+\_\+macro.\+h@{systick\+\_\+macro.\+h}!S\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+U\+T\+O\+\_\+\+C\+O\+N\+F\+I\+G@{S\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+U\+T\+O\+\_\+\+C\+O\+N\+F\+I\+G}}
+\index{S\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+U\+T\+O\+\_\+\+C\+O\+N\+F\+I\+G@{S\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+U\+T\+O\+\_\+\+C\+O\+N\+F\+I\+G}!systick\+\_\+macro.\+h@{systick\+\_\+macro.\+h}}
+\subsubsection[{S\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+U\+T\+O\+\_\+\+C\+O\+N\+F\+I\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+U\+T\+O\+\_\+\+C\+O\+N\+F\+I\+G(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Frequency}
+\end{DoxyParamCaption}
+)}\label{systick__macro_8h_abf9235222ff6ace610624f67afca2e6f}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\hyperlink{structsystick__config}{systick\_config} Name##\_config = \{\(\backslash\)
+        .frequency = Frequency,\(\backslash\)
+        .auto\_start = 1,\(\backslash\)
+    \};\(\backslash\)
+    \(\backslash\)
+    struct \hyperlink{structsystick}{systick} Name = \{\(\backslash\)
+        .configuration = &Name##\_config,\(\backslash\)
+    \};
+\end{DoxyCode}
+
+
+Automatic systick set to frequency, autostarts. 
+
+
+
+Definition at line 10 of file systick\+\_\+macro.\+h.
+

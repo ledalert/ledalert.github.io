@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define PWM_PERIOD 4096</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define PWM_TOP (PWM_PERIOD - 1)</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> hw_init();<span class="comment"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="hw_8h.html#acf938165e604a675fe09218a1b3cfb5f">hw_init</a>();<span class="comment"></span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/*! This is the state of the hardware abstraction layer */</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">   33</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> {</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba6b96182ed0808ff30887f91b24d86849">   34</a></span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba6b96182ed0808ff30887f91b24d86849">HW_INIT_UNINITIALIZED</a>,<span class="comment"></span></div>
@@ -158,12 +158,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a></div><div class="ttdoc">This is the first state entered and here hardware drivers may initialize any clocks needed...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00036">hw.h:36</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9b"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a></div><div class="ttdeci">hw_init_state</div><div class="ttdoc">This is the state of the hardware abstraction layer. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00033">hw.h:33</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a></div><div class="ttdoc">After NVIC is initialized there might be more stuff todo such as setting up perhipheral settings...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00051">hw.h:51</a></div></div>
+<div class="ttc" id="hw_8h_html_acf938165e604a675fe09218a1b3cfb5f"><div class="ttname"><a href="hw_8h.html#acf938165e604a675fe09218a1b3cfb5f">hw_init</a></div><div class="ttdeci">void hw_init()</div><div class="ttdoc">Call hw_init_state with all states to go trough. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8c_source.html#l00018">hw.c:18</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9ba4e9b2d4b7e946d95c2e41f3de17035a0"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba4e9b2d4b7e946d95c2e41f3de17035a0">HW_INIT_GPIO</a></div><div class="ttdoc">After clocks have been initialized all GPIO will be initialized, this also puts pins to their default...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00039">hw.h:39</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9ba6b96182ed0808ff30887f91b24d86849"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba6b96182ed0808ff30887f91b24d86849">HW_INIT_UNINITIALIZED</a></div><div class="ttdoc">Hardware is not initialized. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00034">hw.h:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 15 2015 22:42:01 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

@@ -1,0 +1,113 @@
+\hypertarget{dma__macro_8h}{}\section{src/dma\+\_\+macro.h File Reference}
+\label{dma__macro_8h}\index{src/dma\+\_\+macro.\+h@{src/dma\+\_\+macro.\+h}}
+
+
+Helper macros for D\+M\+A H\+A\+L.  
+
+
+{\ttfamily \#include \char`\"{}dma.\+h\char`\"{}}\\*
+Include dependency graph for dma\+\_\+macro.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dma__macro_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{dma__macro_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{dma__macro_8h_a60ec7bdb3b7b104579e574b42073eefc}{D\+M\+A\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Dma,  Rcc)
+\begin{DoxyCompactList}\small\item\em Create D\+M\+A instance. \end{DoxyCompactList}\item 
+\#define \hyperlink{dma__macro_8h_acedf223dedf82b818fba2c510240ebfe}{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Dma,  Channel,  Perhipheral,  Enable\+\_\+\+Reg,  Enable\+\_\+\+Flag)
+\begin{DoxyCompactList}\small\item\em Create D\+M\+A channel instance. \end{DoxyCompactList}\item 
+\#define \hyperlink{dma__macro_8h_a5ba600d33d1b59c518064b8684e861f7}{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+O\+C\+O\+N\+F}(Name,  Dma,  Channel)~\hyperlink{dma__macro_8h_acedf223dedf82b818fba2c510240ebfe}{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name, Dma, Channel, 0, 0, 0)
+\begin{DoxyCompactList}\small\item\em Create unconfigured D\+M\+A channel. \end{DoxyCompactList}\item 
+\hypertarget{dma__macro_8h_af055f688648e8a123b42c90150041bf6}{}\#define {\bfseries \+\_\+\+D\+M\+A\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}\label{dma__macro_8h_af055f688648e8a123b42c90150041bf6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper macros for D\+M\+A H\+A\+L. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{dma__macro_8h_acedf223dedf82b818fba2c510240ebfe}{}\index{dma\+\_\+macro.\+h@{dma\+\_\+macro.\+h}!D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}}
+\index{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}!dma\+\_\+macro.\+h@{dma\+\_\+macro.\+h}}
+\subsubsection[{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Dma, }
+\item[{}]{Channel, }
+\item[{}]{Perhipheral, }
+\item[{}]{Enable\+\_\+\+Reg, }
+\item[{}]{Enable\+\_\+\+Flag}
+\end{DoxyParamCaption}
+)}\label{dma__macro_8h_acedf223dedf82b818fba2c510240ebfe}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\hyperlink{structdma__channel__config}{dma\_channel\_config} Name = \{\(\backslash\)
+        .dma = Dma,\(\backslash\)
+        .channel = Channel,\(\backslash\)
+        .perhipheral = Perhipheral,\(\backslash\)
+        .enable\_reg = Enable\_Reg,\(\backslash\)
+        .enable\_flag = Enable\_Flag,\(\backslash\)
+    \};
+\end{DoxyCode}
+
+
+Create D\+M\+A channel instance. 
+
+
+
+Definition at line 18 of file dma\+\_\+macro.\+h.
+
+\hypertarget{dma__macro_8h_a5ba600d33d1b59c518064b8684e861f7}{}\index{dma\+\_\+macro.\+h@{dma\+\_\+macro.\+h}!D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+O\+C\+O\+N\+F@{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+O\+C\+O\+N\+F}}
+\index{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+O\+C\+O\+N\+F@{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+O\+C\+O\+N\+F}!dma\+\_\+macro.\+h@{dma\+\_\+macro.\+h}}
+\subsubsection[{D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+O\+C\+O\+N\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+O\+C\+O\+N\+F(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Dma, }
+\item[{}]{Channel}
+\end{DoxyParamCaption}
+)~{\bf D\+M\+A\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name, Dma, Channel, 0, 0, 0)}\label{dma__macro_8h_a5ba600d33d1b59c518064b8684e861f7}
+
+
+Create unconfigured D\+M\+A channel. 
+
+
+
+Definition at line 29 of file dma\+\_\+macro.\+h.
+
+\hypertarget{dma__macro_8h_a60ec7bdb3b7b104579e574b42073eefc}{}\index{dma\+\_\+macro.\+h@{dma\+\_\+macro.\+h}!D\+M\+A\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{D\+M\+A\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}}
+\index{D\+M\+A\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{D\+M\+A\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}!dma\+\_\+macro.\+h@{dma\+\_\+macro.\+h}}
+\subsubsection[{D\+M\+A\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+M\+A\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Dma, }
+\item[{}]{Rcc}
+\end{DoxyParamCaption}
+)}\label{dma__macro_8h_a60ec7bdb3b7b104579e574b42073eefc}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\hyperlink{structdma__config}{dma\_config} Name = \{\(\backslash\)
+        .dma = Dma,\(\backslash\)
+        .rcc = Rcc,\(\backslash\)
+    \};
+\end{DoxyCode}
+
+
+Create D\+M\+A instance. 
+
+
+
+Definition at line 10 of file dma\+\_\+macro.\+h.
+

@@ -5,5 +5,6 @@ var searchData=
   ['state_5freboot_2ec',['state_reboot.c',['../state__reboot_8c.html',1,'']]],
   ['state_5fvalidate_2ec',['state_validate.c',['../state__validate_8c.html',1,'']]],
   ['systick_2ec',['systick.c',['../systick_8c.html',1,'']]],
-  ['systick_2eh',['systick.h',['../systick_8h.html',1,'']]]
+  ['systick_2eh',['systick.h',['../systick_8h.html',1,'']]],
+  ['systick_5fmacro_2eh',['systick_macro.h',['../systick__macro_8h.html',1,'']]]
 ];

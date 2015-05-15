@@ -4,9 +4,9 @@
 <area shape="rect" id="node14" href="$timer__macro_8h.html" title="Utility macros for timers. " alt="" coords="5,155,121,181"/>
 <area shape="rect" id="node15" href="$usart__macro_8h.html" title="Helper macros for USART. " alt="" coords="467,80,582,107"/>
 <area shape="rect" id="node17" href="$time_8h.html" title="Time keeping and converting include file. " alt="" coords="744,229,807,256"/>
-<area shape="rect" id="node19" href="$dma__macro_8h_source.html" title="dma_macro.h" alt="" coords="387,155,497,181"/>
+<area shape="rect" id="node19" href="$dma__macro_8h.html" title="Helper macros for DMA HAL. " alt="" coords="387,155,497,181"/>
 <area shape="rect" id="node20" href="$led__macro_8h.html" title="Helper macros for LED control. " alt="" coords="707,80,809,107"/>
-<area shape="rect" id="node21" href="$systick__macro_8h_source.html" title="systick_macro.h" alt="" coords="947,80,1073,107"/>
+<area shape="rect" id="node21" href="$systick__macro_8h.html" title="Helper macros for systick HAL. " alt="" coords="947,80,1073,107"/>
 <area shape="rect" id="node25" href="$adc_8h.html" title="ADC HAL include. " alt="" coords="883,304,940,331"/>
 <area shape="rect" id="node27" href="$filter_8h.html" title="Filter functions for filtering sensor data. " alt="" coords="1097,80,1160,107"/>
 <area shape="rect" id="node28" href="$irrigation_8h.html" title="Irrigation main include file. " alt="" coords="833,80,923,107"/>

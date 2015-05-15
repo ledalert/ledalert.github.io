@@ -2,6 +2,7 @@ var searchData=
 [
   ['irrigation_20controller',['Irrigation Controller',['../index.html',1,'']]],
   ['initial_5ftimer',['initial_timer',['../structirrigation__controller__status.html#a9d70c74fe395ec2720089b929a32e1e9',1,'irrigation_controller_status']]],
+  ['invalid_5fsamples_5fstreak',['invalid_samples_streak',['../structfilter__rms.html#a00a96dc7cf61e9c2643fdefc3d558ff2',1,'filter_rms']]],
   ['irrigation_2eh',['irrigation.h',['../irrigation_8h.html',1,'']]],
   ['irrigation_5fcontroller',['irrigation_controller',['../structirrigation__controller.html',1,'']]],
   ['irrigation_5fcontroller_5fstatus',['irrigation_controller_status',['../structirrigation__controller__status.html',1,'']]],

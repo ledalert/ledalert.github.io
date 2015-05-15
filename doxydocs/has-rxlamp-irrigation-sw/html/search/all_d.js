@@ -1,6 +1,10 @@
 var searchData=
 [
+  ['set_5fstatus_5fcolor',['set_status_color',['../main_8c.html#ac10cd1ff6b8d3726905397fc86b44bb1',1,'main.c']]],
+  ['size',['size',['../structfilter__rms.html#a8581be35641ea200e6bf23ce48f76196',1,'filter_rms']]],
+  ['sleep_5fms',['sleep_ms',['../main_8c.html#ad6626ba12fbadd1981081605f892a7bb',1,'main.c']]],
   ['soil_5ftemperature',['soil_temperature',['../structirrigation__controller__status.html#a3ef3b031a2c91413170ad02626e8da1c',1,'irrigation_controller_status']]],
+  ['sqsum',['sqsum',['../structfilter__rms.html#a902e6aa671bf468ba0506ef5848f51cf',1,'filter_rms']]],
   ['state',['state',['../structws2812.html#a396b295c928e75adc5688c49c832e631',1,'ws2812']]],
   ['state_5finit_2ec',['state_init.c',['../state__init_8c.html',1,'']]],
   ['state_5finit_5fenter',['state_init_enter',['../group__state__init.html#gaeca2f683660bf42f5258acd6aac353d0',1,'state_init_enter(struct irrigation_controller *controller):&#160;state_init.c'],['../group__state__init.html#gaeca2f683660bf42f5258acd6aac353d0',1,'state_init_enter(struct irrigation_controller *controller):&#160;state_init.c']]],
@@ -16,8 +20,11 @@ var searchData=
   ['state_5fvalidate_5frun',['state_validate_run',['../group__state__validate.html#gaec38509b93f8a850919aa7a36e543ed5',1,'state_validate_run(struct irrigation_controller *controller):&#160;state_validate.c'],['../group__state__validate.html#gaec38509b93f8a850919aa7a36e543ed5',1,'state_validate_run(struct irrigation_controller *controller):&#160;state_validate.c']]],
   ['status',['status',['../structirrigation__controller.html#a68a854df15c9234d24f2ad36b990bfa8',1,'irrigation_controller']]],
   ['sw_5ftimer_5fsystem_5ftime',['sw_timer_system_time',['../structsw__timer__system__time.html',1,'']]],
+  ['sys_5ftick_5fhandler',['sys_tick_handler',['../main_8c.html#afdd94f850b193691f1bfc60c724b542a',1,'main.c']]],
   ['systick',['systick',['../structsystick.html',1,'']]],
   ['systick_2ec',['systick.c',['../systick_8c.html',1,'']]],
   ['systick_2eh',['systick.h',['../systick_8h.html',1,'']]],
-  ['systick_5fconfig',['systick_config',['../structsystick__config.html',1,'']]]
+  ['systick_5fauto_5fconfig',['SYSTICK_AUTO_CONFIG',['../systick__macro_8h.html#abf9235222ff6ace610624f67afca2e6f',1,'systick_macro.h']]],
+  ['systick_5fconfig',['systick_config',['../structsystick__config.html',1,'']]],
+  ['systick_5fmacro_2eh',['systick_macro.h',['../systick__macro_8h.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hw_5finit_5fstate',['hw_init_state',['../hw_8h.html#aabae29cd362c0001a2b417c9206cb330',1,'hw_init_state(enum hw_init_state state):&#160;main.c'],['../main_8c.html#aabae29cd362c0001a2b417c9206cb330',1,'hw_init_state(enum hw_init_state state):&#160;main.c']]]
+  ['get_5fsystem_5ftime_5fblocking',['get_system_time_blocking',['../main_8c.html#a42ca7c9b89c22fcd9ec9aeed3e96b6c4',1,'main.c']]]
 ];

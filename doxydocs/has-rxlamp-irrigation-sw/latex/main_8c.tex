@@ -16,8 +16,7 @@ Irrigation controller main file.
 {\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}filter.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}irrigation.\+h\char`\"{}}\\*
-Include dependency graph for main.\+c\+:
-\nopagebreak
+Include dependency graph for main.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -59,6 +58,9 @@ Include dependency graph for main.\+c\+:
 \hypertarget{main_8c_a4b692da9c42d4defd8814f963d1d2da0}{}{\bfseries T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F} (Status\+L\+E\+D\+\_\+pwm,\&Status\+L\+E\+D\+\_\+timer, T\+I\+M\+\_\+\+O\+C3\+N,\&Status\+L\+E\+D\+\_\+dma)\label{main_8c_a4b692da9c42d4defd8814f963d1d2da0}
 
 \item 
+\hypertarget{main_8c_ad3c78d4a91a7027ea6ec309a0fdf1a4d}{}{\bfseries W\+S2812\+\_\+\+S\+I\+M\+P\+L\+E\+\_\+\+C\+O\+N\+F} (Status\+L\+E\+D,\&Status\+L\+E\+D\+\_\+pin,\&Status\+L\+E\+D\+\_\+pwm, 1)\label{main_8c_ad3c78d4a91a7027ea6ec309a0fdf1a4d}
+
+\item 
 \hypertarget{main_8c_ac01d8360f2847c41f234b2d6333879cc}{}{\bfseries S\+Y\+S\+T\+I\+C\+K\+\_\+\+A\+U\+T\+O\+\_\+\+C\+O\+N\+F\+I\+G} (Systick, 1000)\label{main_8c_ac01d8360f2847c41f234b2d6333879cc}
 
 \item 
@@ -66,38 +68,22 @@ Include dependency graph for main.\+c\+:
 
 \item 
 void \hyperlink{main_8c_aabae29cd362c0001a2b417c9206cb330}{hw\+\_\+init\+\_\+state} (enum \hyperlink{hw_8h_a3c02952100e7d051b77cdf060ca0ba9b}{hw\+\_\+init\+\_\+state} state)
-\begin{DoxyCompactList}\small\item\em This function prototype calls all perhipherals with the state as argument. \end{DoxyCompactList}\item 
-\hypertarget{main_8c_afdd94f850b193691f1bfc60c724b542a}{}void {\bfseries sys\+\_\+tick\+\_\+handler} (void)\label{main_8c_afdd94f850b193691f1bfc60c724b542a}
-
-\item 
-\hypertarget{main_8c_a359616b69ef6be09a3cb5680893c25cb}{}void {\bfseries ms\+\_\+sleep} (int time)\label{main_8c_a359616b69ef6be09a3cb5680893c25cb}
-
-\item 
-\hypertarget{main_8c_a42ca7c9b89c22fcd9ec9aeed3e96b6c4}{}void {\bfseries get\+\_\+system\+\_\+time\+\_\+blocking} (struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time} $\ast$result)\label{main_8c_a42ca7c9b89c22fcd9ec9aeed3e96b6c4}
-
-\item 
-\hypertarget{main_8c_ac10cd1ff6b8d3726905397fc86b44bb1}{}void {\bfseries set\+\_\+status\+\_\+color} (int r, int g, int b)\label{main_8c_ac10cd1ff6b8d3726905397fc86b44bb1}
-
-\item 
-\hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{}int {\bfseries main} (void)\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Init hardware. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_afdd94f850b193691f1bfc60c724b542a}{sys\+\_\+tick\+\_\+handler} (void)
+\begin{DoxyCompactList}\small\item\em Systick I\+R\+Q handler. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a359616b69ef6be09a3cb5680893c25cb}{ms\+\_\+sleep} (int time)
+\begin{DoxyCompactList}\small\item\em Sleep in millisecond durations. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a42ca7c9b89c22fcd9ec9aeed3e96b6c4}{get\+\_\+system\+\_\+time\+\_\+blocking} (struct \hyperlink{structsw__timer__system__time}{sw\+\_\+timer\+\_\+system\+\_\+time} $\ast$result)
+\begin{DoxyCompactList}\small\item\em Get time, wait until an atomic reading was successful. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_ac10cd1ff6b8d3726905397fc86b44bb1}{set\+\_\+status\+\_\+color} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em Update status L\+E\+D. \end{DoxyCompactList}\item 
+int \hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\begin{DoxyCompactList}\small\item\em Application entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structws2812__config}{ws2812\+\_\+config} {\bfseries Status\+L\+E\+D\+\_\+config}
-\item 
-\hypertarget{main_8c_ab0455c70d0edcf1a2a1c9ffc77fe5bee}{}struct \hyperlink{structws2812__rgb}{ws2812\+\_\+rgb} {\bfseries Status\+L\+E\+D\+\_\+buf} \mbox{[}1\mbox{]}\label{main_8c_ab0455c70d0edcf1a2a1c9ffc77fe5bee}
-
-\item 
-\hypertarget{main_8c_ae7d46441394e3638418869dda13a2970}{}volatile uint8\+\_\+t {\bfseries Status\+L\+E\+D\+\_\+pwmbuf} \mbox{[}1 $\ast$24+1\mbox{]}\label{main_8c_ae7d46441394e3638418869dda13a2970}
-
-\item 
-struct \hyperlink{structws2812}{ws2812} {\bfseries Status\+L\+E\+D}
-\item 
-\hypertarget{main_8c_ad6626ba12fbadd1981081605f892a7bb}{}volatile int {\bfseries sleep\+\_\+ms} = 0\label{main_8c_ad6626ba12fbadd1981081605f892a7bb}
-
-\item 
+volatile int \hyperlink{main_8c_ad6626ba12fbadd1981081605f892a7bb}{sleep\+\_\+ms} = 0
+\begin{DoxyCompactList}\small\item\em Holds number of ms to sleep, counts down in \hyperlink{main_8c_afdd94f850b193691f1bfc60c724b542a}{sys\+\_\+tick\+\_\+handler()} \end{DoxyCompactList}\item 
 \hypertarget{main_8c_a2d39b8e4f9506f28e2bdff70929287f6}{}volatile int {\bfseries N\+T\+C\+\_\+filtered\+\_\+value} = -\/1\label{main_8c_a2d39b8e4f9506f28e2bdff70929287f6}
 
 \item 
@@ -142,6 +128,25 @@ Definition at line 16 of file main.\+c.
 
 
 \subsection{Function Documentation}
+\hypertarget{main_8c_a42ca7c9b89c22fcd9ec9aeed3e96b6c4}{}\index{main.\+c@{main.\+c}!get\+\_\+system\+\_\+time\+\_\+blocking@{get\+\_\+system\+\_\+time\+\_\+blocking}}
+\index{get\+\_\+system\+\_\+time\+\_\+blocking@{get\+\_\+system\+\_\+time\+\_\+blocking}!main.\+c@{main.\+c}}
+\subsubsection[{get\+\_\+system\+\_\+time\+\_\+blocking}]{\setlength{\rightskip}{0pt plus 5cm}void get\+\_\+system\+\_\+time\+\_\+blocking (
+\begin{DoxyParamCaption}
+\item[{struct {\bf sw\+\_\+timer\+\_\+system\+\_\+time} $\ast$}]{result}
+\end{DoxyParamCaption}
+)}\label{main_8c_a42ca7c9b89c22fcd9ec9aeed3e96b6c4}
+
+
+Get time, wait until an atomic reading was successful. 
+
+
+
+Definition at line 97 of file main.\+c.
+
+
+
+Referenced by main().
+
 \hypertarget{main_8c_aabae29cd362c0001a2b417c9206cb330}{}\index{main.\+c@{main.\+c}!hw\+\_\+init\+\_\+state@{hw\+\_\+init\+\_\+state}}
 \index{hw\+\_\+init\+\_\+state@{hw\+\_\+init\+\_\+state}!main.\+c@{main.\+c}}
 \subsubsection[{hw\+\_\+init\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf hw\+\_\+init\+\_\+state} (
@@ -151,46 +156,117 @@ Definition at line 16 of file main.\+c.
 )}\label{main_8c_aabae29cd362c0001a2b417c9206cb330}
 
 
+Init hardware. 
+
 This function prototype calls all perhipherals with the state as argument. 
 
-
-
-Definition at line 76 of file main.\+c.
+Definition at line 64 of file main.\+c.
 
 
 
 References usart\+\_\+init(), and ws2812\+\_\+init().
 
+\hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+
+Application entry point. 
+
+
+
+Definition at line 117 of file main.\+c.
+
+
+
+References get\+\_\+system\+\_\+time\+\_\+blocking(), hw\+\_\+init(), ms\+\_\+sleep(), set\+\_\+status\+\_\+color(), usart\+\_\+blocking\+\_\+str, and usart\+\_\+blocking\+\_\+tm().
+
+\hypertarget{main_8c_a359616b69ef6be09a3cb5680893c25cb}{}\index{main.\+c@{main.\+c}!ms\+\_\+sleep@{ms\+\_\+sleep}}
+\index{ms\+\_\+sleep@{ms\+\_\+sleep}!main.\+c@{main.\+c}}
+\subsubsection[{ms\+\_\+sleep}]{\setlength{\rightskip}{0pt plus 5cm}void ms\+\_\+sleep (
+\begin{DoxyParamCaption}
+\item[{int}]{time}
+\end{DoxyParamCaption}
+)}\label{main_8c_a359616b69ef6be09a3cb5680893c25cb}
+
+
+Sleep in millisecond durations. 
+
+
+
+Definition at line 91 of file main.\+c.
+
+
+
+References sleep\+\_\+ms.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_ac10cd1ff6b8d3726905397fc86b44bb1}{}\index{main.\+c@{main.\+c}!set\+\_\+status\+\_\+color@{set\+\_\+status\+\_\+color}}
+\index{set\+\_\+status\+\_\+color@{set\+\_\+status\+\_\+color}!main.\+c@{main.\+c}}
+\subsubsection[{set\+\_\+status\+\_\+color}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+status\+\_\+color (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}\label{main_8c_ac10cd1ff6b8d3726905397fc86b44bb1}
+
+
+Update status L\+E\+D. 
+
+
+
+Definition at line 110 of file main.\+c.
+
+
+
+References ws2812\+\_\+set\+\_\+led(), and ws2812\+\_\+update\+\_\+blocking().
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_afdd94f850b193691f1bfc60c724b542a}{}\index{main.\+c@{main.\+c}!sys\+\_\+tick\+\_\+handler@{sys\+\_\+tick\+\_\+handler}}
+\index{sys\+\_\+tick\+\_\+handler@{sys\+\_\+tick\+\_\+handler}!main.\+c@{main.\+c}}
+\subsubsection[{sys\+\_\+tick\+\_\+handler}]{\setlength{\rightskip}{0pt plus 5cm}void sys\+\_\+tick\+\_\+handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{main_8c_afdd94f850b193691f1bfc60c724b542a}
+
+
+Systick I\+R\+Q handler. 
+
+
+
+Definition at line 77 of file main.\+c.
+
+
+
+References sw\+\_\+timer\+\_\+system\+\_\+time\+::epoch, sw\+\_\+timer\+\_\+system\+\_\+time\+::ms, and sleep\+\_\+ms.
+
 
 
 \subsection{Variable Documentation}
-\hypertarget{main_8c_a155a1d3f9591d851bbbe4d7d7ff71af7}{}\index{main.\+c@{main.\+c}!Status\+L\+E\+D@{Status\+L\+E\+D}}
-\index{Status\+L\+E\+D@{Status\+L\+E\+D}!main.\+c@{main.\+c}}
-\subsubsection[{Status\+L\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ws2812} Status\+L\+E\+D}\label{main_8c_a155a1d3f9591d851bbbe4d7d7ff71af7}
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-= \{
-    .configuration = &StatusLED\_config,
-    .led\_buffer = StatusLED\_buf,
-    .pwm\_buffer = StatusLED\_pwmbuf,
-    .led\_count = 1,
-\}
-\end{DoxyCode}
+\hypertarget{main_8c_ad6626ba12fbadd1981081605f892a7bb}{}\index{main.\+c@{main.\+c}!sleep\+\_\+ms@{sleep\+\_\+ms}}
+\index{sleep\+\_\+ms@{sleep\+\_\+ms}!main.\+c@{main.\+c}}
+\subsubsection[{sleep\+\_\+ms}]{\setlength{\rightskip}{0pt plus 5cm}volatile int sleep\+\_\+ms = 0}\label{main_8c_ad6626ba12fbadd1981081605f892a7bb}
+
+
+Holds number of ms to sleep, counts down in \hyperlink{main_8c_afdd94f850b193691f1bfc60c724b542a}{sys\+\_\+tick\+\_\+handler()} 
+
 
 
 Definition at line 59 of file main.\+c.
 
-\hypertarget{main_8c_aca1a1694194ca69da59aac0a1443da6e}{}\index{main.\+c@{main.\+c}!Status\+L\+E\+D\+\_\+config@{Status\+L\+E\+D\+\_\+config}}
-\index{Status\+L\+E\+D\+\_\+config@{Status\+L\+E\+D\+\_\+config}!main.\+c@{main.\+c}}
-\subsubsection[{Status\+L\+E\+D\+\_\+config}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf ws2812\+\_\+config} Status\+L\+E\+D\+\_\+config}\label{main_8c_aca1a1694194ca69da59aac0a1443da6e}
-{\bfseries Initial value\+:}
-\begin{DoxyCode}
-= \{
-    .ccr = &StatusLED\_pwm,
-    .pin = &StatusLED\_pin,  
-\}
-\end{DoxyCode}
 
 
-Definition at line 51 of file main.\+c.
+Referenced by ms\+\_\+sleep(), and sys\+\_\+tick\+\_\+handler().
 

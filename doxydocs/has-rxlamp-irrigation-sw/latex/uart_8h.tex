@@ -8,8 +8,7 @@ U\+A\+R\+T H\+A\+L Include file.
 {\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\\*
 {\ttfamily \#include $<$libopencm3/stm32/usart.\+h$>$}\\*
-Include dependency graph for uart.\+h\+:
-\nopagebreak
+Include dependency graph for uart.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -81,7 +80,7 @@ Definition at line 11 of file uart.\+h.
 
 
 
-Referenced by usart\+\_\+blocking\+\_\+tm().
+Referenced by main(), and usart\+\_\+blocking\+\_\+tm().
 
 
 
@@ -107,7 +106,7 @@ Send a formatted float using blocking/polling method (no I\+R\+Q nor D\+M\+A)
 \end{DoxyParams}
 
 
-Definition at line 131 of file usart.\+c.
+Definition at line 137 of file usart.\+c.
 
 
 
@@ -155,7 +154,7 @@ Send a formatted int with zeropadding using blocking/polling method (no I\+R\+Q 
 {\em dp} & Number of digits to use \\
 \hline
 \end{DoxyParams}
-
+pow() takes like 4kb of flash so avoid it here since we are just working with integers anyway 
 
 Definition at line 114 of file usart.\+c.
 
@@ -210,11 +209,15 @@ Send broken down time using blocking/polling (no dma/irq)
 
 
 
-Definition at line 140 of file usart.\+c.
+Definition at line 146 of file usart.\+c.
 
 
 
 References sw\+\_\+timer\+\_\+system\+\_\+time\+::epoch, sw\+\_\+timer\+\_\+system\+\_\+time\+::ms, time\+\_\+tm\+\_\+from\+\_\+epoch(), tm\+::tm\+\_\+hour, tm\+::tm\+\_\+mday, tm\+::tm\+\_\+min, tm\+::tm\+\_\+mon, tm\+::tm\+\_\+sec, tm\+::tm\+\_\+year, usart\+\_\+blocking\+\_\+int(), usart\+\_\+blocking\+\_\+int\+\_\+zp(), and usart\+\_\+blocking\+\_\+str.
+
+
+
+Referenced by main().
 
 \hypertarget{uart_8h_a0e3103fc345dfb09aa255989c86805e8}{}\index{uart.\+h@{uart.\+h}!usart\+\_\+init@{usart\+\_\+init}}
 \index{usart\+\_\+init@{usart\+\_\+init}!uart.\+h@{uart.\+h}}

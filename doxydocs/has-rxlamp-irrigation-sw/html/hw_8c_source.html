@@ -106,18 +106,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// #include &lt;libopencm3/cm3/nvic.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> hw_init() {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba4e9b2d4b7e946d95c2e41f3de17035a0">HW_INIT_GPIO</a>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba3f137ea5dd6b2ac372bb6d175434b3fa">HW_INIT_NVIC</a>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*! Call hw_init_state with all states to go trough */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="hw_8h.html#acf938165e604a675fe09218a1b3cfb5f">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="hw_8c.html#acf938165e604a675fe09218a1b3cfb5f">hw_init</a>() {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba4e9b2d4b7e946d95c2e41f3de17035a0">HW_INIT_GPIO</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba3f137ea5dd6b2ac372bb6d175434b3fa">HW_INIT_NVIC</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a>(<a class="code" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba45012c00c17031e71a4f60ada04df07d">HW_INIT_PRE_NVIC</a></div><div class="ttdoc">After GPIOs have been initialized we might want to do some stuff before NVIC. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00045">hw.h:45</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9ba3f137ea5dd6b2ac372bb6d175434b3fa"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9ba3f137ea5dd6b2ac372bb6d175434b3fa">HW_INIT_NVIC</a></div><div class="ttdoc">After GPIO have been initialized all NVIC will be initialized. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00048">hw.h:48</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9baca0b4dbf0e3911b3edde56d700f76ecf">HW_INIT_RCC</a></div><div class="ttdoc">This is the first state entered and here hardware drivers may initialize any clocks needed...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00036">hw.h:36</a></div></div>
+<div class="ttc" id="hw_8c_html_acf938165e604a675fe09218a1b3cfb5f"><div class="ttname"><a href="hw_8c.html#acf938165e604a675fe09218a1b3cfb5f">hw_init</a></div><div class="ttdeci">void hw_init()</div><div class="ttdoc">Call hw_init_state with all states to go trough. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8c_source.html#l00018">hw.c:18</a></div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9b"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a></div><div class="ttdeci">hw_init_state</div><div class="ttdoc">This is the state of the hardware abstraction layer. </div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00033">hw.h:33</a></div></div>
 <div class="ttc" id="hw_8h_html"><div class="ttname"><a href="hw_8h.html">hw.h</a></div><div class="ttdoc">Hardware abstraction layer include file. </div></div>
 <div class="ttc" id="hw_8h_html_a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201"><div class="ttname"><a href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9bacf9b04dc351d9fc47482fcd5229eb201">HW_INIT_POST_INIT</a></div><div class="ttdoc">After NVIC is initialized there might be more stuff todo such as setting up perhipheral settings...</div><div class="ttdef"><b>Definition:</b> <a href="hw_8h_source.html#l00051">hw.h:51</a></div></div>
@@ -125,7 +127,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 15 2015 22:42:01 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

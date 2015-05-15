@@ -6,8 +6,7 @@ Utility macros for timers.
 
 
 {\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\\*
-Include dependency graph for timer\+\_\+macro.\+h\+:
-\nopagebreak
+Include dependency graph for timer\+\_\+macro.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,16 +23,14 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \subsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Timer,  Rcc,  Period)
-\item 
-\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Timer,  Channel,  Dma,  Start\+C\+C\+R)
-\item 
-\hypertarget{timer__macro_8h_a3279bcf4092c38d74426dae48169f4f0}{}\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F}(Name,  Timer,  Rcc)~T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(Name, Timer, Rcc, 0)\label{timer__macro_8h_a3279bcf4092c38d74426dae48169f4f0}
-
-\item 
-\hypertarget{timer__macro_8h_a882cfce62e6e6f7f3b0cbef9e2853d8a}{}\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F}(Name,  Timer,  Channel,  Dma)~T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E(Name, Timer, Channel, Dma, 0)\label{timer__macro_8h_a882cfce62e6e6f7f3b0cbef9e2853d8a}
-
-\item 
+\#define \hyperlink{timer__macro_8h_af329da461fefeb6d28239adb02a75eef}{T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Timer,  Rcc,  Period)
+\begin{DoxyCompactList}\small\item\em Create timer instance. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__macro_8h_aaffa297931f23f6b1d6acc68de84ba4b}{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name,  Timer,  Channel,  Dma,  Start\+C\+C\+R)
+\begin{DoxyCompactList}\small\item\em Create timer C\+R\+R channel instance. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__macro_8h_a3279bcf4092c38d74426dae48169f4f0}{T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F}(Name,  Timer,  Rcc)~\hyperlink{timer__macro_8h_af329da461fefeb6d28239adb02a75eef}{T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name, Timer, Rcc, 0)
+\begin{DoxyCompactList}\small\item\em Create unconfigured timer. \end{DoxyCompactList}\item 
+\#define \hyperlink{timer__macro_8h_a882cfce62e6e6f7f3b0cbef9e2853d8a}{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F}(Name,  Timer,  Channel,  Dma)~\hyperlink{timer__macro_8h_aaffa297931f23f6b1d6acc68de84ba4b}{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name, Timer, Channel, Dma, 0)
+\begin{DoxyCompactList}\small\item\em Create unconfigured timer C\+C\+R channel. \end{DoxyCompactList}\item 
 \hypertarget{timer__macro_8h_afcf9e00e37f249ee79898999ba9b79c7}{}\#define {\bfseries \+\_\+\+T\+I\+M\+E\+R\+\_\+\+M\+A\+C\+R\+O\+\_\+\+H\+\_\+}\label{timer__macro_8h_afcf9e00e37f249ee79898999ba9b79c7}
 
 \end{DoxyCompactItemize}
@@ -70,7 +67,29 @@ Utility macros for timers.
 \end{DoxyCode}
 
 
-Definition at line 25 of file timer\+\_\+macro.\+h.
+Create timer C\+R\+R channel instance. 
+
+
+
+Definition at line 23 of file timer\+\_\+macro.\+h.
+
+\hypertarget{timer__macro_8h_a882cfce62e6e6f7f3b0cbef9e2853d8a}{}\index{timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}!T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F@{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F}}
+\index{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F@{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F}!timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}}
+\subsubsection[{T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+N\+O\+C\+O\+N\+F(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Timer, }
+\item[{}]{Channel, }
+\item[{}]{Dma}
+\end{DoxyParamCaption}
+)~{\bf T\+I\+M\+E\+R\+\_\+\+C\+C\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name, Timer, Channel, Dma, 0)}\label{timer__macro_8h_a882cfce62e6e6f7f3b0cbef9e2853d8a}
+
+
+Create unconfigured timer C\+C\+R channel. 
+
+
+
+Definition at line 39 of file timer\+\_\+macro.\+h.
 
 \hypertarget{timer__macro_8h_af329da461fefeb6d28239adb02a75eef}{}\index{timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}!T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}}
 \index{T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}!timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}}
@@ -96,5 +115,26 @@ Definition at line 25 of file timer\+\_\+macro.\+h.
 \end{DoxyCode}
 
 
-Definition at line 11 of file timer\+\_\+macro.\+h.
+Create timer instance. 
+
+
+
+Definition at line 10 of file timer\+\_\+macro.\+h.
+
+\hypertarget{timer__macro_8h_a3279bcf4092c38d74426dae48169f4f0}{}\index{timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}!T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F@{T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F}}
+\index{T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F@{T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F}!timer\+\_\+macro.\+h@{timer\+\_\+macro.\+h}}
+\subsubsection[{T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+I\+M\+E\+R\+\_\+\+N\+O\+C\+O\+N\+F(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Timer, }
+\item[{}]{Rcc}
+\end{DoxyParamCaption}
+)~{\bf T\+I\+M\+E\+R\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}(Name, Timer, Rcc, 0)}\label{timer__macro_8h_a3279bcf4092c38d74426dae48169f4f0}
+
+
+Create unconfigured timer. 
+
+
+
+Definition at line 37 of file timer\+\_\+macro.\+h.
 

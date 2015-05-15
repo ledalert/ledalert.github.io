@@ -11,8 +11,7 @@ W\+S2812 Instance.
 
 
 
-Collaboration diagram for ws2812\+:
-\nopagebreak
+Collaboration diagram for ws2812\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -55,7 +54,7 @@ Definition at line 22 of file ws2812.\+h.
 
 
 
-Referenced by ws2812\+\_\+configure\+\_\+gpio(), ws2812\+\_\+configure\+\_\+timer(), ws2812\+\_\+init(), and ws2812\+\_\+set\+\_\+defaults().
+Referenced by ws2812\+\_\+configure\+\_\+gpio(), ws2812\+\_\+configure\+\_\+timer(), ws2812\+\_\+init(), ws2812\+\_\+process\+\_\+buffer(), ws2812\+\_\+set\+\_\+defaults(), ws2812\+\_\+update(), and ws2812\+\_\+update\+\_\+blocking().
 
 \hypertarget{structws2812_a9d672a2d9ea381c7fcd940ba4ebdebe2}{}\index{ws2812@{ws2812}!led\+\_\+buffer@{led\+\_\+buffer}}
 \index{led\+\_\+buffer@{led\+\_\+buffer}!ws2812@{ws2812}}
@@ -71,6 +70,10 @@ This should contain as many elements as there are L\+E\+Ds
 
 Definition at line 23 of file ws2812.\+h.
 
+
+
+Referenced by ws2812\+\_\+process\+\_\+buffer(), and ws2812\+\_\+set\+\_\+led().
+
 \hypertarget{structws2812_aaed6db83ce4a0e8e58b73650f2b4638e}{}\index{ws2812@{ws2812}!led\+\_\+count@{led\+\_\+count}}
 \index{led\+\_\+count@{led\+\_\+count}!ws2812@{ws2812}}
 \subsubsection[{led\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}int ws2812\+::led\+\_\+count}\label{structws2812_aaed6db83ce4a0e8e58b73650f2b4638e}
@@ -81,6 +84,10 @@ Number of L\+E\+Ds connected to the bus.
 
 
 Definition at line 26 of file ws2812.\+h.
+
+
+
+Referenced by ws2812\+\_\+process\+\_\+buffer(), ws2812\+\_\+update(), and ws2812\+\_\+update\+\_\+blocking().
 
 \hypertarget{structws2812_a864f88183104cfbdd144cb301870e655}{}\index{ws2812@{ws2812}!pwm\+\_\+buffer@{pwm\+\_\+buffer}}
 \index{pwm\+\_\+buffer@{pwm\+\_\+buffer}!ws2812@{ws2812}}
@@ -95,6 +102,10 @@ This should contain 24 $\ast$ N + 1 elements where N is number of L\+E\+Ds
 
 
 Definition at line 24 of file ws2812.\+h.
+
+
+
+Referenced by ws2812\+\_\+process\+\_\+buffer(), ws2812\+\_\+update(), and ws2812\+\_\+update\+\_\+blocking().
 
 \hypertarget{structws2812_a396b295c928e75adc5688c49c832e631}{}\index{ws2812@{ws2812}!state@{state}}
 \index{state@{state}!ws2812@{ws2812}}

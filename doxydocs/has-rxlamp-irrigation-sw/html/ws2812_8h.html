@@ -135,14 +135,14 @@ Functions</h2></td></tr>
 <tr class="memitem:adbff51511c0bd9a408d6065a5c2b9851"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ws2812_8h.html#adbff51511c0bd9a408d6065a5c2b9851">ws2812_init</a> (struct <a class="el" href="structws2812.html">ws2812</a> *led, enum <a class="el" href="hw_8h.html#a3c02952100e7d051b77cdf060ca0ba9b">hw_init_state</a> state)</td></tr>
 <tr class="memdesc:adbff51511c0bd9a408d6065a5c2b9851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate <a class="el" href="structws2812.html" title="WS2812 Instance. ">ws2812</a> bus to state.  <a href="#adbff51511c0bd9a408d6065a5c2b9851">More...</a><br /></td></tr>
 <tr class="separator:adbff51511c0bd9a408d6065a5c2b9851"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dbb8822e64ed089eb01c8145817e3ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dbb8822e64ed089eb01c8145817e3ed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ws2812_update</b> (struct <a class="el" href="structws2812.html">ws2812</a> *led)</td></tr>
+<tr class="memitem:a4dbb8822e64ed089eb01c8145817e3ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ws2812_8h.html#a4dbb8822e64ed089eb01c8145817e3ed">ws2812_update</a> (struct <a class="el" href="structws2812.html">ws2812</a> *led)</td></tr>
+<tr class="memdesc:a4dbb8822e64ed089eb01c8145817e3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to LEDs.  <a href="#a4dbb8822e64ed089eb01c8145817e3ed">More...</a><br /></td></tr>
 <tr class="separator:a4dbb8822e64ed089eb01c8145817e3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a563ef0da6498fc194067eed2611705a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a563ef0da6498fc194067eed2611705a9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ws2812_set_led</b> (struct <a class="el" href="structws2812.html">ws2812</a> *led, int index, int r, int g, int b)</td></tr>
+<tr class="memitem:a563ef0da6498fc194067eed2611705a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ws2812_8h.html#a563ef0da6498fc194067eed2611705a9">ws2812_set_led</a> (struct <a class="el" href="structws2812.html">ws2812</a> *led, int index, int r, int g, int b)</td></tr>
+<tr class="memdesc:a563ef0da6498fc194067eed2611705a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set LED buffer index to color r, g, b (0-255)  <a href="#a563ef0da6498fc194067eed2611705a9">More...</a><br /></td></tr>
 <tr class="separator:a563ef0da6498fc194067eed2611705a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f2823a0771f8d6e1671ce1078aa5db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82f2823a0771f8d6e1671ce1078aa5db"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ws2812_update_blocking</b> (struct <a class="el" href="structws2812.html">ws2812</a> *led)</td></tr>
+<tr class="memitem:a82f2823a0771f8d6e1671ce1078aa5db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ws2812_8h.html#a82f2823a0771f8d6e1671ce1078aa5db">ws2812_update_blocking</a> (struct <a class="el" href="structws2812.html">ws2812</a> *led)</td></tr>
+<tr class="memdesc:a82f2823a0771f8d6e1671ce1078aa5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to LEDs, wait for completion.  <a href="#a82f2823a0771f8d6e1671ce1078aa5db">More...</a><br /></td></tr>
 <tr class="separator:a82f2823a0771f8d6e1671ce1078aa5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -187,14 +187,112 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ws2812_update_blockin
 
 <p>References <a class="el" href="ws2812_8h_source.html#l00013">ws2812_config::ccr</a>, <a class="el" href="ws2812_8h_source.html#l00022">ws2812::configuration</a>, <a class="el" href="hw_8h_source.html#l00039">HW_INIT_GPIO</a>, <a class="el" href="hw_8h_source.html#l00051">HW_INIT_POST_INIT</a>, <a class="el" href="hw_8h_source.html#l00045">HW_INIT_PRE_NVIC</a>, <a class="el" href="ws2812_8h_source.html#l00014">ws2812_config::pin</a>, <a class="el" href="timer_8c_source.html#l00012">timer_ccr_init()</a>, <a class="el" href="ws2812_8c_source.html#l00022">ws2812_configure_gpio()</a>, <a class="el" href="ws2812_8c_source.html#l00015">ws2812_configure_timer()</a>, and <a class="el" href="ws2812_8c_source.html#l00030">ws2812_set_defaults()</a>.</p>
 
-<p>Referenced by <a class="el" href="main_8c_source.html#l00076">hw_init_state()</a>.</p>
+<p>Referenced by <a class="el" href="main_8c_source.html#l00064">hw_init_state()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a563ef0da6498fc194067eed2611705a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ws2812_set_led </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structws2812.html">ws2812</a> *&#160;</td>
+          <td class="paramname"><em>led</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set LED buffer index to color r, g, b (0-255) </p>
+
+<p>Definition at line <a class="el" href="ws2812_8c_source.html#l00096">96</a> of file <a class="el" href="ws2812_8c_source.html">ws2812.c</a>.</p>
+
+<p>References <a class="el" href="ws2812_8h_source.html#l00032">ws2812_rgb::g</a>, <a class="el" href="ws2812_8h_source.html#l00023">ws2812::led_buffer</a>, and <a class="el" href="ws2812_8h_source.html#l00031">ws2812_rgb::r</a>.</p>
+
+<p>Referenced by <a class="el" href="main_8c_source.html#l00110">set_status_color()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4dbb8822e64ed089eb01c8145817e3ed"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ws2812_update </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structws2812.html">ws2812</a> *&#160;</td>
+          <td class="paramname"><em>led</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send data to LEDs. </p>
+
+<p>Definition at line <a class="el" href="ws2812_8c_source.html#l00080">80</a> of file <a class="el" href="ws2812_8c_source.html">ws2812.c</a>.</p>
+
+<p>References <a class="el" href="ws2812_8h_source.html#l00013">ws2812_config::ccr</a>, <a class="el" href="ws2812_8h_source.html#l00022">ws2812::configuration</a>, <a class="el" href="ws2812_8h_source.html#l00026">ws2812::led_count</a>, <a class="el" href="ws2812_8h_source.html#l00024">ws2812::pwm_buffer</a>, and <a class="el" href="ws2812_8c_source.html#l00065">ws2812_process_buffer()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a82f2823a0771f8d6e1671ce1078aa5db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ws2812_update_blocking </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structws2812.html">ws2812</a> *&#160;</td>
+          <td class="paramname"><em>led</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send data to LEDs, wait for completion. </p>
+
+<p>Definition at line <a class="el" href="ws2812_8c_source.html#l00090">90</a> of file <a class="el" href="ws2812_8c_source.html">ws2812.c</a>.</p>
+
+<p>References <a class="el" href="ws2812_8h_source.html#l00013">ws2812_config::ccr</a>, <a class="el" href="ws2812_8h_source.html#l00022">ws2812::configuration</a>, <a class="el" href="ws2812_8h_source.html#l00026">ws2812::led_count</a>, <a class="el" href="ws2812_8h_source.html#l00024">ws2812::pwm_buffer</a>, and <a class="el" href="ws2812_8c_source.html#l00065">ws2812_process_buffer()</a>.</p>
+
+<p>Referenced by <a class="el" href="main_8c_source.html#l00110">set_status_color()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 14 2015 21:20:54 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 15 2015 22:42:01 for Irrigation test system 1 by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

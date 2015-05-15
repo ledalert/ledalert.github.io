@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['ws2812_5fconfigure_5fgpio',['ws2812_configure_gpio',['../ws2812_8c.html#a35b250d1bf6fa32e168ca7d559309c9a',1,'ws2812.c']]],
-  ['ws2812_5fconfigure_5ftimer',['ws2812_configure_timer',['../ws2812_8c.html#abe4c1d1365ba3b842e733f00ff5b8cb4',1,'ws2812.c']]],
-  ['ws2812_5finit',['ws2812_init',['../ws2812_8c.html#adbff51511c0bd9a408d6065a5c2b9851',1,'ws2812_init(struct ws2812 *led, enum hw_init_state state):&#160;ws2812.c'],['../ws2812_8h.html#adbff51511c0bd9a408d6065a5c2b9851',1,'ws2812_init(struct ws2812 *led, enum hw_init_state state):&#160;ws2812.c']]],
-  ['ws2812_5fset_5fdefaults',['ws2812_set_defaults',['../ws2812_8c.html#a077cfeecec2b7fbefaed4e75631e76c7',1,'ws2812.c']]]
+  ['time_5ftm_5ffrom_5fepoch',['time_tm_from_epoch',['../time_8c.html#a356fcdd74b8b159a7de9b87dcb694617',1,'time_tm_from_epoch(struct tm *tm, int t):&#160;time.c'],['../time_8h.html#a5820d1723388d23f68df400cc4a6a065',1,'time_tm_from_epoch(struct tm *result, int epoch):&#160;time.c']]],
+  ['timer_5fccr_5finit',['timer_ccr_init',['../timer_8c.html#a995539ac62815c22bad2313f304865b5',1,'timer_ccr_init(struct timer_ccr *ccr, enum hw_init_state state):&#160;timer.c'],['../timer_8h.html#a995539ac62815c22bad2313f304865b5',1,'timer_ccr_init(struct timer_ccr *ccr, enum hw_init_state state):&#160;timer.c']]],
+  ['timer_5fccr_5fset',['timer_ccr_set',['../timer_8c.html#a734417848b07d1d04bca5e224f13e319',1,'timer_ccr_set(struct timer_ccr *ccr, uint32_t value):&#160;timer.c'],['../timer_8h.html#a734417848b07d1d04bca5e224f13e319',1,'timer_ccr_set(struct timer_ccr *ccr, uint32_t value):&#160;timer.c']]],
+  ['timer_5finit',['timer_init',['../timer_8c.html#a1e33eb6cb5bd4bd99416edbb25790760',1,'timer_init(struct timer *timer, enum hw_init_state state):&#160;timer.c'],['../timer_8h.html#a1e33eb6cb5bd4bd99416edbb25790760',1,'timer_init(struct timer *timer, enum hw_init_state state):&#160;timer.c']]]
 ];

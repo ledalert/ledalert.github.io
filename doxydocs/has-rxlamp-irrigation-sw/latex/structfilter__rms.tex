@@ -24,21 +24,16 @@ Collaboration diagram for filter\+\_\+rms\+:\nopagebreak
 \hypertarget{structfilter__rms_a54520c4d0cb0f9441f4c57eacf5bfd78}{}volatile uint32\+\_\+t $\ast$ {\bfseries buffer}\label{structfilter__rms_a54520c4d0cb0f9441f4c57eacf5bfd78}
 
 \item 
-\hypertarget{structfilter__rms_a8581be35641ea200e6bf23ce48f76196}{}uint32\+\_\+t {\bfseries size}\label{structfilter__rms_a8581be35641ea200e6bf23ce48f76196}
-
-\item 
-\hypertarget{structfilter__rms_a85d467406ed373c2ad1a134860fd24bd}{}int {\bfseries pos}\label{structfilter__rms_a85d467406ed373c2ad1a134860fd24bd}
-
-\item 
-\hypertarget{structfilter__rms_a42976cc476c577216f312bcd496eb79b}{}uint32\+\_\+t {\bfseries count}\label{structfilter__rms_a42976cc476c577216f312bcd496eb79b}
-
-\item 
-\hypertarget{structfilter__rms_a902e6aa671bf468ba0506ef5848f51cf}{}uint32\+\_\+t {\bfseries sqsum}\label{structfilter__rms_a902e6aa671bf468ba0506ef5848f51cf}
-
-\item 
-\hypertarget{structfilter__rms_a00a96dc7cf61e9c2643fdefc3d558ff2}{}int {\bfseries invalid\+\_\+samples\+\_\+streak}\label{structfilter__rms_a00a96dc7cf61e9c2643fdefc3d558ff2}
-
-\item 
+uint32\+\_\+t \hyperlink{structfilter__rms_a8581be35641ea200e6bf23ce48f76196}{size}
+\begin{DoxyCompactList}\small\item\em Size of the buffer. \end{DoxyCompactList}\item 
+int \hyperlink{structfilter__rms_a85d467406ed373c2ad1a134860fd24bd}{pos}
+\begin{DoxyCompactList}\small\item\em Current position of the buffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{structfilter__rms_a42976cc476c577216f312bcd496eb79b}{count}
+\begin{DoxyCompactList}\small\item\em Count of samples in buffer, used to determine if data is filtered yet. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{structfilter__rms_a902e6aa671bf468ba0506ef5848f51cf}{sqsum}
+\begin{DoxyCompactList}\small\item\em Total square sum of samples. \end{DoxyCompactList}\item 
+int \hyperlink{structfilter__rms_a00a96dc7cf61e9c2643fdefc3d558ff2}{invalid\+\_\+samples\+\_\+streak}
+\begin{DoxyCompactList}\small\item\em Used for detecting sensor malfunction. \end{DoxyCompactList}\item 
 \hypertarget{structfilter__rms_abcd2a21aa49c2abb148493265da1efa5}{}struct \hyperlink{structfilter__sample__range}{filter\+\_\+sample\+\_\+range} {\bfseries valid\+\_\+range}\label{structfilter__rms_abcd2a21aa49c2abb148493265da1efa5}
 
 \end{DoxyCompactItemize}
@@ -48,6 +43,87 @@ Collaboration diagram for filter\+\_\+rms\+:\nopagebreak
 R\+M\+S filter configuration and state. 
 
 Definition at line 15 of file filter.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structfilter__rms_a42976cc476c577216f312bcd496eb79b}{}\index{filter\+\_\+rms@{filter\+\_\+rms}!count@{count}}
+\index{count@{count}!filter\+\_\+rms@{filter\+\_\+rms}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t filter\+\_\+rms\+::count}\label{structfilter__rms_a42976cc476c577216f312bcd496eb79b}
+
+
+Count of samples in buffer, used to determine if data is filtered yet. 
+
+
+
+Definition at line 19 of file filter.\+h.
+
+
+
+Referenced by filter\+\_\+rms\+\_\+process().
+
+\hypertarget{structfilter__rms_a00a96dc7cf61e9c2643fdefc3d558ff2}{}\index{filter\+\_\+rms@{filter\+\_\+rms}!invalid\+\_\+samples\+\_\+streak@{invalid\+\_\+samples\+\_\+streak}}
+\index{invalid\+\_\+samples\+\_\+streak@{invalid\+\_\+samples\+\_\+streak}!filter\+\_\+rms@{filter\+\_\+rms}}
+\subsubsection[{invalid\+\_\+samples\+\_\+streak}]{\setlength{\rightskip}{0pt plus 5cm}int filter\+\_\+rms\+::invalid\+\_\+samples\+\_\+streak}\label{structfilter__rms_a00a96dc7cf61e9c2643fdefc3d558ff2}
+
+
+Used for detecting sensor malfunction. 
+
+
+
+Definition at line 21 of file filter.\+h.
+
+
+
+Referenced by filter\+\_\+rms\+\_\+process().
+
+\hypertarget{structfilter__rms_a85d467406ed373c2ad1a134860fd24bd}{}\index{filter\+\_\+rms@{filter\+\_\+rms}!pos@{pos}}
+\index{pos@{pos}!filter\+\_\+rms@{filter\+\_\+rms}}
+\subsubsection[{pos}]{\setlength{\rightskip}{0pt plus 5cm}int filter\+\_\+rms\+::pos}\label{structfilter__rms_a85d467406ed373c2ad1a134860fd24bd}
+
+
+Current position of the buffer. 
+
+
+
+Definition at line 18 of file filter.\+h.
+
+
+
+Referenced by filter\+\_\+rms\+\_\+process().
+
+\hypertarget{structfilter__rms_a8581be35641ea200e6bf23ce48f76196}{}\index{filter\+\_\+rms@{filter\+\_\+rms}!size@{size}}
+\index{size@{size}!filter\+\_\+rms@{filter\+\_\+rms}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t filter\+\_\+rms\+::size}\label{structfilter__rms_a8581be35641ea200e6bf23ce48f76196}
+
+
+Size of the buffer. 
+
+
+
+Definition at line 17 of file filter.\+h.
+
+
+
+Referenced by filter\+\_\+rms\+\_\+process().
+
+\hypertarget{structfilter__rms_a902e6aa671bf468ba0506ef5848f51cf}{}\index{filter\+\_\+rms@{filter\+\_\+rms}!sqsum@{sqsum}}
+\index{sqsum@{sqsum}!filter\+\_\+rms@{filter\+\_\+rms}}
+\subsubsection[{sqsum}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t filter\+\_\+rms\+::sqsum}\label{structfilter__rms_a902e6aa671bf468ba0506ef5848f51cf}
+
+
+Total square sum of samples. 
+
+\begin{DoxyNote}{Note}
+If you use 12 bit samples, the square take up to 24 bits, this means you get 8 bits left, so max filter length is 256! 
+\end{DoxyNote}
+
+
+Definition at line 20 of file filter.\+h.
+
+
+
+Referenced by filter\+\_\+rms\+\_\+process().
 
 
 

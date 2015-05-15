@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$timer_8h.html" title="Timer HAL include file. " alt="" coords="195,80,286,107"/>
 <area shape="rect" id="node4" href="$ws2812_8h.html" title="WS2812 HAL include file. " alt="" coords="5,155,111,181"/>
 <area shape="rect" id="node10" href="$dma_8c.html" title="DMA implementation. " alt="" coords="310,80,395,107"/>
-<area shape="rect" id="node11" href="$dma__macro_8h_source.html" title="src/dma_macro.h" alt="" coords="436,229,571,256"/>
+<area shape="rect" id="node11" href="$dma__macro_8h.html" title="Helper macros for DMA HAL. " alt="" coords="436,229,571,256"/>
 <area shape="rect" id="node3" href="$adc_8c.html" title="ADC HAL implementation. " alt="" coords="135,155,213,181"/>
 <area shape="rect" id="node8" href="$timer__macro_8h.html" title="Utility macros for timers. " alt="" coords="238,155,377,181"/>
 <area shape="rect" id="node9" href="$timer_8c.html" title="Timer HAL implementation. " alt="" coords="401,155,491,181"/>
